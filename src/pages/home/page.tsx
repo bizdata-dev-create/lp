@@ -801,7 +801,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">お客様の声・導入ビフォアフ</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">お客様の声・導入前後の違い</h3>
             <p className="text-xl text-gray-600">実際にご利用いただいたお客様からの評価</p>
           </div>
           
