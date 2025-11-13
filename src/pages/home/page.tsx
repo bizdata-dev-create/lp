@@ -282,7 +282,7 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-gray-900 mb-4">サービスの流れ</h3>
           </div>
           
-          <div className="space-y-4">
+          <div className="max-w-4xl mx-auto space-y-4">
             {/* Step 1 */}
             <div className="flex-1 bg-white rounded-lg p-6 shadow-md border border-gray-200">
               <div className="flex items-center mb-3">
