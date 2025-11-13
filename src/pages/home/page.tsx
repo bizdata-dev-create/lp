@@ -634,7 +634,7 @@ export default function Home() {
             </div>
 
             {/* USP 2 */}
-            <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 border-4 border-green-600">
+            <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 border-2 border-green-600">
               <div className="text-center mb-8">
                 <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <i className="ri-user-line text-teal-600 text-2xl"></i>
