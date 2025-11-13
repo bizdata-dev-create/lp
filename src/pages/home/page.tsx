@@ -597,7 +597,7 @@ export default function Home() {
           
           <div className="grid lg:grid-cols-2 gap-16">
             {/* USP 1 */}
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border-2 border-orange-600">
               <div className="text-center mb-8">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <i className="ri-edit-line text-orange-600 text-2xl"></i>
@@ -634,7 +634,7 @@ export default function Home() {
             </div>
 
             {/* USP 2 */}
-            <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 border-4 border-green-600">
               <div className="text-center mb-8">
                 <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <i className="ri-user-line text-teal-600 text-2xl"></i>
@@ -758,7 +758,7 @@ export default function Home() {
           </div>
           
           <div className="grid lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-lg p-8 text-center">
+            <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-lg p-8 text-center border-4 border-blue-600">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
                   <i className="ri-target-line text-blue-600 text-lg"></i>
@@ -770,7 +770,7 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-8 text-center">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-8 text-center border-4 border-green-600">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
                   <i className="ri-shield-check-line text-green-600 text-lg"></i>
@@ -782,7 +782,7 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-8 text-center">
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-8 text-center border-4 border-pink-600">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
                   <i className="ri-time-line text-purple-600 text-lg"></i>
@@ -802,7 +802,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">お客様の声・導入前後の違い</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">お客様の声</h3>
             <p className="text-xl text-gray-600">実際にご利用いただいたお客様からの評価</p>
           </div>
           
@@ -876,7 +876,7 @@ export default function Home() {
       {/* Company Section */}
       <section id="company" className="py-20 bg-blue-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-4">
             <h3 className="text-3xl font-bold text-white mb-4">会社紹介</h3>
             <p className="text-xl text-white">コンサル出身の実行チームが、<strong>成果を出す営業</strong>を設計します</p>
           </div>
@@ -884,7 +884,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-white mb-6 leading-relaxed">
-                当社は、<strong>一部上場コンサルティング会社からスピンアウト</strong>し設立されました。
+                当社合同会社bizdataは、<strong>一部上場コンサルティング会社からスピンアウト</strong>し設立されました。
                 戦略立案から実行支援まで、これまでに<strong>20社以上の営業・データ分析プロジェクト</strong>をご支援してきました。
               </p>
               
@@ -1105,10 +1105,10 @@ export default function Home() {
       <section className="py-20 bg-blue-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-3xl font-bold text-white mb-6">
-            営業の「手間」をなくし、「<strong>成果</strong>」に集中できる仕組み
+            営業の「手間」をなくし「<strong>成果</strong>」に集中
           </h3>
           <p className="text-xl text-blue-100 mb-8">
-            「営業にかかる労力を最小化し、<strong>確実に成果を最大化する仕組み</strong>」を私達は提供します。
+            「営業労力を最小化し、<strong>成果を最大化する仕組み</strong>」を私達は提供します。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
