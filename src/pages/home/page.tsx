@@ -276,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* Service Flow Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">サービスの流れ</h3>
@@ -291,7 +291,8 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">会社・商材情報のご共有</h4>
               </div>
-              <p className="text-gray-600 mb-2">・御社の営業戦略や商材の強み、顧客の理解についての認識合わせを行います。送信NGリスト等についてもご共有頂きます。</p>
+              <p className="text-gray-600 mb-2">・御社の営業戦略や商材の強み、顧客の理解についての認識合わせを行います。</p>
+              <p className="text-gray-600 mb-2">・送信NGリスト等についてもご共有頂きます。</p>
               <p className="text-gray-600">・御社の労力は基本的にここのみとなります</p>
             </div>
             
@@ -355,7 +356,7 @@ export default function Home() {
           
           <div className="space-y-16">
             {/* Feature 1 - 初期費用ゼロ */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
               <div className="order-2 lg:order-1">
                 <img 
                   src={benefit1Image}
@@ -398,7 +399,7 @@ export default function Home() {
             </div>
 
             {/* Feature 2 - 量・質ともに圧倒的な営業リスト */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
               <div>
                 <div className="bg-blue-900 text-white px-6 py-3 text-lg font-bold mb-4 inline-block">
                   特徴②
@@ -507,7 +508,7 @@ export default function Home() {
             </div>
 
             {/* Feature 3 - 特典としてリストを無償提供 */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
               <div className="order-2 lg:order-1">
                 <img 
                   src={benefit4Image}
@@ -538,7 +539,7 @@ export default function Home() {
             </div>
 
             {/* Feature 4 - 営業戦略の見直し */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
               <div>
                 <div className="bg-blue-900 text-white px-6 py-3 text-lg font-bold mb-4 inline-block">
                   特徴④
@@ -873,48 +874,44 @@ export default function Home() {
       </section>
 
       {/* Company Section */}
-      <section id="company" className="py-20 bg-gray-50">
+      <section id="company" className="py-20 bg-blue-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">会社紹介</h3>
-            <p className="text-xl text-gray-600">コンサル出身の実行チームが、<strong>成果を出す営業</strong>を設計します</p>
+            <h3 className="text-3xl font-bold text-white mb-4">会社紹介</h3>
+            <p className="text-xl text-white">コンサル出身の実行チームが、<strong>成果を出す営業</strong>を設計します</p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-white mb-6 leading-relaxed">
                 当社は、<strong>一部上場コンサルティング会社からスピンアウト</strong>し設立されました。
                 戦略立案から実行支援まで、これまでに<strong>20社以上の営業・データ分析プロジェクト</strong>をご支援してきました。
               </p>
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">① コンサル品質の「戦略 × 実行」アプローチ</h4>
-                  <p className="text-gray-600">
-                    私たちは、単なる代行業ではなく、<strong>"成果が出る仕組み"を設計するプロジェクトチーム</strong>として活動しています。
-                    戦略コンサルタントとして培った分析・検証・改善力とプロジェクトマネジャーとしての推進力を組み合わせ、
-                    「確実に結果が出る営業プロセス」をクライアントと共に構築します。
+                  <h4 className="bg-white text-blue-800 px-2 py-1 font-black text-xl mb-3">① コンサル品質の「戦略 × 実行」アプローチ</h4>
+                  <p className="text-white">
+                    私たちは、単なる代行業ではなく、<strong>"成果が出る仕組み"を設計するチーム</strong>として活動しています。
+                    戦略コンサルタントとして培った分析・検証・改善力により、「確実に結果が出る営業プロセス」をお客様と共に構築します。
                   </p>
                 </div>
                 
                 <div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">② 現場から生まれた「本当に使えるノウハウ」</h4>
-                  <p className="text-gray-600">
+                  <h4 className="bg-white text-blue-800 px-2 py-1 font-black text-xl mb-3">② 現場から生まれた「本当に使えるノウハウ」</h4>
+                  <p className="text-white">
                     私たちが提供している仕組みや文章テンプレートは、実際に<strong>数多くのプロジェクトの中で、成果が出たものだけを体系化</strong>したノウハウです。
-                    机上の理論ではなく、現場で"反応が取れた方法"だけを磨き上げ、再現可能な形に落とし込んでいます。
+                    机上の理論ではなく、現場で"反応が取れた方法"だけをお伝えします。
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">③ モットー：「顧客に本質的な価値を届ける」</h4>
-                  <p className="text-gray-600">
+                  <h4 className="bg-white text-blue-800 px-2 py-1 font-black text-xl mb-3">③ モットー：「顧客に本質的な価値を届ける」</h4>
+                  <p className="text-white">
                     「代行して終わり」ではなく、
                     <strong>お客様が自社の営業を自信を持って回せる状態</strong>をゴールとしています。
                     だからこそ、私たちは常に、
-                  </p>
-                  <p className="text-gray-600 font-semibold mt-2">
-                    <strong>"本質的な価値を提供できているか？"</strong><br />
-                    を問いながら、プロジェクトを前に進めています。
+                    <strong>"本質的な価値を提供できているか？"</strong>を問いながら、プロジェクトを進めています。
                   </p>
                 </div>
               </div>
