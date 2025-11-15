@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 縦書き＋中央揃え用のユーティリティ */
+.vertical-center {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.25rem;
+	margin: 0 auto;
+}

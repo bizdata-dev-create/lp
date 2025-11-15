@@ -85,19 +85,16 @@ export default function Home() {
               
               {/* Feature Blocks - Gold border with transparent background */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                <div className="border-4 border-yellow-400 bg-transparent p-3 rounded-lg shadow-lg text-center">
-                  <div className="w-8 h-8 mx-auto mb-2 flex items-center justify-center bg-yellow-400 rounded-full shadow-lg">
-                    <i className="ri-medal-fill text-yellow-800 text-lg"></i>
-                  </div>
+                <div className="border-4 border-yellow-400 bg-transparent p-3 rounded-lg shadow-lg text-center flex flex-col items-center justify-center">
                   <p className="text-xs font-bold text-yellow-400 leading-tight">初期費用・リスト作成<br />文章作成全て<span className="text-yellow-300 text-sm">0円</span></p>
                 </div>
-                <div className="border-4 border-yellow-400 bg-transparent p-3 rounded-lg shadow-lg text-center">
+                <div className="border-4 border-yellow-400 bg-transparent p-3 rounded-lg shadow-lg text-center flex flex-col items-center justify-center">
                   <div className="w-8 h-8 mx-auto mb-2 flex items-center justify-center bg-yellow-400 rounded-full shadow-lg">
                     <i className="ri-medal-fill text-yellow-800 text-lg"></i>
                   </div>
                   <p className="text-xs font-bold text-yellow-400 leading-tight">コンサル出身者が<br /><span className="text-yellow-300 text-sm">戦略も支援</span></p>
                 </div>
-                <div className="border-4 border-yellow-400 bg-transparent p-3 rounded-lg shadow-lg text-center">
+                <div className="border-4 border-yellow-400 bg-transparent p-3 rounded-lg shadow-lg text-center flex flex-col items-center justify-center">
                   <div className="w-8 h-8 mx-auto mb-2 flex items-center justify-center bg-yellow-400 rounded-full shadow-lg">
                     <i className="ri-medal-fill text-yellow-800 text-lg"></i>
                   </div>
