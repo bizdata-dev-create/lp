@@ -7,6 +7,8 @@ import benefit4Image from '../../img/benefit4.jpg';
 import company1Image from '../../img/company1.jpg';
 import valuePropositionMobile from '../../img/value_proposition_mobile.jpg';
 import valuePropositionPC from '../../img/value_proposition_pc.jpg';
+import hero_mukimukiman_pc from '../../img/hero_mukimukiman_pc.jpg';
+import hero_mukimukiman_mobile from '../../img/hero_mukimukiman_mobile.jpg';
 
 export default function Home() {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
@@ -72,7 +74,7 @@ export default function Home() {
                   <span className="sm:hidden">成果報酬×<br />業界最安値</span>
                 </span>
                 <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-                  <span className="text-yellow-400 text-6xl lg:text-7xl font-black">15円</span>送信〜<br />
+                  <span className="text-yellow-400 text-6xl lg:text-7xl font-black">15円/件</span>送信〜<br />
                   <div className="mb-4"></div>
                   <span className="bg-black text-white px-2 py-1 font-black text-2xl lg:text-3xl">結果にこだわる営業代行</span>
                 </h2>
@@ -114,12 +116,16 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="relative">
-              <img 
-                src={heroImage}
-                alt="信頼できるビジネスマン"
-                className="w-full h-auto rounded-lg shadow-lg object-cover"
-              />
+            <div className="relative -mx-4 sm:-mx-6 lg:-mx-8">
+              <picture>
+                <source srcSet={hero_mukimukiman_mobile} media="(max-width: 767px)" />
+                <source srcSet={hero_mukimukiman_pc} media="(min-width: 768px)" />
+                <img
+                  src={hero_mukimukiman_pc}
+                  alt="mukimukiman"
+                  className="block w-full h-auto rounded-none lg:rounded-lg shadow-lg object-cover"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -390,7 +396,7 @@ export default function Home() {
                 
                 <p className="text-gray-600">
                   営業に必要な準備はすべて弊社にお任せください。
-                  お客様にご負担いただくのは、<strong>送信完了分の料金（1通15円〜）のみ</strong>。
+                  お客様にご負担いただくのは、<strong>送信完了分の料金（1通あたり15円〜）のみ</strong>。
                 </p>
               </div>
             </div>
