@@ -11,6 +11,11 @@ export default {
           'brand-blue': '#002672',
           'brand-blue-light': '#DBEAFE', // blue-100相当
         },
+        screens: {
+          // スマホ/PC判定基準をmd（768px）に統一
+          'mobile': '0px',
+          'desktop': '768px', // md相当
+        },
       },
     },
     plugins: [],

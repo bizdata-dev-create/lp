@@ -47,7 +47,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-start">
-                <img src={logoDeeper} alt="logo" className="h-12 scale-[0.68] lg:scale-[0.85]" />
+                <img src={logoDeeper} alt="logo" className="h-12 scale-[0.68] md:scale-[0.85]" />
               </div>
             <nav className="hidden md:flex space-x-8">
               <a href="#service" className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">サービス概要</a>
@@ -131,7 +131,7 @@ export default function Home() {
             <p className="text-xl text-gray-600">数々の企業で確実な成果を実現</p>
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Result 1 */}
             <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-red-200">
               <div className="text-center mb-6">
@@ -326,15 +326,15 @@ export default function Home() {
           
           <div className="space-y-16">
             {/* Feature 1 - 初期費用ゼロ */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center border-4 border-brand-blue p-4">
-              <div className="order-2 lg:order-1">
+            <div className="grid md:grid-cols-2 gap-12 items-center border-4 border-brand-blue p-4">
+              <div className="order-2 md:order-1">
                 <img 
                   src={benefit1Image}
                   alt="初期費用0円の成果報酬制"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
                 />
               </div>
-              <div className="order-1 lg:order-2">
+              <div className="order-1 md:order-2">
                 <div className="bg-brand-blue text-white px-6 py-3 text-lg font-bold mb-4 inline-block">
                   特徴①
                 </div>
@@ -369,7 +369,7 @@ export default function Home() {
             </div>
 
             {/* Feature 2 - 量・質ともに圧倒的な営業リスト */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
+            <div className="grid md:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
               <div>
                 <div className="bg-brand-blue text-white px-6 py-3 text-lg font-bold mb-4 inline-block">
                   特徴②
@@ -418,7 +418,7 @@ export default function Home() {
               <div className="bg-brand-blue-light p-8 rounded-lg border-2 border-brand-blue">
                 <h5 className="font-semibold text-gray-900 mb-6 text-center text-xl">リストアップできる媒体例（ご希望の媒体を付け加え可能）</h5>
                 
-                <div className="grid lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-8">
                   <div>
                   <h6 className="font-medium text-gray-900 mb-4 text-lg"><span className="inline-block border-b-2 border-blue-600 pb-2 w-1/2">採用媒体</span></h6>
                     <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
@@ -478,15 +478,15 @@ export default function Home() {
             </div>
 
             {/* Feature 3 - 特典としてリストを無償提供 */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
-              <div className="order-2 lg:order-1">
+            <div className="grid md:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
+              <div className="order-2 md:order-1">
                 <img 
                   src={benefit4Image}
                   alt="多様な営業手法への対応"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
                 />
               </div>
-              <div className="order-1 lg:order-2">
+              <div className="order-1 md:order-2">
                 <div className="bg-brand-blue text-white px-6 py-3 text-lg font-bold mb-4 inline-block">
                   特徴③
                 </div>
@@ -509,7 +509,7 @@ export default function Home() {
             </div>
 
             {/* Feature 4 - 営業戦略の見直し */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
+            <div className="grid md:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
               <div>
                 <div className="bg-brand-blue text-white px-6 py-3 text-lg font-bold mb-4 inline-block">
                   特徴④
@@ -565,7 +565,7 @@ export default function Home() {
             <p className="text-xl text-gray-600">他社との違い</p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid md:grid-cols-2 gap-16">
             {/* USP 1 */}
             <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border-2 border-orange-600">
               <div className="text-center mb-8">
@@ -736,11 +736,11 @@ export default function Home() {
             <img 
               src={valuePropositionMobile}
               alt="提供価値 - 導入前後の比較"
-              className="w-full h-auto rounded-lg lg:hidden"
+              className="w-full h-auto rounded-lg md:hidden"
             />
             
             {/* PC用画像（モバイルで非表示、PCで表示、80%サイズ） */}
-            <div className="hidden lg:flex lg:justify-center">
+            <div className="hidden md:flex md:justify-center">
               <img 
                 src={valuePropositionPC}
                 alt="提供価値 - 導入前後の比較"
@@ -749,7 +749,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-brand-blue-light to-teal-50 rounded-lg p-8 text-center border-4 border-blue-600">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-brand-blue-light rounded-full flex items-center justify-center flex-shrink-0 mr-4">
@@ -798,7 +798,7 @@ export default function Home() {
             <p className="text-xl text-gray-600">実際にご利用いただいたお客様からの評価</p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
@@ -873,7 +873,7 @@ export default function Home() {
             <p className="text-xl text-white">コンサル出身の実行チームが、<strong>成果を出す営業</strong>を設計します</p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-white mb-6 leading-relaxed">
                 当社合同会社bizdataは、<strong>一部上場コンサルティング会社からスピンアウト</strong>し設立されました。
@@ -923,7 +923,7 @@ export default function Home() {
               <h4 className="text-2xl font-bold text-gray-900 mb-4"><strong>成果にこだわる、最強の実行チーム</strong>が支援します</h4>
             </div>
             
-            <div className="grid lg:grid-cols-[70%_30%] gap-8 items-start">
+            <div className="grid md:grid-cols-[70%_30%] gap-8 items-start">
               <div>
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
                   <h5 className="font-semibold text-gray-900 mb-3">代表：梁清揚（りょう せいよう）</h5>
@@ -934,7 +934,7 @@ export default function Home() {
                 </div>
                 
                 {/* スマホ版：写真を代表紹介とチーム構成の間に配置 */}
-                <div className="flex justify-center mb-6 lg:hidden">
+                <div className="flex justify-center mb-6 md:hidden">
                   <div className="w-48 h-64 rounded-lg overflow-hidden">
                     <img 
                       src={ryoImage}
@@ -966,7 +966,7 @@ export default function Home() {
                 </div>
               </div>
               {/* PC版：写真を右側に配置 */}
-              <div className="hidden lg:flex lg:justify-start">
+              <div className="hidden md:flex md:justify-start">
                 <div className="w-48 h-64 rounded-lg overflow-hidden">
                   <img 
                     src={ryoImage}
@@ -1134,7 +1134,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <div>
               <h4 className="text-xl font-bold mb-4" style={{ fontFamily: 'Pacifico, serif' }}>logo</h4>
               <p className="text-gray-400 text-sm">
