@@ -59,7 +59,7 @@ export default function Home() {
               href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-red-600 text-white px-2 py-1.5 rounded-lg hover:bg-red-700 transition-colors whitespace-nowrap cursor-pointer font-bold text-lg"
+              className="bg-brand-red text-white px-2 py-1.5 rounded-lg hover:bg-brand-red/90 transition-colors whitespace-nowrap cursor-pointer font-bold text-lg"
             >
               お問い合わせ
             </a>
@@ -83,7 +83,7 @@ export default function Home() {
               <span className="text-orange-500">🎁 お問い合わせ特典</span>
             </h3>
             <p className="text-xl text-gray-700 mb-6 text-left">
-              お問い合わせいただいた方に、<br></br><strong className="text-red-600 text-[1.3em]">無料で</strong><strong>「反応率が2倍以上になる営業の裏ワザ」</strong>をプレゼント！
+              お問い合わせいただいた方に、<br></br><strong className="text-brand-red text-[1.3em]">無料で</strong><strong>「反応率が2倍以上になる営業の裏ワザ」</strong>をプレゼント！
             </p>
             <div className="grid md:grid-cols-[60%_40%] gap-8 mb-6">
               <div className="text-left border border-gray-300 rounded-lg p-4">
@@ -115,7 +115,7 @@ export default function Home() {
               href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-red-600 text-white px-8 py-2 rounded-lg text-lg font-bold hover:bg-red-700 transition-colors whitespace-nowrap cursor-pointer inline-block"
+              className="bg-brand-red text-white px-8 py-2 rounded-lg text-lg font-bold hover:bg-brand-red/90 transition-colors whitespace-nowrap cursor-pointer inline-block"
             >
               お問い合わせ
             </a>
@@ -133,10 +133,10 @@ export default function Home() {
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Result 1 */}
-            <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-red-200">
+            <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-brand-red-light">
               <div className="text-center mb-6">
-                <div className="bg-red-600 text-white px-4 py-3 rounded text-xl font-bold mb-2">BPO業</div>
-                <div className="text-5xl font-bold text-red-600 mb-2">+418%</div>
+                <div className="bg-brand-red text-white px-4 py-3 rounded text-xl font-bold mb-2">BPO業</div>
+                <div className="text-5xl font-bold text-brand-red mb-2">+418%</div>
                 <div className="inline-block bg-white border border-black rounded-full px-6 py-2 text-xl font-bold text-black mb-2">
                   リード獲得数
                 </div>
@@ -160,10 +160,10 @@ export default function Home() {
             </div>
 
             {/* Result 2 */}
-            <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-red-200">
+            <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-brand-red-light">
               <div className="text-center mb-6">
-                <div className="bg-red-600 text-white px-4 py-3 rounded text-xl font-bold mb-2">システム開発業</div>
-                <div className="text-5xl font-bold text-red-600 mb-2">+210%</div>
+                <div className="bg-brand-red text-white px-4 py-3 rounded text-xl font-bold mb-2">システム開発業</div>
+                <div className="text-5xl font-bold text-brand-red mb-2">+210%</div>
                 <div className="inline-block bg-white border border-black rounded-full px-6 py-2 text-xl font-bold text-black mb-2">
                   新規受注数
                 </div>
@@ -187,10 +187,10 @@ export default function Home() {
             </div>
 
             {/* Result 3 */}
-            <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-red-200">
+            <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-brand-red-light">
               <div className="text-center mb-6">
-                <div className="bg-red-600 text-white px-4 py-3 rounded text-xl font-bold mb-2">WEB制作業</div>
-                <div className="text-5xl font-bold text-red-600 mb-2">+135%</div>
+                <div className="bg-brand-red text-white px-4 py-3 rounded text-xl font-bold mb-2">WEB制作業</div>
+                <div className="text-5xl font-bold text-brand-red mb-2">+135%</div>
                 <div className="inline-block bg-white border border-black rounded-full px-6 py-2 text-xl font-bold text-black mb-2">
                   新規顧客売上
                 </div>
@@ -347,16 +347,16 @@ export default function Home() {
                 </p>
                 
                 <div className="grid grid-cols-3 gap-4 mb-6">
-                  <div className="bg-white p-4 rounded-lg shadow-md text-center border-2 border-yellow-400">
-                    <div className="text-2xl font-bold text-red-600">0円</div>
+                  <div className="bg-white p-4 rounded-lg shadow-md text-center border-2 border-brand-red">
+                    <div className="text-2xl font-bold text-brand-red">0円</div>
                     <div className="text-sm text-gray-600 font-bold">初期費用</div>
                   </div>
-                  <div className="bg-white p-4 rounded-lg shadow-md text-center border-2 border-yellow-400">
-                    <div className="text-2xl font-bold text-red-600">0円</div>
+                  <div className="bg-white p-4 rounded-lg shadow-md text-center border-2 border-brand-red">
+                    <div className="text-2xl font-bold text-brand-red">0円</div>
                     <div className="text-sm text-gray-600 font-bold">リスト作成</div>
                   </div>
-                  <div className="bg-white p-4 rounded-lg shadow-md text-center border-2 border-yellow-400">
-                    <div className="text-2xl font-bold text-red-600">0円</div>
+                  <div className="bg-white p-4 rounded-lg shadow-md text-center border-2 border-brand-red">
+                    <div className="text-2xl font-bold text-brand-red">0円</div>
                     <div className="text-sm text-gray-600 font-bold">文章作成<br />（何度でも）</div>
                   </div>
                 </div>
@@ -383,7 +383,7 @@ export default function Home() {
                 </p>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-                  <h5 className="font-semibold text-gray-900 mb-4"><span className="text-red-600 font-bold text-xl">200万件</span>以上の企業リストを独自に保有</h5>
+                  <h5 className="font-semibold text-gray-900 mb-4"><span className="text-brand-red font-bold text-xl">200万件</span>以上の企業リストを独自に保有</h5>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <h6 className="font-medium text-gray-900 mb-2">業種・業界別</h6>
@@ -577,7 +577,7 @@ export default function Home() {
                 </h4>
                 <p className="text-gray-600 mb-6">
                   営業の反応率を決めるのは、「<strong>相手にとって自分ごとに感じられるか</strong>」。
-                  これまで同じ商品でも、相手の業種や状況に合わせて言葉を変えることで、返信・成約率が<span className="text-red-600 font-bold text-3xl">180％以上</span>向上しています。
+                  これまで同じ商品でも、相手の業種や状況に合わせて言葉を変えることで、返信・成約率が<span className="text-brand-red font-bold text-3xl">180％以上</span>向上しています。
                 </p>
               </div>
               
@@ -653,7 +653,7 @@ export default function Home() {
               <span className="text-orange-500">🎁 お問い合わせ特典</span>
             </h3>
             <p className="text-xl text-gray-700 mb-6 text-left">
-              お問い合わせいただいた方に、<br></br><strong className="text-red-600 text-[1.3em]">無料で</strong><strong>「反応率が2倍以上になる営業の裏ワザ」</strong>をプレゼント！
+              問い合わせいただいた方に、<br></br><strong className="text-brand-red text-[1.3em]">無料で</strong><strong>「反応率が2倍以上になる裏ワザ」</strong>をプレゼント！
             </p>
             <div className="grid md:grid-cols-[60%_40%] gap-8 mb-6">
               <div className="text-left border border-gray-300 rounded-lg p-4">
@@ -685,7 +685,7 @@ export default function Home() {
               href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-red-600 text-white px-8 py-2 rounded-lg text-lg font-bold hover:bg-red-700 transition-colors whitespace-nowrap cursor-pointer inline-block"
+              className="bg-brand-red text-white px-8 py-2 rounded-lg text-lg font-bold hover:bg-brand-red/90 transition-colors whitespace-nowrap cursor-pointer inline-block"
             >
               お問い合わせ
             </a>
@@ -697,8 +697,8 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">競合と比べても圧倒的な成果を残しています</h3>
-            <p className="text-xl text-gray-600">他社サービスとの詳細比較</p>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">他サービスと比較</h3>
+            <p className="text-xl text-gray-600">他社と比べても費用の割に営業のクオリティ・スピードともに高いところが強みとなっています。</p>
           </div>
           
           {/* Table Space for Future Use */}
@@ -795,11 +795,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">お客様の声</h3>
-            <p className="text-xl text-gray-600">実際にご利用いただいたお客様からの評価</p>
+            <p className="text-xl text-gray-600">ご利用いただいたお客様からの評価</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-lg">
+            <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
                   <i className="ri-user-line text-teal-600 text-xl"></i>
@@ -815,13 +815,13 @@ export default function Home() {
               </blockquote>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg">
+            <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-brand-blue-light rounded-full flex items-center justify-center mr-4">
                   <i className="ri-user-line text-brand-blue text-xl"></i>
                 </div>
                 <div>
-                  <h5 className="font-semibold text-gray-900">IT企業 B社様</h5>
+                  <h5 className="font-semibold text-gray-900 ">IT企業 B社様</h5>
                   <p className="text-sm text-gray-600">従業員数: 30名</p>
                 </div>
               </div>
@@ -830,7 +830,7 @@ export default function Home() {
               </blockquote>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg">
+            <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
                   <i className="ri-user-line text-purple-600 text-xl"></i>
@@ -846,7 +846,7 @@ export default function Home() {
               </blockquote>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg">
+            <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
                   <i className="ri-user-line text-orange-600 text-xl"></i>
@@ -989,7 +989,7 @@ export default function Home() {
           </div>
           
           <div className="space-y-6">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. 原稿の作成は自社で行う必要がありますか？</h4>
               </div>
@@ -998,7 +998,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. 企業リストは誰が準備しますか？</h4>
               </div>
@@ -1007,7 +1007,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. 自社で保有しているリストにも送信できますか？</h4>
               </div>
@@ -1016,7 +1016,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. 作成された企業リストを事前に確認できますか？</h4>
               </div>
@@ -1025,7 +1025,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. 送信ペースはどのくらいですか？</h4>
               </div>
@@ -1034,7 +1034,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. 最低契約期間や件数の制限はありますか？</h4>
               </div>
@@ -1043,7 +1043,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. 送信結果のレポートはもらえますか？</h4>
               </div>
@@ -1052,7 +1052,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. 問い合わせにつながる割合はどのくらいですか？</h4>
               </div>
@@ -1061,7 +1061,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. NGリストをスキップできますか？</h4>
               </div>
@@ -1070,7 +1070,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. 営業代行を使うと、自社にノウハウが残らないかと心配してます。</h4>
               </div>
@@ -1088,7 +1088,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. まずは相談だけでも大丈夫ですか？</h4>
               </div>
@@ -1097,7 +1097,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
                 <h4 className="font-bold text-lg">Q. 料金の支払い方法を教えてください</h4>
               </div>
@@ -1164,7 +1164,7 @@ export default function Home() {
                 href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm whitespace-nowrap cursor-pointer mb-4 inline-block"
+                className="bg-brand-red text-white px-6 py-2 rounded-lg hover:bg-brand-red/90 transition-colors text-sm whitespace-nowrap cursor-pointer mb-4 inline-block"
               >
                 お問い合わせフォーム
               </a>
@@ -1197,7 +1197,7 @@ export default function Home() {
               <form id="contact-form" data-readdy-form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                    会社名 <span className="text-red-500">*</span>
+                    会社名 <span className="text-brand-red">*</span>
                   </label>
                   <input
                     type="text"
@@ -1213,7 +1213,7 @@ export default function Home() {
                 
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    お名前 <span className="text-red-500">*</span>
+                    お名前 <span className="text-brand-red">*</span>
                   </label>
                   <input
                     type="text"
@@ -1229,7 +1229,7 @@ export default function Home() {
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    メールアドレス <span className="text-red-500">*</span>
+                    メールアドレス <span className="text-brand-red">*</span>
                   </label>
                   <input
                     type="email"
@@ -1260,7 +1260,7 @@ export default function Home() {
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    お問い合わせ内容 <span className="text-red-500">*</span>
+                    お問い合わせ内容 <span className="text-brand-red">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -1278,7 +1278,7 @@ export default function Home() {
                 
                 <button
                   type="submit"
-                  className="w-full bg-red-600 text-white py-2 rounded-lg font-bold hover:bg-red-700 transition-colors whitespace-nowrap cursor-pointer"
+                  className="w-full bg-brand-red text-white py-2 rounded-lg font-bold hover:bg-brand-red/90 transition-colors whitespace-nowrap cursor-pointer"
                 >
                   送信する
                 </button>
