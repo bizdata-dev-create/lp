@@ -491,7 +491,7 @@ export default function Home() {
                   特徴③
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">
-                  特典としてリストを<br className="md:hidden" />無償提供
+                  特典としてリストを<br className="md:hidden" /><strong className="bg-marker-yellow font-bold">無償提供</strong>
                 </h4>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   例えば自社でテレアポ営業をしたい場合、DMやFAXを送付したい場合など、 
@@ -519,7 +519,7 @@ export default function Home() {
                 </h4>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   どんなに良い営業手法を使っても、「戦略の方向性」が間違っていれば<strong>成果は出ません</strong>。
-                  単に送信だけでなく、「誰に・何を・どう伝えるべきか」という<strong>営業戦略の見直し</strong>までサポートします。
+                  単に送信だけでなく、<strong className="bg-marker-yellow font-bold">「誰に・何を・どう伝えるべきか」という<strong>営業戦略の見直し</strong></strong>までサポートします。
                 </p>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
@@ -920,7 +920,7 @@ export default function Home() {
           {/* Team Introduction */}
           <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-12">
             <div className="text-center mb-12">
-              <h4 className="text-2xl font-bold text-gray-900 mb-4"><strong>成果にこだわる、最強の実行チーム</strong>が支援します</h4>
+              <h4 className="text-2xl font-bold text-gray-900 mb-4">成果にこだわる、最強<br className="md:hidden" />のチームが支援します</h4>
             </div>
             
             <div className="grid md:grid-cols-[70%_30%] gap-8 items-start">
