@@ -926,7 +926,7 @@ export default function Home() {
             <div className="grid md:grid-cols-[70%_30%] gap-8 items-start">
               <div>
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-                  <h5 className="font-semibold text-gray-900 mb-3">代表：梁清揚（りょう せいよう）</h5>
+                  <h5 className="font-semibold text-gray-900 mb-3">代表：<br className="md:hidden" />梁清揚（りょう せいよう）</h5>
                   <p className="text-sm text-gray-600">
                     コンサルティング会社での営業・データ基盤導入支援経験を経て、企業の営業活動を効率化する複数プロジェクトをリード。
                     これまでに<strong>20社以上の企業で、営業・データ活用・分析基盤構築</strong>を支援。
