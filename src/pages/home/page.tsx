@@ -83,10 +83,10 @@ export default function Home() {
               <span className="text-orange-500">🎁 お問い合わせ特典</span>
             </h3>
             <p className="text-xl text-gray-700 mb-6 text-left">
-              お問い合わせいただいた方に、<br></br><strong className="text-brand-red text-[1.3em]">無料で</strong><strong>「反応率が2倍以上になる営業の裏ワザ」</strong>をプレゼント！
+              問い合わせいただいた方に、<br></br><strong className="bg-marker-yellow font-bold"><strong className="text-brand-red text-[1.3em] font-bold">無料で</strong><strong>「反応率が2倍以上になる裏ワザ」</strong>をプレゼント！</strong>
             </p>
             <div className="grid md:grid-cols-[60%_40%] gap-8 mb-6">
-              <div className="text-left border border-gray-300 rounded-lg p-4">
+              <div className="text-left border border-gray-300 rounded-lg p-4 flex flex-col justify-center">
                 <h4 className="font-bold text-gray-900 mb-2">内容一例</h4>
                 <div className="grid grid-cols-1 gap-1.5 text-base text-gray-600">
                   <div className="flex items-center justify-start">
@@ -341,8 +341,8 @@ export default function Home() {
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">
                   <strong>初期費用ゼロ</strong>。成果報酬だけの安心料金
                 </h4>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  一般的な営業代行や広告のように、初期費用として<strong>数十万円の費用を払う必要は「一切」ありません</strong>。
+                <p className="text-gray-900 mb-6 leading-relaxed">
+                  一般的な営業代行や広告のように、<strong className="bg-marker-yellow font-bold">初期費用として数十万円の費用を払う必要は「一切」ありません</strong>。
                   フォーム営業では、「送信が行われた分だけ」のシンプルな成果報酬制です。
                 </p>
                 
@@ -383,7 +383,7 @@ export default function Home() {
                 </p>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-                  <h5 className="font-semibold text-gray-900 mb-4"><span className="text-brand-red font-bold text-xl">200万件</span>以上の企業リストを独自に保有</h5>
+                  <h5 className="font-semibold text-gray-900 mb-4"><strong className="bg-marker-yellow font-bold"><span className="text-brand-red font-bold text-xl">200万件</span>以上の企業リストを独自に保有</strong></h5>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <h6 className="font-medium text-gray-900 mb-2">業種・業界別</h6>
@@ -499,7 +499,7 @@ export default function Home() {
                 </p>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-                  <h5 className="font-semibold text-gray-900 mb-4">🔹 <strong>完全無料＆取得件数は無制限</strong>でリスト提供</h5>
+                  <h5 className="font-semibold text-gray-900 mb-4">🔹 <strong className="bg-marker-yellow font-bold">完全無料＆取得件数は無制限</strong>でリスト提供</h5>
                   <p className="text-gray-600 text-sm mb-4">
                     弊社のお問合せフォーム送信代行をご利用いただいているお客様であれば、完全無料＆取得件数は無制限で「URL、電話番号、FAX番号、住所などの情報を削除していない」営業リストを取得できますので、 
                     お問合せフォーム営業以外の様々な営業手段で弊社のリストをご利用いただけます。
@@ -582,7 +582,7 @@ export default function Home() {
               </div>
               
               <div className="space-y-4">
-                <h5 className="font-semibold text-gray-900">AIを用いた営業文カスタマイズ</h5>
+                <h5 className="font-semibold text-gray-900">一社一社に<strong className="bg-marker-yellow font-bold">営業文をカスタマイズ</strong></h5>
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center">
                     <i className="ri-check-line text-green-500 mr-2"></i>
@@ -653,10 +653,10 @@ export default function Home() {
               <span className="text-orange-500">🎁 お問い合わせ特典</span>
             </h3>
             <p className="text-xl text-gray-700 mb-6 text-left">
-              問い合わせいただいた方に、<br></br><strong className="text-brand-red text-[1.3em]">無料で</strong><strong>「反応率が2倍以上になる裏ワザ」</strong>をプレゼント！
+              問い合わせいただいた方に、<br></br><strong className="bg-marker-yellow font-bold"><strong className="text-brand-red text-[1.3em] font-bold">無料で</strong><strong>「反応率が2倍以上になる裏ワザ」</strong>をプレゼント！</strong>
             </p>
             <div className="grid md:grid-cols-[60%_40%] gap-8 mb-6">
-              <div className="text-left border border-gray-300 rounded-lg p-4">
+              <div className="text-left border border-gray-300 rounded-lg p-4 flex flex-col justify-center">
                 <h4 className="font-bold text-gray-900 mb-2">内容一例</h4>
                 <div className="grid grid-cols-1 gap-1.5 text-base text-gray-600">
                   <div className="flex items-center justify-start">
@@ -698,7 +698,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">他サービスと比較</h3>
-            <p className="text-xl text-gray-600">他社と比べても費用の割に営業のクオリティ・スピードともに高いところが強みとなっています。</p>
+            <p className="text-xl text-gray-600">他社と比べても<strong className="bg-marker-yellow font-bold">費用の割に営業のクオリティ・スピードともに高い</strong>ところが強みとなっています。</p>
           </div>
           
           {/* Table Space for Future Use */}
@@ -727,7 +727,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">提供価値</h3>
-            <p className="text-xl text-gray-600">初期準備（営業戦略とリストの取得、文章作成等）とアプローチをお任せ頂くことで、御社はコア業務に集中できるようになります。</p>
+            <p className="text-xl text-gray-600">初期準備（営業戦略とリストの取得、文章作成等）とアプローチをお任せ頂くことで、<strong className="bg-marker-yellow font-bold">御社はコア業務に集中できる</strong>ようになります。</p>
           </div>
           
           {/* Image Space */}
@@ -809,8 +809,8 @@ export default function Home() {
                   <p className="text-sm text-gray-600">従業員数: 50名</p>
                 </div>
               </div>
-              <blockquote className="text-gray-700 italic mb-4">
-                <strong>「CPAがわかりやすく、安心して頼める。課金形態が他の業者は作業ベース、bizdataさんは結果ベースなので、結果にコミットしてくれる。
+              <blockquote className="text-gray-700 mb-4">
+                <strong>「CPAがわかりやすく、安心して頼める。課金形態が他の業者は作業ベース、<strong className="bg-marker-yellow font-bold">bizdataさんは結果ベース</strong>なので、結果にコミットしてくれる。
                 成果報酬だから安心して任せられるし、実際に費用対効果がはっきり出ている点が他社との決定的な違いでした。」</strong>
               </blockquote>
             </div>
@@ -825,8 +825,8 @@ export default function Home() {
                   <p className="text-sm text-gray-600">従業員数: 30名</p>
                 </div>
               </div>
-              <blockquote className="text-gray-700 italic mb-4">
-                <strong>「営業戦略自体も詳しく相談に乗っていただけた。色々な業界や商材のユースケースを提案していただき、自分たちだけではできなかった新規開拓に成功した。」</strong>
+              <blockquote className="text-gray-700 mb-4">
+                <strong>「営業戦略自体も詳しく相談に乗っていただけた。<strong className="bg-marker-yellow font-bold">色々な業界や商材のユースケースを提案</strong>していただき、自分たちだけではできなかった新規開拓に成功した。」</strong>
               </blockquote>
             </div>
 
@@ -840,8 +840,8 @@ export default function Home() {
                   <p className="text-sm text-gray-600">従業員数: 80名</p>
                 </div>
               </div>
-              <blockquote className="text-gray-700 italic mb-4">
-                <strong>「文章をすごい丁寧に準備してくれた。おかげで、開始翌週からすぐに反響があり、案件獲得につながった。
+              <blockquote className="text-gray-700 mb-4">
+                <strong>「文章をすごい丁寧に準備してくれた。おかげで、<strong className="bg-marker-yellow font-bold">開始翌週からすぐに反響があり</strong>、案件獲得につながった。
                 わざわざフォームから返信頂いたお客さんは基本的に興味を持ってくれる人たちなので商談の質も高く、本格導入につながりやすかった。」</strong>
               </blockquote>
             </div>
@@ -856,9 +856,9 @@ export default function Home() {
                   <p className="text-sm text-gray-600">従業員数: 120名</p>
                 </div>
               </div>
-              <blockquote className="text-gray-700 italic mb-4">
-                <strong>「文章をすごい丁寧に準備してくれた。おかげで、開始翌週からすぐに反響があり、案件獲得につながった。
-                わざわざフォームから返信頂いたお客さんは基本的に興味を持ってくれる人たちなので商談の質も高く、本格導入につながりやすかった。」</strong>
+              <blockquote className="text-gray-700 mb-4">
+                <strong>一件一件のヒアリングや提案内容が的確で、<strong className="bg-marker-yellow font-bold">単なるアポ代行ではなく伴走型の営業パートナー</strong>という印象です。
+                </strong>
               </blockquote>
             </div>
           </div>
@@ -868,20 +868,20 @@ export default function Home() {
       {/* Company Section */}
       <section id="company" className="py-20 bg-brand-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-4">
+          <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-4">会社紹介</h3>
             <p className="text-xl text-white">コンサル出身の実行チームが、<strong>成果を出す営業</strong>を設計します</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <p className="text-white mb-6 leading-relaxed">
+              <p className="text-white mb-6 leading-relaxed mb-8">
                 当社合同会社bizdataは、<strong>一部上場コンサルティング会社からスピンアウト</strong>し設立されました。
                 戦略立案から実行支援まで、これまでに<strong>20社以上の営業・データ分析プロジェクト</strong>をご支援してきました。
               </p>
               
               <div className="space-y-6">
-                <div>
+                <div className="mb-8">
                   <h4 className="bg-white text-brand-blue px-2 py-1 font-black text-xl mb-3">① コンサル品質の「戦略 × 実行」アプローチ</h4>
                   <p className="text-white">
                     私たちは、単なる代行業ではなく、<strong>"成果が出る仕組み"を設計するチーム</strong>として活動しています。
@@ -889,7 +889,7 @@ export default function Home() {
                   </p>
                 </div>
                 
-                <div>
+                <div className="mb-8">
                   <h4 className="bg-white text-brand-blue px-2 py-1 font-black text-xl mb-3">② 現場から生まれた「本当に使えるノウハウ」</h4>
                   <p className="text-white">
                     私たちが提供している仕組みや文章テンプレートは、実際に<strong>数多くのプロジェクトの中で、成果が出たものだけを体系化</strong>したノウハウです。
@@ -897,7 +897,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div>
+                <div className="mb-8">
                   <h4 className="bg-white text-brand-blue px-2 py-1 font-black text-xl mb-3">③ モットー：「顧客に本質的な価値を届ける」</h4>
                   <p className="text-white">
                     「代行して終わり」ではなく、
@@ -1084,7 +1084,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. どのような業種でも対応できますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. BtoBであれば全業界で対応可能です。弊社で保有するリスト120万社の他、新規ですべての業界の情報を取得可能です(一般消費者へのアプローチは行っておりませんのでご了承ください)</p>
+                <p className="text-gray-700">A. BtoBであれば全業界で対応可能です。弊社で保有するリスト200万社の他、新規ですべての業界の情報を取得可能です(一般消費者へのアプローチは行っておりませんのでご了承ください)</p>
               </div>
             </div>
 
@@ -1136,7 +1136,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h4 className="text-xl font-bold mb-4" style={{ fontFamily: 'Pacifico, serif' }}>logo</h4>
               <p className="text-gray-400 text-sm">
                 成果報酬型の営業代行サービス。<br />
                 <strong>初期費用0円</strong>で確実に結果を出します。

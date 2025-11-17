@@ -13,6 +13,9 @@ export default {
           'brand-red': '#B91C1C', // red-700相当
           'brand-red-light': '#FEE2E2', // red-200相当
         },
+        backgroundImage: {
+          'marker-yellow': 'linear-gradient(transparent 50%, rgba(255,235,59,0.6) 50%)',
+        },
         screens: {
           // スマホ/PC判定基準をmd（768px）に統一
           'mobile': '0px',
