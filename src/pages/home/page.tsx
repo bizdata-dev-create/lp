@@ -127,7 +127,7 @@ export default function Home() {
       <section id="results" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">bizdata式フォーム営業の圧倒的な実績</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">bizdata式フォーム営業<br className="md:hidden" />の圧倒的な実績</h3>
             <p className="text-xl text-gray-600">数々の企業で確実な成果を実現</p>
           </div>
           
@@ -220,9 +220,9 @@ export default function Home() {
       <section id="service" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">フォーム営業が優れている理由</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">フォーム営業と他営業<br className="md:hidden" />手法の比較</h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              フォーム営業は決裁者の目に届きやすく、興味の高い人しか返信しないため、受注率の高い営業手法となっております。
+              フォーム営業は決裁者の目に届きやすく、興味の高い人のみ返信するため、受注率の高い営業手法です。
             </p>
           </div>
           
@@ -339,7 +339,7 @@ export default function Home() {
                   特徴①
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">
-                  <strong>初期費用ゼロ</strong>。成果報酬だけの安心料金
+                  <strong>初期費用ゼロ</strong>。成果報酬<br className="md:hidden" />だけの安心料金
                 </h4>
                 <p className="text-gray-900 mb-6 leading-relaxed">
                   一般的な営業代行や広告のように、<strong className="bg-marker-yellow font-bold">初期費用として数十万円の費用を払う必要は「一切」ありません</strong>。
@@ -375,7 +375,7 @@ export default function Home() {
                   特徴②
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">
-                  量・質ともに圧倒的な営業リストを保有
+                  量・質ともに圧倒的な<br className="md:hidden" />営業リストを保有
                 </h4>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   営業の成果を決める最大の要因は、「<strong>誰に届けるか</strong>」。
@@ -416,7 +416,7 @@ export default function Home() {
             {/* Media List Section - Full width below Feature 2 */}
             <div className="w-full">
               <div className="bg-brand-blue-light p-8 rounded-lg border-2 border-brand-blue">
-                <h5 className="font-semibold text-gray-900 mb-6 text-center text-xl">リストアップできる媒体例（ご希望の媒体を付け加え可能）</h5>
+                <h5 className="font-semibold text-gray-900 mb-6 text-center text-xl">リストアップできる媒体例<br/><span className="text-sm">（ご希望の媒体を付け加え可能）</span></h5>
                 
                 <div className="grid md:grid-cols-3 gap-8">
                   <div>
@@ -491,7 +491,7 @@ export default function Home() {
                   特徴③
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">
-                  特典としてリストを無償提供
+                  特典としてリストを<br className="md:hidden" />無償提供
                 </h4>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   例えば自社でテレアポ営業をしたい場合、DMやFAXを送付したい場合など、 
@@ -499,7 +499,7 @@ export default function Home() {
                 </p>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-                  <h5 className="font-semibold text-gray-900 mb-4">🔹 <strong className="bg-marker-yellow font-bold">完全無料＆取得件数は無制限</strong>でリスト提供</h5>
+                  <h5 className="font-semibold text-gray-900 mb-4"> <strong className="bg-marker-yellow font-bold">完全無料＆取得件数は無制限</strong>でリスト提供</h5>
                   <p className="text-gray-600 text-sm mb-4">
                     弊社のお問合せフォーム送信代行をご利用いただいているお客様であれば、完全無料＆取得件数は無制限で「URL、電話番号、FAX番号、住所などの情報を削除していない」営業リストを取得できますので、 
                     お問合せフォーム営業以外の様々な営業手段で弊社のリストをご利用いただけます。
@@ -515,7 +515,7 @@ export default function Home() {
                   特徴④
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">
-                  <strong>営業戦略の見直し</strong>まで、一緒に考えます
+                  <strong>営業戦略の見直し</strong>まで、<br className="md:hidden" />一緒に考えます
                 </h4>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   どんなに良い営業手法を使っても、「戦略の方向性」が間違っていれば<strong>成果は出ません</strong>。
@@ -523,7 +523,7 @@ export default function Home() {
                 </p>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-                  <h5 className="font-semibold text-gray-900 mb-4">🔹 ご契約前でも、営業戦略のご相談を<strong>無料で実施</strong></h5>
+                  <h5 className="font-semibold text-gray-900 mb-4"> ご契約前でも、営業戦略のご相談を<strong>無料で実施</strong></h5>
                   <div className="space-y-2 text-sm text-gray-600">
                     <div className="flex items-center">
                       <i className="ri-check-line text-green-500 mr-2"></i>
@@ -573,7 +573,7 @@ export default function Home() {
                   <i className="ri-edit-line text-orange-600 text-2xl"></i>
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">
-                  一社一社に「刺さる」営業文を<strong>作成</strong>します
+                  一社一社に「刺さる」<br className="md:hidden" />営業文を<strong>作成</strong>します
                 </h4>
                 <p className="text-gray-600 mb-6">
                   営業の反応率を決めるのは、「<strong>相手にとって自分ごとに感じられるか</strong>」。
@@ -610,7 +610,7 @@ export default function Home() {
                   <i className="ri-user-line text-teal-600 text-2xl"></i>
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">
-                  最終的に人が確認・送信。品質を守ります。
+                  人が最後に確認・送信。<br className="md:hidden" />品質を守ります。
                 </h4>
                 <p className="text-gray-600 mb-6">
                   フォーム営業は、自動化すれば簡単に見えます。しかし実際には、フォーム構造の違いや入力制限、送信エラーなど、
@@ -619,7 +619,7 @@ export default function Home() {
               </div>
               
               <div className="space-y-4">
-                <h5 className="font-semibold text-gray-900">🔹 システムだけでは気づけない"わずかな違い"を人が判断</h5>
+                <h5 className="font-semibold text-gray-900"> システムだけでは気づけない"わずかな違い"を人が判断</h5>
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center">
                     <i className="ri-check-line text-green-500 mr-2"></i>
@@ -753,7 +753,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-brand-blue-light to-teal-50 rounded-lg p-8 text-center border-4 border-blue-600">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-brand-blue-light rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                  <i className="ri-target-line text-brand-blue text-lg"></i>
+                  <i className="ri-arrow-right-line text-brand-blue text-lg"></i>
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">初期準備</h4>
               </div>
