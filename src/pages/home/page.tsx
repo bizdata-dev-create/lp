@@ -56,7 +56,7 @@ export default function Home() {
               <a href="#benefits" className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">当サービスの特徴</a>
               <a href="#company" className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">会社概要</a>
             </nav>
-            <a 
+            <a id="cta_header"
               href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
               target="_blank"
               rel="noopener noreferrer"
@@ -113,6 +113,7 @@ export default function Home() {
               </div>
             </div>
             <a 
+              id="cta_special_offer_1"
               href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
               target="_blank"
               rel="noopener noreferrer"
@@ -683,6 +684,7 @@ export default function Home() {
               </div>
             </div>
             <a 
+              id="cta_special_offer_2"
               href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
               target="_blank"
               rel="noopener noreferrer"
@@ -1121,6 +1123,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
+              id="cta_last_section"
               href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
               target="_blank"
               rel="noopener noreferrer"
@@ -1161,12 +1164,13 @@ export default function Home() {
             <div>
               <h5 className="font-semibold mb-4">お問い合わせ</h5>
               <a 
+                id="cta_footer"
                 href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand-red text-white px-6 py-2 rounded-lg hover:bg-brand-red/90 transition-colors text-sm whitespace-nowrap cursor-pointer mb-4 inline-block"
               >
-                お問い合わせフォーム
+                お問い合わせ
               </a>
               <div className="text-sm text-gray-400">
                 <p>営業時間: 平日 9:00-18:00</p>
