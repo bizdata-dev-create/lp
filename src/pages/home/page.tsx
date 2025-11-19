@@ -224,7 +224,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">フォーム営業と他営業<br className="md:hidden" />手法の比較</h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              フォーム営業は決裁者の目に届きやすく、興味の高い人のみ返信するため、受注率の高い営業手法です。
+              フォーム営業は<strong className="bg-marker-yellow font-bold">決裁者の目に届きやすく、興味の高い人のみ返信する</strong>ため、受注率の高い営業手法です。
             </p>
           </div>
           
