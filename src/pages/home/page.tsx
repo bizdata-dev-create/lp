@@ -637,7 +637,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 mt-4">
-                  AIや自動ツールでは止まってしまう部分を、専門スタッフが一件ずつ確認・再送信。
+                  AIや自動ツールでは止まってしまう部分を、<strong className="bg-marker-yellow font-bold">専門スタッフが一件ずつ確認・再送信</strong>。
                   これにより、<strong>品質を守る</strong>ようにしております。
                   これにより誤送信等による<strong>イメージダウンを防ぐ</strong>ことができます。
                 </p>
