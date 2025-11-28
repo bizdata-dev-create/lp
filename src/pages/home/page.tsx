@@ -15,6 +15,19 @@ import compareTableMobile from '../../img/compare_table_mobile.jpg';
 import compareTablePC from '../../img/compare_table_pc.jpg';
 import benefitImage from '../../img/benfit.jpg';
 import ryoImage from '../../img/ryo.jpg';
+import {
+  ArrowRightIcon,
+  BarChartIcon,
+  CheckIcon,
+  CloseIcon,
+  EditIcon,
+  FileTextIcon,
+  GraduationCapIcon,
+  SendPlaneIcon,
+  ShieldCheckIcon,
+  TimeIcon,
+  UserIcon,
+} from '../../components/icons';
 
 export default function Home() {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
@@ -41,7 +54,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white font-['Noto_Sans_JP']">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-40">
 
@@ -84,22 +97,22 @@ export default function Home() {
               <span className="text-orange-500">🎁 お問い合わせ特典</span>
             </h3>
             <p className="text-xl text-gray-700 mb-6 text-left">
-              問い合わせいただいた方に、<br></br><strong className="bg-marker-yellow font-bold"><strong className="text-brand-red text-[1.3em] font-bold">無料で</strong><strong>「反応率が2倍以上になる裏ワザ」</strong>をプレゼント！</strong>
+              問い合わせいただいた方に、<br></br><strong className="bg-marker-yellow font-bold"><strong className="text-brand-red text-[1.3em] font-bold">無料で</strong><strong>「営業戦略の相談」と「反応率が3倍以上になる裏ワザ」</strong>をプレゼント！</strong>
             </p>
             <div className="grid md:grid-cols-[60%_40%] gap-8 mb-6">
               <div className="text-left border border-gray-300 rounded-lg p-4 flex flex-col justify-center">
                 <h4 className="font-bold text-gray-900 mb-2">内容一例</h4>
                 <div className="grid grid-cols-1 gap-1.5 text-base text-gray-600">
                   <div className="flex items-center justify-start">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     実はよく効く「〇〇〇」「△△△」チャネルの活用法
                   </div>
                   <div className="flex items-center justify-start">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     返信をもらいやすい文章の"型"
                   </div>
                   <div className="flex items-center justify-start">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     実際に使われた文章・送信結果の事例集
                   </div>
                 </div>
@@ -259,7 +272,7 @@ export default function Home() {
             <div className="flex-1 bg-white rounded-lg p-6 shadow-md border border-gray-200">
               <div className="flex items-center mb-3">
                 <div className="flex-shrink-0 w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-lg mr-6">
-                  <i className="ri-user-line text-white"></i>
+                  <UserIcon className="w-5 h-5 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">会社・商材情報のご共有</h4>
               </div>
@@ -276,7 +289,7 @@ export default function Home() {
             <div className="flex-1 bg-white rounded-lg p-6 shadow-md border border-gray-200">
               <div className="flex items-center mb-3">
                 <div className="flex-shrink-0 w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-lg mr-6">
-                  <i className="ri-file-text-line text-white"></i>
+                  <FileTextIcon className="w-5 h-5 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">リストと文章の作成</h4>
               </div>
@@ -292,7 +305,7 @@ export default function Home() {
             <div className="flex-1 bg-white rounded-lg p-6 shadow-md border border-gray-200">
               <div className="flex items-center mb-3">
                 <div className="flex-shrink-0 w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-lg mr-6">
-                  <i className="ri-send-plane-line text-white"></i>
+                  <SendPlaneIcon className="w-5 h-5 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">目標達成までアプローチ</h4>
               </div>
@@ -308,7 +321,7 @@ export default function Home() {
             <div className="flex-1 bg-white rounded-lg p-6 shadow-md border border-gray-200">
               <div className="flex items-center mb-3">
                 <div className="flex-shrink-0 w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-lg mr-6">
-                  <i className="ri-bar-chart-line text-white"></i>
+                  <BarChartIcon className="w-5 h-5 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">定期的に報告</h4>
               </div>
@@ -528,11 +541,11 @@ export default function Home() {
                   <h5 className="font-semibold text-gray-900 mb-4"> ご契約前でも、営業戦略のご相談を<strong>無料で実施</strong></h5>
                   <div className="space-y-2 text-sm text-gray-600">
                     <div className="flex items-center">
-                      <i className="ri-check-line text-green-500 mr-2"></i>
+                      <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                       「今の営業のやり方でいいのか分からない」
                     </div>
                     <div className="flex items-center">
-                      <i className="ri-check-line text-green-500 mr-2"></i>
+                      <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                       「どの業界を狙うのがいいか見直したい」
                     </div>
                   </div>
@@ -572,7 +585,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border-2 border-orange-600">
               <div className="text-center mb-8">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="ri-edit-line text-orange-600 text-2xl"></i>
+                  <EditIcon className="w-8 h-8 text-orange-600" />
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">
                   一社一社に「刺さる」<br className="md:hidden" />営業文を<strong>作成</strong>します
@@ -587,15 +600,15 @@ export default function Home() {
                 <h5 className="font-semibold text-gray-900">一社一社に<strong className="bg-marker-yellow font-bold">営業文をカスタマイズ</strong></h5>
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     企業サイトの内容（事業内容・強み・代表メッセージなど）
                   </div>
                   <div className="flex items-center">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     IR・有価証券報告書等
                   </div>
                   <div className="flex items-center">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     企業の最新動向（採用・展示会出航など）
                   </div>
                 </div>
@@ -609,7 +622,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 border-2 border-green-600">
               <div className="text-center mb-8">
                 <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="ri-user-line text-teal-600 text-2xl"></i>
+                  <UserIcon className="w-8 h-8 text-teal-600" />
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">
                   人が最後に確認・送信。<br className="md:hidden" />品質を守ります。
@@ -624,15 +637,15 @@ export default function Home() {
                 <h5 className="font-semibold text-gray-900"> システムだけでは気づけない"わずかな違い"を人が判断</h5>
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     送信フォームの項目が特殊な企業
                   </div>
                   <div className="flex items-center">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     セキュリティが厳しく、自動送信をブロックする企業
                   </div>
                   <div className="flex items-center">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     住所・電話番号など、独自形式を求めるフォーム
                   </div>
                 </div>
@@ -655,22 +668,22 @@ export default function Home() {
               <span className="text-orange-500">🎁 お問い合わせ特典</span>
             </h3>
             <p className="text-xl text-gray-700 mb-6 text-left">
-              問い合わせいただいた方に、<br></br><strong className="bg-marker-yellow font-bold"><strong className="text-brand-red text-[1.3em] font-bold">無料で</strong><strong>「反応率が2倍以上になる裏ワザ」</strong>をプレゼント！</strong>
+              問い合わせいただいた方に、<br></br><strong className="bg-marker-yellow font-bold"><strong className="text-brand-red text-[1.3em] font-bold">無料で</strong><strong>「営業戦略の相談」と「反応率が3倍以上になる裏ワザ」</strong>をプレゼント！</strong>
             </p>
             <div className="grid md:grid-cols-[60%_40%] gap-8 mb-6">
               <div className="text-left border border-gray-300 rounded-lg p-4 flex flex-col justify-center">
                 <h4 className="font-bold text-gray-900 mb-2">内容一例</h4>
                 <div className="grid grid-cols-1 gap-1.5 text-base text-gray-600">
                   <div className="flex items-center justify-start">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     実はよく効く「〇〇〇」「△△△」チャネルの活用法
                   </div>
                   <div className="flex items-center justify-start">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     返信をもらいやすい文章の"型"
                   </div>
                   <div className="flex items-center justify-start">
-                    <i className="ri-check-line text-green-500 mr-2"></i>
+                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     実際に使われた文章・送信結果の事例集
                   </div>
                 </div>
@@ -756,7 +769,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-brand-blue-light to-teal-50 rounded-lg p-8 text-center border-4 border-blue-600">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-brand-blue-light rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                  <i className="ri-arrow-right-line text-brand-blue text-lg"></i>
+                  <ArrowRightIcon className="w-4 h-4 text-brand-blue" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">初期準備</h4>
               </div>
@@ -768,7 +781,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-8 text-center border-4 border-green-600">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                  <i className="ri-shield-check-line text-green-600 text-lg"></i>
+                  <ShieldCheckIcon className="w-4 h-4 text-green-600" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">アプローチ</h4>
               </div>
@@ -780,7 +793,7 @@ export default function Home() {
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-8 text-center border-4 border-pink-600">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
-                  <i className="ri-time-line text-purple-600 text-lg"></i>
+                  <TimeIcon className="w-4 h-4 text-purple-600" />
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">その他（全体）</h4>
               </div>
@@ -805,7 +818,7 @@ export default function Home() {
             <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                  <i className="ri-user-line text-teal-600 text-xl"></i>
+                  <UserIcon className="w-6 h-6 text-teal-600" />
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900">製造業 A社様</h5>
@@ -821,7 +834,7 @@ export default function Home() {
             <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-brand-blue-light rounded-full flex items-center justify-center mr-4">
-                  <i className="ri-user-line text-brand-blue text-xl"></i>
+                  <UserIcon className="w-6 h-6 text-brand-blue" />
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900 ">IT企業 B社様</h5>
@@ -836,7 +849,7 @@ export default function Home() {
             <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                  <i className="ri-user-line text-purple-600 text-xl"></i>
+                  <UserIcon className="w-6 h-6 text-purple-600" />
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900">人材サービス C社様</h5>
@@ -852,7 +865,7 @@ export default function Home() {
             <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                  <i className="ri-user-line text-orange-600 text-xl"></i>
+                  <UserIcon className="w-6 h-6 text-orange-600" />
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900">建設業 D社様</h5>
@@ -950,7 +963,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                      <i className="ri-graduation-cap-line text-teal-600"></i>
+                      <GraduationCapIcon className="w-4 h-4 text-teal-600" />
                     </div>
                     <div>
                       <h6 className="font-medium text-gray-900">チーム構成</h6>
@@ -959,7 +972,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                      <i className="ri-bar-chart-line text-teal-600"></i>
+                      <BarChartIcon className="w-4 h-4 text-teal-600" />
                     </div>
                     <div>
                       <h6 className="font-medium text-gray-900">アプローチ</h6>
@@ -1194,7 +1207,7 @@ export default function Home() {
                   onClick={() => setIsContactFormOpen(false)}
                   className="text-gray-400 hover:text-gray-600 cursor-pointer"
                 >
-                  <i className="ri-close-line text-2xl"></i>
+                  <CloseIcon className="w-6 h-6" />
                 </button>
               </div>
               
