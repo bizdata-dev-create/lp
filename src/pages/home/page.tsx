@@ -13,8 +13,8 @@ import compareTableFormMobile from '../../img/compare_table_form_mobile.jpg';
 import compareTableFormPC from '../../img/compare_table_form_pc.jpg';
 import compareTableMobile from '../../img/compare_table_mobile.jpg';
 import compareTablePC from '../../img/compare_table_pc.jpg';
-import benefitImage from '../../img/benfit.jpg';
 import ryoImage from '../../img/ryo.jpg';
+import SpecialOffer from '../../components/SpecialOffer';
 import {
   ArrowRightIcon,
   BarChartIcon,
@@ -38,6 +38,14 @@ export default function Home() {
     phone: '',
     message: ''
   });
+
+  // Special Offer の共通データ
+  const specialOfferBenefits = [
+    '本物の営業代行業者の見極め方',
+    '高品質なLP作成費用を1/10にする方法',
+    '御社に最適な営業ルートの選び方',
+    '反応率を200%以上に上げる文章の"型"'
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,10 +72,10 @@ export default function Home() {
                 <img src={logoDeeper} alt="logo" className="h-12 scale-[0.68] md:scale-[0.85]" />
               </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#service" className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">サービス概要</a>
-              <a href="#results" className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">実績</a>
-              <a href="#benefits" className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">当サービスの特徴</a>
-              <a href="#company" className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">会社概要</a>
+              <a href="#service" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">サービス概要</a>
+              <a href="#results" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">実績</a>
+              <a href="#benefits" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">当サービスの特徴</a>
+              <a href="#company" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">会社概要</a>
             </nav>
             <a id="cta_schedule_header"
               href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
@@ -100,60 +108,17 @@ export default function Home() {
       </section>
 
       {/* Special Offer */}
-      <section className="bg-brand-blue-light py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-lg p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              <span className="text-orange-500">🎁 お問い合わせ特典</span>
-            </h3>
-            <p className="text-xl text-gray-700 mb-6 text-left">
-              問い合わせいただいた方に、<br></br><strong className="bg-marker-yellow font-bold"><strong className="text-brand-red text-[1.3em] font-bold">無料で</strong><strong>「営業戦略の相談」と「反応率が3倍以上になる裏ワザ」</strong>をプレゼント！</strong>
-            </p>
-            <div className="grid md:grid-cols-[60%_40%] gap-8 mb-6">
-              <div className="text-left border border-gray-300 rounded-lg p-4 flex flex-col justify-center">
-                <h4 className="font-bold text-gray-900 mb-2">内容一例</h4>
-                <div className="grid grid-cols-1 gap-1.5 text-base text-gray-600">
-                  <div className="flex items-center justify-start">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
-                    実はよく効く「〇〇〇」「△△△」チャネルの活用法
-                  </div>
-                  <div className="flex items-center justify-start">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
-                    返信をもらいやすい文章の"型"
-                  </div>
-                  <div className="flex items-center justify-start">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
-                    実際に使われた文章・送信結果の事例集
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center mr-4">
-                <img 
-                  src={benefitImage}
-                  alt="特典資料"
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-            </div>
-            <a 
-              id="cta_schedule_special_offer_1"
-              href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-brand-red text-white px-8 py-2 rounded-lg text-lg font-bold hover:bg-brand-red/90 transition-colors whitespace-nowrap cursor-pointer inline-block"
-            >
-              お問い合わせ
-            </a>
-          </div>
-        </div>
-      </section>
+      <SpecialOffer 
+        ctaId="cta_schedule_special_offer_1"
+        benefitItems={specialOfferBenefits}
+      />
 
       {/* Results Section */}
       <section id="results" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">bizdata式フォーム営業<br className="md:hidden" />の圧倒的な実績</h3>
-            <p className="text-xl text-gray-600">数々の企業で確実な成果を実現</p>
+            <p className="text-xl text-gray-900">数々の企業で確実な成果を実現</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -166,20 +131,20 @@ export default function Home() {
                   リード獲得数
                 </div>
               </div>
-              <blockquote className="text-gray-700 italic mb-6">
+              <blockquote className="text-gray-900 italic mb-6">
                 <strong>「見逃していた層からも反応があり、営業活動の勢いがつきました。」</strong>
               </blockquote>
               <div className="space-y-4">
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">課題：</h5>
-                  <p className="text-sm text-gray-600">テレアポ中心の新規開拓で、在宅勤務の広がりにより電話がつながらず、メール営業も反応が少なくリード獲得数が減少。</p>
+                  <p className="text-sm text-gray-900">テレアポ中心の新規開拓で、在宅勤務の広がりにより電話がつながらず、メール営業も反応が少なくリード獲得数が減少。</p>
                 </div>
                 <div className="flex items-center justify-center my-4">
                   <div className="w-0 h-0 border-l-[100px] border-l-transparent border-r-[100px] border-r-transparent border-t-[20px] border-t-gray-400"></div>
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">導入後：</h5>
-                  <p className="text-sm text-gray-600">フォーム送信代行により企業の公式サイト経由で確実に担当者へ情報を届け、<strong>リード獲得数418％向上</strong>を実現。</p>
+                  <p className="text-sm text-gray-900">フォーム送信代行により企業の公式サイト経由で確実に担当者へ情報を届け、<strong>リード獲得数418％向上</strong>を実現。</p>
                 </div>
               </div>
             </div>
@@ -193,20 +158,20 @@ export default function Home() {
                   新規受注数
                 </div>
               </div>
-              <blockquote className="text-gray-700 italic mb-6">
+              <blockquote className="text-gray-900 italic mb-6">
                 <strong>「営業リソースを削減しながら、質の高い商談を増やすことができた。」</strong>
               </blockquote>
               <div className="space-y-4">
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">課題：</h5>
-                  <p className="text-sm text-gray-600">紹介や展示会頼みで新規案件獲得に波があり、テレアポでは時間と人件費がかかり費用対効果が合わない状況。</p>
+                  <p className="text-sm text-gray-900">紹介や展示会頼みで新規案件獲得に波があり、テレアポでは時間と人件費がかかり費用対効果が合わない状況。</p>
                 </div>
                 <div className="flex items-center justify-center my-4">
                   <div className="w-0 h-0 border-l-[100px] border-l-transparent border-r-[100px] border-r-transparent border-t-[20px] border-t-gray-400"></div>
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">導入後：</h5>
-                  <p className="text-sm text-gray-600">ターゲット業種に特化した送信リストを構築し、確度の高い商談が増加。<strong>新規受注数約2.1倍</strong>を達成。</p>
+                  <p className="text-sm text-gray-900">ターゲット業種に特化した送信リストを構築し、確度の高い商談が増加。<strong>新規受注数約2.1倍</strong>を達成。</p>
                 </div>
               </div>
             </div>
@@ -220,20 +185,20 @@ export default function Home() {
                   新規顧客売上
                 </div>
               </div>
-              <blockquote className="text-gray-700 italic mb-6">
+              <blockquote className="text-gray-900 italic mb-6">
                 <strong>「紹介だけに頼らない"攻めの営業"ができるようになりました。」</strong>
               </blockquote>
               <div className="space-y-4">
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">課題：</h5>
-                  <p className="text-sm text-gray-600">既存顧客の紹介頼みで売上が頭打ち。フォーム営業を試したがノウハウがなく結果が出せない状況。</p>
+                  <p className="text-sm text-gray-900">既存顧客の紹介頼みで売上が頭打ち。フォーム営業を試したがノウハウがなく結果が出せない状況。</p>
                 </div>
                 <div className="flex items-center justify-center my-4">
                   <div className="w-0 h-0 border-l-[100px] border-l-transparent border-r-[100px] border-r-transparent border-t-[20px] border-t-gray-400"></div>
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">導入後：</h5>
-                  <p className="text-sm text-gray-600">営業リスト作成から送信文章作成まで全て代行し、狙った業界に効率よくアプローチ。<strong>月間売上約135％向上</strong>。</p>
+                  <p className="text-sm text-gray-900">営業リスト作成から送信文章作成まで全て代行し、狙った業界に効率よくアプローチ。<strong>月間売上約135％向上</strong>。</p>
                 </div>
               </div>
             </div>
@@ -246,7 +211,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">フォーム営業と他営業<br className="md:hidden" />手法の比較</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-900 max-w-3xl mx-auto">
               フォーム営業は<strong className="bg-marker-yellow font-bold">決裁者の目に届きやすく、興味の高い人のみ返信する</strong>ため、受注率の高い営業手法です。
             </p>
           </div>
@@ -286,9 +251,9 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">会社・商材情報のご共有</h4>
               </div>
-              <p className="text-gray-600 mb-2">・御社の営業戦略や商材の強み、顧客の理解についての認識合わせを行います。</p>
-              <p className="text-gray-600 mb-2">・送信NGリスト等についてもご共有頂きます。</p>
-              <p className="text-gray-600">・御社の労力は基本的にここのみとなります</p>
+              <p className="text-gray-900 mb-2">・御社の営業戦略や商材の強み、顧客の理解についての認識合わせを行います。</p>
+              <p className="text-gray-900 mb-2">・送信NGリスト等についてもご共有頂きます。</p>
+              <p className="text-gray-900">・御社の労力は基本的にここのみとなります</p>
             </div>
             
             <div className="flex justify-center my-4">
@@ -303,8 +268,8 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">リストと文章の作成</h4>
               </div>
-              <p className="text-gray-600 mb-2">・御社の商材に最適リスト、及び営業文章をこちらから作成・提案します。</p>
-              <p className="text-gray-600">・既存のリストや文章がある場合は持ち寄っていただいても問題ありません。改善提案もできます。</p>
+              <p className="text-gray-900 mb-2">・御社の商材に最適リスト、及び営業文章をこちらから作成・提案します。</p>
+              <p className="text-gray-900">・既存のリストや文章がある場合は持ち寄っていただいても問題ありません。改善提案もできます。</p>
             </div>
             
             <div className="flex justify-center my-4">
@@ -319,8 +284,8 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">目標達成までアプローチ</h4>
               </div>
-              <p className="text-gray-600 mb-2">・リストと文章について、御社の了承をいただけ次第、送信をすぐに開始します。</p>
-              <p className="text-gray-600">・目標が達成されるまで送信を続けます</p>
+              <p className="text-gray-900 mb-2">・リストと文章について、御社の了承をいただけ次第、送信をすぐに開始します。</p>
+              <p className="text-gray-900">・目標が達成されるまで送信を続けます</p>
             </div>
             
             <div className="flex justify-center my-4">
@@ -335,7 +300,7 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">定期的に報告</h4>
               </div>
-              <p className="text-gray-600">・隔週~月1で営業状況及び改善提案について報告させて頂きます。返信率を高める施策を一緒に考えます。</p>
+              <p className="text-gray-900">・隔週~月1で営業状況及び改善提案について報告させて頂きます。返信率を高める施策を一緒に考えます。</p>
             </div>
           </div>
         </div>
@@ -346,7 +311,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">4つの特徴</h3>
-            <p className="text-xl text-gray-600">なぜ選ばれるのか</p>
+            <p className="text-xl text-gray-900">なぜ選ばれるのか</p>
           </div>
           
           <div className="space-y-16">
@@ -374,19 +339,19 @@ export default function Home() {
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="bg-white p-4 rounded-lg shadow-md text-center border-2 border-brand-red">
                     <div className="text-2xl font-bold text-brand-red">0円</div>
-                    <div className="text-sm text-gray-600 font-bold">初期費用</div>
+                    <div className="text-sm text-gray-900 font-bold">初期費用</div>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow-md text-center border-2 border-brand-red">
                     <div className="text-2xl font-bold text-brand-red">0円</div>
-                    <div className="text-sm text-gray-600 font-bold">リスト作成</div>
+                    <div className="text-sm text-gray-900 font-bold">リスト作成</div>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow-md text-center border-2 border-brand-red">
                     <div className="text-2xl font-bold text-brand-red">0円</div>
-                    <div className="text-sm text-gray-600 font-bold">文章作成<br />（何度でも）</div>
+                    <div className="text-sm text-gray-900 font-bold">文章作成<br />（何度でも）</div>
                   </div>
                 </div>
                 
-                <p className="text-gray-600">
+                <p className="text-gray-900">
                   営業に必要な準備はすべて弊社にお任せください。
                   お客様にご負担いただくのは、<strong>送信完了分の料金（1通あたり15円〜）のみ</strong>。
                 </p>
@@ -402,7 +367,7 @@ export default function Home() {
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">
                   量・質ともに圧倒的な<br className="md:hidden" />営業リストを保有
                 </h4>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-900 mb-6 leading-relaxed">
                   営業の成果を決める最大の要因は、「<strong>誰に届けるか</strong>」。
                   どれだけ良い文章を書いても、送る相手がズレていれば<strong>結果は出ません</strong>。
                 </p>
@@ -412,19 +377,19 @@ export default function Home() {
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
                       <h6 className="font-medium text-gray-900 mb-2">業種・業界別</h6>
-                      <p className="text-gray-600">IT、製造、建設、飲食、美容、人材など</p>
+                      <p className="text-gray-900">IT、製造、建設、飲食、美容、人材など</p>
                     </div>
                     <div>
                       <h6 className="font-medium text-gray-900 mb-2">企業規模別</h6>
-                      <p className="text-gray-600">従業員数・資本金・エリア</p>
+                      <p className="text-gray-900">従業員数・資本金・エリア</p>
                     </div>
                     <div>
                       <h6 className="font-medium text-gray-900 mb-2">ニーズ別</h6>
-                      <p className="text-gray-600">採用中・店舗拡大中・検討中など</p>
+                      <p className="text-gray-900">採用中・店舗拡大中・検討中など</p>
                     </div>
                     <div>
                       <h6 className="font-medium text-gray-900 mb-2">特殊条件</h6>
-                      <p className="text-gray-600">新規法人登記企業・広告出稿企業など</p>
+                      <p className="text-gray-900">新規法人登記企業・広告出稿企業など</p>
                     </div>
                   </div>
                 </div>
@@ -446,7 +411,7 @@ export default function Home() {
                 <div className="grid md:grid-cols-3 gap-8">
                   <div>
                   <h6 className="font-medium text-gray-900 mb-4 text-lg"><span className="inline-block border-b-2 border-blue-600 pb-2 w-1/2">採用媒体</span></h6>
-                    <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
+                    <div className="grid grid-cols-2 gap-2 text-sm text-gray-900">
                       <div>リクナビ</div>
                       <div>マイナビ</div>
                       <div>リクナビNEXT</div>
@@ -469,7 +434,7 @@ export default function Home() {
 
                   <div>
                    <h6 className="font-medium text-gray-900 mb-4 text-lg"><span className="inline-block border-b-2 border-blue-600 pb-2 w-1/2">営業・PR系媒体</span></h6>
-                    <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
+                    <div className="grid grid-cols-2 gap-2 text-sm text-gray-900">
                       <div>BOXIL</div>
                       <div>LISKUL</div>
                       <div>アイミツ</div>
@@ -483,7 +448,7 @@ export default function Home() {
 
                   <div>
                   <h6 className="font-medium text-gray-900 mb-4 text-lg"><span className="inline-block border-b-2 border-blue-600 pb-2 w-1/2">業界特化媒体</span></h6>
-                    <div className="space-y-3 text-sm text-gray-700">
+                    <div className="space-y-3 text-sm text-gray-900">
                       <div>
                         <strong>①美容系媒体</strong><br />
                         ホットペッパービューティー、ヘアログ
@@ -518,14 +483,14 @@ export default function Home() {
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">
                   特典としてリストを<br className="md:hidden" /><strong className="bg-marker-yellow font-bold">無償提供</strong>
                 </h4>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-900 mb-6 leading-relaxed">
                   例えば自社でテレアポ営業をしたい場合、DMやFAXを送付したい場合など、 
                   <strong>お問合せフォーム送信以外の用途</strong>でも営業リストを作成したい場合があります。
                 </p>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
                   <h5 className="font-semibold text-gray-900 mb-4"> <strong className="bg-marker-yellow font-bold">完全無料＆取得件数は無制限</strong>でリスト提供</h5>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-900 text-sm mb-4">
                     弊社のお問合せフォーム送信代行をご利用いただいているお客様であれば、完全無料＆取得件数は無制限で「URL、電話番号、FAX番号、住所などの情報を削除していない」営業リストを取得できますので、 
                     お問合せフォーム営業以外の様々な営業手段で弊社のリストをご利用いただけます。
                   </p>
@@ -542,14 +507,14 @@ export default function Home() {
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">
                   <strong>営業戦略の見直し</strong>まで、<br className="md:hidden" />一緒に考えます
                 </h4>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-900 mb-6 leading-relaxed">
                   どんなに良い営業手法を使っても、「戦略の方向性」が間違っていれば<strong>成果は出ません</strong>。
-                  単に送信だけでなく、<strong className="bg-marker-yellow font-bold">「誰に・何を・どう伝えるべきか」という<strong>営業戦略の見直し</strong></strong>までサポートします。
+                  単に送信だけでなく、<strong className="bg-marker-yellow font-bold">「誰に・何を・どう伝えるべきか」という営業戦略の見直し</strong>までサポートします。
                 </p>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
                   <h5 className="font-semibold text-gray-900 mb-4"> ご契約前でも、営業戦略のご相談を<strong>無料で実施</strong></h5>
-                  <div className="space-y-2 text-sm text-gray-600">
+                  <div className="space-y-2 text-sm text-gray-900">
                     <div className="flex items-center">
                       <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                       「今の営業のやり方でいいのか分からない」
@@ -561,12 +526,12 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-900 mb-4">
                   上場企業から中小企業、ベンチャー企業に至るまで、<strong>数多くの企業の営業を支援</strong>してきたプロのコンサル出身メンバーが、
                   具体的な改善ポイントをわかりやすく整理します。
                 </p>
                 
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-900">
                   ※各種データ・リサーチを踏まえた戦略設計は別途有償で承ります。業界・競合分析、社内データを基に確実な営業戦略を設計いたします。
                 </p>
               </div>
@@ -587,7 +552,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">独自の強み</h3>
-            <p className="text-xl text-gray-600">他社との違い</p>
+            <p className="text-xl text-gray-900">他社との違い</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-16">
@@ -600,7 +565,7 @@ export default function Home() {
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">
                   一社一社に「刺さる」<br className="md:hidden" />営業文を<strong>作成</strong>します
                 </h4>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-900 mb-6">
                   営業の反応率を決めるのは、「<strong>相手にとって自分ごとに感じられるか</strong>」。
                   これまで同じ商品でも、相手の業種や状況に合わせて言葉を変えることで、返信・成約率が<span className="text-brand-red font-bold text-3xl">180％以上</span>向上しています。
                 </p>
@@ -608,7 +573,7 @@ export default function Home() {
               
               <div className="space-y-4">
                 <h5 className="font-semibold text-gray-900">一社一社に<strong className="bg-marker-yellow font-bold">営業文をカスタマイズ</strong></h5>
-                <div className="space-y-2 text-sm text-gray-600">
+                <div className="space-y-2 text-sm text-gray-900">
                   <div className="flex items-center">
                     <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     企業サイトの内容（事業内容・強み・代表メッセージなど）
@@ -622,7 +587,7 @@ export default function Home() {
                     企業の最新動向（採用・展示会出航など）
                   </div>
                 </div>
-                <p className="text-sm text-gray-600 mt-4">
+                <p className="text-sm text-gray-900 mt-4">
                   AIだけに任せず、すべての文章は人の目で最終確認。<strong>文面のトーンや敬語表現、企業の印象を損なわないか</strong>などをチェックします。
                 </p>
               </div>
@@ -637,7 +602,7 @@ export default function Home() {
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">
                   人が最後に確認・送信。<br className="md:hidden" />品質を守ります。
                 </h4>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-900 mb-6">
                   フォーム営業は、自動化すれば簡単に見えます。しかし実際には、フォーム構造の違いや入力制限、送信エラーなど、
                   <strong>自動ツールだけでは対応できないケース</strong>が多く存在します。
                 </p>
@@ -645,7 +610,7 @@ export default function Home() {
               
               <div className="space-y-4">
                 <h5 className="font-semibold text-gray-900"> システムだけでは気づけない"わずかな違い"を人が判断</h5>
-                <div className="space-y-2 text-sm text-gray-600">
+                <div className="space-y-2 text-sm text-gray-900">
                   <div className="flex items-center">
                     <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
                     送信フォームの項目が特殊な企業
@@ -659,7 +624,7 @@ export default function Home() {
                     住所・電話番号など、独自形式を求めるフォーム
                   </div>
                 </div>
-                <p className="text-sm text-gray-600 mt-4">
+                <p className="text-sm text-gray-900 mt-4">
                   AIや自動ツールでは止まってしまう部分を、<strong className="bg-marker-yellow font-bold">専門スタッフが一件ずつ確認・再送信</strong>。
                   これにより、<strong>品質を守る</strong>ようにしております。
                   これにより誤送信等による<strong>イメージダウンを防ぐ</strong>ことができます。
@@ -671,60 +636,17 @@ export default function Home() {
       </section>
 
       {/* Special Offer 2 */}
-      <section className="bg-brand-blue-light py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white rounded-lg p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              <span className="text-orange-500">🎁 お問い合わせ特典</span>
-            </h3>
-            <p className="text-xl text-gray-700 mb-6 text-left">
-              問い合わせいただいた方に、<br></br><strong className="bg-marker-yellow font-bold"><strong className="text-brand-red text-[1.3em] font-bold">無料で</strong><strong>「営業戦略の相談」と「反応率が3倍以上になる裏ワザ」</strong>をプレゼント！</strong>
-            </p>
-            <div className="grid md:grid-cols-[60%_40%] gap-8 mb-6">
-              <div className="text-left border border-gray-300 rounded-lg p-4 flex flex-col justify-center">
-                <h4 className="font-bold text-gray-900 mb-2">内容一例</h4>
-                <div className="grid grid-cols-1 gap-1.5 text-base text-gray-600">
-                  <div className="flex items-center justify-start">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
-                    実はよく効く「〇〇〇」「△△△」チャネルの活用法
-                  </div>
-                  <div className="flex items-center justify-start">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
-                    返信をもらいやすい文章の"型"
-                  </div>
-                  <div className="flex items-center justify-start">
-                    <CheckIcon className="w-5 h-5 text-green-500 mr-2" />
-                    実際に使われた文章・送信結果の事例集
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-center justify-center mr-4">
-                <img 
-                  src={benefitImage}
-                  alt="特典資料"
-                  className="w-full h-auto rounded-lg"
-                />
-              </div>
-            </div>
-            <a 
-              id="cta_schedule_special_offer_2"
-              href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-brand-red text-white px-8 py-2 rounded-lg text-lg font-bold hover:bg-brand-red/90 transition-colors whitespace-nowrap cursor-pointer inline-block"
-            >
-              お問い合わせ
-            </a>
-          </div>
-        </div>
-      </section>
+      <SpecialOffer 
+        ctaId="cta_schedule_special_offer_2"
+        benefitItems={specialOfferBenefits}
+      />
 
       {/* Competitive Comparison */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">他サービスと比較</h3>
-            <p className="text-xl text-gray-600">他社と比べても<strong className="bg-marker-yellow font-bold">費用の割に営業のクオリティ・スピードともに高い</strong>ところが強みとなっています。</p>
+            <p className="text-xl text-gray-900">他社と比べても<strong className="bg-marker-yellow font-bold">費用の割に営業のクオリティ・スピードともに高い</strong>ところが強みとなっています。</p>
           </div>
           
           {/* Table Space for Future Use */}
@@ -753,7 +675,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">提供価値</h3>
-            <p className="text-xl text-gray-600">初期準備（営業戦略とリストの取得、文章作成等）とアプローチをお任せ頂くことで、<strong className="bg-marker-yellow font-bold">御社はコア業務に集中できる</strong>ようになります。</p>
+            <p className="text-xl text-gray-900">初期準備（営業戦略とリストの取得、文章作成等）とアプローチをお任せ頂くことで、<strong className="bg-marker-yellow font-bold">御社はコア業務に集中できる</strong>ようになります。</p>
           </div>
           
           {/* Image Space */}
@@ -783,7 +705,7 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">初期準備</h4>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-900">
                 一部上場企業(現プライム上場)にて、BtoBの営業戦略を検討してきたコンサルタントが、貴社のターゲット選定をご支援することで、見込みの高い顧客獲得に繋がります
               </p>
             </div>
@@ -795,7 +717,7 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">アプローチ</h4>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-900">
                 一社一社に最適な文章を考え、送信を外部パートナーと連携することで営業文章の質の向上と送信量の確保を両立し、効率的な営業を実施できます
               </p>
             </div>
@@ -807,7 +729,7 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">その他（全体）</h4>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-900">
                 これまでかけてきた初期準備、アポ依頼の時間を、
                 業務品質の向上に寄与します
               </p>
@@ -821,7 +743,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">お客様の声</h3>
-            <p className="text-xl text-gray-600">ご利用いただいたお客様からの評価</p>
+            <p className="text-xl text-gray-900">ご利用いただいたお客様からの評価</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -832,10 +754,10 @@ export default function Home() {
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900">製造業 A社様</h5>
-                  <p className="text-sm text-gray-600">従業員数: 50名</p>
+                  <p className="text-sm text-gray-900">従業員数: 50名</p>
                 </div>
               </div>
-              <blockquote className="text-gray-700 mb-4">
+              <blockquote className="text-gray-900 mb-4">
                 <strong>「CPAがわかりやすく、安心して頼める。課金形態が他の業者は作業ベース、<strong className="bg-marker-yellow font-bold">bizdataさんは結果ベース</strong>なので、結果にコミットしてくれる。
                 成果報酬だから安心して任せられるし、実際に費用対効果がはっきり出ている点が他社との決定的な違いでした。」</strong>
               </blockquote>
@@ -848,10 +770,10 @@ export default function Home() {
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900 ">IT企業 B社様</h5>
-                  <p className="text-sm text-gray-600">従業員数: 30名</p>
+                  <p className="text-sm text-gray-900">従業員数: 30名</p>
                 </div>
               </div>
-              <blockquote className="text-gray-700 mb-4">
+              <blockquote className="text-gray-900 mb-4">
                 <strong>「営業戦略自体も詳しく相談に乗っていただけた。<strong className="bg-marker-yellow font-bold">色々な業界や商材のユースケースを提案</strong>していただき、自分たちだけではできなかった新規開拓に成功した。」</strong>
               </blockquote>
             </div>
@@ -863,10 +785,10 @@ export default function Home() {
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900">人材サービス C社様</h5>
-                  <p className="text-sm text-gray-600">従業員数: 80名</p>
+                  <p className="text-sm text-gray-900">従業員数: 80名</p>
                 </div>
               </div>
-              <blockquote className="text-gray-700 mb-4">
+              <blockquote className="text-gray-900 mb-4">
                 <strong>「文章をすごい丁寧に準備してくれた。おかげで、<strong className="bg-marker-yellow font-bold">開始翌週からすぐに反響があり</strong>、案件獲得につながった。
                 わざわざフォームから返信頂いたお客さんは基本的に興味を持ってくれる人たちなので商談の質も高く、本格導入につながりやすかった。」</strong>
               </blockquote>
@@ -879,10 +801,10 @@ export default function Home() {
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900">建設業 D社様</h5>
-                  <p className="text-sm text-gray-600">従業員数: 120名</p>
+                  <p className="text-sm text-gray-900">従業員数: 120名</p>
                 </div>
               </div>
-              <blockquote className="text-gray-700 mb-4">
+              <blockquote className="text-gray-900 mb-4">
                 <strong>一件一件のヒアリングや提案内容が的確で、<strong className="bg-marker-yellow font-bold">単なるアポ代行ではなく伴走型の営業パートナー</strong>という印象です。
                 </strong>
               </blockquote>
@@ -953,7 +875,7 @@ export default function Home() {
               <div>
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
                   <h5 className="font-semibold text-gray-900 mb-3">代表：<br className="md:hidden" />梁清揚（りょう せいよう）</h5>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-gray-900">
                     コンサルティング会社での営業・データ基盤導入支援経験を経て、企業の営業活動を効率化する複数プロジェクトをリード。
                     これまでに<strong>20社以上の企業で、営業・データ活用・分析基盤構築</strong>を支援。
                   </p>
@@ -977,7 +899,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h6 className="font-medium text-gray-900">チーム構成</h6>
-                      <p className="text-sm text-gray-600"><strong>東京大学・東京工業大学出身、数学オリンピックファイナリスト、大手コンサルティングファーム出身者</strong>など</p>
+                      <p className="text-sm text-gray-900"><strong>東京大学・東京工業大学出身、数学オリンピックファイナリスト、大手コンサルティングファーム出身者</strong>など</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -986,7 +908,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h6 className="font-medium text-gray-900">アプローチ</h6>
-                      <p className="text-sm text-gray-600"><strong>数字で物事を考える力と、課題の本質をつかむ洞察力</strong>。データをもとに徹底的に設計</p>
+                      <p className="text-sm text-gray-900"><strong>数字で物事を考える力と、課題の本質をつかむ洞察力</strong>。データをもとに徹底的に設計</p>
                     </div>
                   </div>
                 </div>
@@ -1011,7 +933,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">FAQ</h3>
-            <p className="text-xl text-gray-600">よくあるご質問</p>
+            <p className="text-xl text-gray-900">よくあるご質問</p>
           </div>
           
           <div className="space-y-6">
@@ -1020,7 +942,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 原稿の作成は自社で行う必要がありますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. 原稿作成は当社で行います。完成した原稿は御社にご確認いただき、内容修正も可能です。すでに御社でご用意された原稿がある場合は、そのまま活用することも、改善案を当社でご提案することもできます。</p>
+                <p className="text-gray-900">A. 原稿作成は当社で行います。完成した原稿は御社にご確認いただき、内容修正も可能です。すでに御社でご用意された原稿がある場合は、そのまま活用することも、改善案を当社でご提案することもできます。</p>
               </div>
             </div>
 
@@ -1029,7 +951,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 企業リストは誰が準備しますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. 企業リストの作成はすべて当社で対応いたします。追加・変更が発生しても、追加費用は一切いただきません。</p>
+                <p className="text-gray-900">A. 企業リストの作成はすべて当社で対応いたします。追加・変更が発生しても、追加費用は一切いただきません。</p>
               </div>
             </div>
 
@@ -1038,7 +960,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 自社で保有しているリストにも送信できますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. 可能です。御社からリストをお預かりすれば、そのリストにも同様に送信いたします。</p>
+                <p className="text-gray-900">A. 可能です。御社からリストをお預かりすれば、そのリストにも同様に送信いたします。</p>
               </div>
             </div>
 
@@ -1047,7 +969,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 作成された企業リストを事前に確認できますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. はい、すべて御社にご提出いたします。御社のお取引先など、送信を避けたい企業が含まれている場合は、除外チェックをお願いしています。</p>
+                <p className="text-gray-900">A. はい、すべて御社にご提出いたします。御社のお取引先など、送信を避けたい企業が含まれている場合は、除外チェックをお願いしています。</p>
               </div>
             </div>
 
@@ -1056,7 +978,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 送信ペースはどのくらいですか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. 平均的には1日あたり500件ほど送信しますが、御社のご希望に合わせて調整も可能です。</p>
+                <p className="text-gray-900">A. 平均的には1日あたり500件ほど送信しますが、御社のご希望に合わせて調整も可能です。</p>
               </div>
             </div>
 
@@ -1065,7 +987,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 最低契約期間や件数の制限はありますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. ご依頼いただく件数によって異なりますので、詳細はお問い合わせください。</p>
+                <p className="text-gray-900">A. ご依頼いただく件数によって異なりますので、詳細はお問い合わせください。</p>
               </div>
             </div>
 
@@ -1074,7 +996,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 送信結果のレポートはもらえますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. 送信先が分かるよう、Excel形式でレポートを提出いたします。</p>
+                <p className="text-gray-900">A. 送信先が分かるよう、Excel形式でレポートを提出いたします。</p>
               </div>
             </div>
 
@@ -1083,7 +1005,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 問い合わせにつながる割合はどのくらいですか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. 平均では0.2〜0.3％（1,000件中2〜3件）程度です。案件によっては0.7〜1.0％に達するケースもあります。</p>
+                <p className="text-gray-900">A. 平均では0.2〜0.3％（1,000件中2〜3件）程度です。案件によっては0.7〜1.0％に達するケースもあります。</p>
               </div>
             </div>
 
@@ -1092,7 +1014,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. NGリストをスキップできますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. もちろんスキップすることが可能です。会社名ベースでも、HPベースでも可能です。</p>
+                <p className="text-gray-900">A. もちろんスキップすることが可能です。会社名ベースでも、HPベースでも可能です。</p>
               </div>
             </div>
 
@@ -1101,7 +1023,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 営業代行を使うと、自社にノウハウが残らないかと心配してます。</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. 初回のご商談からはお客様にお願いをするため、営業活動の主要部分はノウハウとして残ります。また、弊社が使用している文章、リスト等もすべて提出を致しますので、貴社のノウハウとして所持して頂ければと考えます。</p>
+                <p className="text-gray-900">A. 初回のご商談からはお客様にお願いをするため、営業活動の主要部分はノウハウとして残ります。また、弊社が使用している文章、リスト等もすべて提出を致しますので、貴社のノウハウとして所持して頂ければと考えます。</p>
               </div>
             </div>
 
@@ -1110,7 +1032,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. どのような業種でも対応できますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. BtoBであれば全業界で対応可能です。弊社で保有するリスト200万社の他、新規ですべての業界の情報を取得可能です(一般消費者へのアプローチは行っておりませんのでご了承ください)</p>
+                <p className="text-gray-900">A. BtoBであれば全業界で対応可能です。弊社で保有するリスト200万社の他、新規ですべての業界の情報を取得可能です(一般消費者へのアプローチは行っておりませんのでご了承ください)</p>
               </div>
             </div>
 
@@ -1119,7 +1041,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. まずは相談だけでも大丈夫ですか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. 問題ございません。「プロのコンサル経験者から弊社の営業方針についての意見が欲しい」といった内容でご相談した事例もございます。お気軽にお問い合わせ下さい。</p>
+                <p className="text-gray-900">A. 問題ございません。「プロのコンサル経験者から弊社の営業方針についての意見が欲しい」といった内容でご相談した事例もございます。お気軽にお問い合わせ下さい。</p>
               </div>
             </div>
 
@@ -1128,7 +1050,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 料金の支払い方法を教えてください</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-700">A. クレジットカード決済、または請求書払いとなります。</p>
+                <p className="text-gray-900">A. クレジットカード決済、または請求書払いとなります。</p>
               </div>
             </div>
           </div>
@@ -1215,7 +1137,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-gray-900">お問い合わせ</h3>
                 <button 
                   onClick={() => setIsContactFormOpen(false)}
-                  className="text-gray-400 hover:text-gray-600 cursor-pointer"
+                  className="text-gray-400 hover:text-gray-900 cursor-pointer"
                 >
                   <CloseIcon className="w-6 h-6" />
                 </button>
@@ -1223,7 +1145,7 @@ export default function Home() {
               
               <form id="contact-form" data-readdy-form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-900 mb-1">
                     会社名 <span className="text-brand-red">*</span>
                   </label>
                   <input
@@ -1239,7 +1161,7 @@ export default function Home() {
                 </div>
                 
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-1">
                     お名前 <span className="text-brand-red">*</span>
                   </label>
                   <input
@@ -1255,7 +1177,7 @@ export default function Home() {
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-1">
                     メールアドレス <span className="text-brand-red">*</span>
                   </label>
                   <input
@@ -1271,7 +1193,7 @@ export default function Home() {
                 </div>
                 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-1">
                     電話番号
                   </label>
                   <input
@@ -1286,7 +1208,7 @@ export default function Home() {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-1">
                     お問い合わせ内容 <span className="text-brand-red">*</span>
                   </label>
                   <textarea
@@ -1300,7 +1222,7 @@ export default function Home() {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm resize-none"
                     placeholder="ご相談内容をお聞かせください（500文字以内）"
                   ></textarea>
-                  <p className="text-xs text-gray-500 mt-1">{formData.message.length}/500文字</p>
+                  <p className="text-xs text-gray-900 mt-1">{formData.message.length}/500文字</p>
                 </div>
                 
                 <button

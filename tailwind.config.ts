@@ -14,7 +14,7 @@ export default {
           'brand-red-light': '#FEE2E2', // red-200相当
         },
         backgroundImage: {
-          'marker-yellow': 'linear-gradient(transparent 50%, rgba(255,235,59,0.6) 50%)',
+          'marker-yellow': 'linear-gradient(rgba(255,248,0,1.0) 0%, rgba(255,248,0,1.0) 100%)',
         },
         screens: {
           // スマホ/PC判定基準をmd（768px）に統一
