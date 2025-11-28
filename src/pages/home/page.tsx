@@ -83,9 +83,19 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative bg-brand-blue p-0">
-      <div className="w-full">
-          <img src={heroImageMobile} alt="hero" className="w-full h-auto md:hidden" />
-          <img src={heroImagePC} alt="hero" className="w-full h-auto hidden md:block" />
+        <div className="w-full">
+          <img
+            src={heroImageMobile}
+            alt="hero"
+            className="w-full h-auto md:hidden"
+            fetchPriority="high"
+          />
+          <img
+            src={heroImagePC}
+            alt="hero"
+            className="w-full h-auto hidden md:block"
+            fetchPriority="high"
+          />
         </div>
       </section>
 
