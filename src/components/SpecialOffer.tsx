@@ -34,6 +34,8 @@ export default function SpecialOffer({ ctaId, benefitItems }: SpecialOfferProps)
                 src={benefitImage}
                 alt="特典資料"
                 className="w-full h-auto rounded-lg"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

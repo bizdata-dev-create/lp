@@ -223,6 +223,8 @@ export default function Home() {
               src={compareTableFormMobile}
               alt="比較表"
               className="w-full h-auto rounded-lg md:hidden"
+              loading="lazy"
+              decoding="async"
             />
             
             {/* PC用画像（モバイルで非表示、PCで表示） */}
@@ -230,6 +232,8 @@ export default function Home() {
               src={compareTableFormPC}
               alt="比較表"
               className="w-full h-auto rounded-lg hidden md:block"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -322,6 +326,8 @@ export default function Home() {
                   src={benefit1Image}
                   alt="初期費用0円の成果報酬制"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="order-1 md:order-2">
@@ -399,6 +405,8 @@ export default function Home() {
                   src={benefit3Image}
                   alt="200万件以上の企業リスト"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -474,6 +482,8 @@ export default function Home() {
                   src={benefit4Image}
                   alt="多様な営業手法への対応"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="order-1 md:order-2">
@@ -540,6 +550,8 @@ export default function Home() {
                   src={benefit2Image}
                   alt="営業戦略コンサルティング"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -657,6 +669,8 @@ export default function Home() {
                 src={compareTableMobile}
                 alt="詳細比較表"
                 className="w-full h-auto rounded-lg md:hidden"
+                loading="lazy"
+                decoding="async"
               />
               
               {/* PC用画像（タブレット以上で表示、モバイルで非表示） */}
@@ -664,6 +678,8 @@ export default function Home() {
                 src={compareTablePC}
                 alt="詳細比較表"
                 className="w-full h-auto rounded-lg hidden md:block"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -685,6 +701,8 @@ export default function Home() {
               src={valuePropositionMobile}
               alt="提供価値 - 導入前後の比較"
               className="w-full h-auto rounded-lg md:hidden"
+              loading="lazy"
+              decoding="async"
             />
             
             {/* PC用画像（モバイルで非表示、PCで表示、80%サイズ） */}
@@ -693,6 +711,8 @@ export default function Home() {
                 src={valuePropositionPC}
                 alt="提供価値 - 導入前後の比較"
                 className="w-4/5 h-auto rounded-lg"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -861,6 +881,8 @@ export default function Home() {
                 src={company1Image}
                 alt="コンサル出身の実行チーム"
                 className="w-full h-auto rounded-lg shadow-lg object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -888,6 +910,8 @@ export default function Home() {
                       src={ryoImage}
                       alt="社長写真"
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
@@ -920,6 +944,8 @@ export default function Home() {
                     src={ryoImage}
                     alt="社長写真"
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
