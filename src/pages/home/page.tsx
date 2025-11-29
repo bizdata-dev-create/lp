@@ -1,19 +1,19 @@
 import { useState } from 'react';
-import heroImageMobile from '../../img/hero_mobile.jpg';
-import heroImagePC from '../../img/hero_pc.jpg';
-import benefit1Image from '../../img/benefit1.jpg';
-import benefit2Image from '../../img/benefit2.jpg';
-import benefit3Image from '../../img/benefit3.jpg';
-import benefit4Image from '../../img/benefit4.jpg';
-import company1Image from '../../img/company1.jpg';
-import valuePropositionMobile from '../../img/value_proposition_mobile.jpg';
-import valuePropositionPC from '../../img/value_proposition_pc.jpg';
-import logoDeeper from '../../img/logo_deeper.jpg';
-import compareTableFormMobile from '../../img/compare_table_form_mobile.jpg';
-import compareTableFormPC from '../../img/compare_table_form_pc.jpg';
-import compareTableMobile from '../../img/compare_table_mobile.jpg';
-import compareTablePC from '../../img/compare_table_pc.jpg';
-import ryoImage from '../../img/ryo.jpg';
+import heroImageMobile from '../../img/hero_mobile.webp';
+import heroImagePC from '../../img/hero_pc.webp';
+import benefit1Image from '../../img/benefit1.webp';
+import benefit2Image from '../../img/benefit2.webp';
+import benefit3Image from '../../img/benefit3.webp';
+import benefit4Image from '../../img/benefit4.webp';
+import company1Image from '../../img/company1.webp';
+import valuePropositionMobile from '../../img/value_proposition_mobile.webp';
+import valuePropositionPC from '../../img/value_proposition_pc.webp';
+import logoDeeper from '../../img/logo_deeper.webp';
+import compareTableFormMobile from '../../img/compare_table_form_mobile.webp';
+import compareTableFormPC from '../../img/compare_table_form_pc.webp';
+import compareTableMobile from '../../img/compare_table_mobile.webp';
+import compareTablePC from '../../img/compare_table_pc.webp';
+import ryoImage from '../../img/ryo.webp';
 import SpecialOffer from '../../components/SpecialOffer';
 import {
   ArrowRightIcon,

@@ -1,5 +1,5 @@
 import { CheckCircleIcon } from './icons';
-import benefitImage from '../img/benfit.jpg';
+import benefitImage from '../img/benfit.webp';
 
 interface SpecialOfferProps {
   ctaId: string;
