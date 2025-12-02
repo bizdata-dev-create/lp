@@ -42,9 +42,9 @@ export default function Home() {
   // Special Offer の共通データ
   const specialOfferBenefits = [
     '本物の営業代行業者の見極め方',
-    '高品質なLP作成費用を1/10にする方法',
+    '高品質LPの作成費用を【1/10】にする方法',
     '御社に最適な営業ルートの選び方',
-    '反応率を200%以上に上げる文章の"型"'
+    '反応率を200%上げる文章の"型"'
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -81,7 +81,7 @@ export default function Home() {
               href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-brand-red text-white px-2 py-1.5 rounded-lg hover:bg-brand-red/90 transition-colors whitespace-nowrap cursor-pointer font-bold text-lg"
+              className="bg-brand-red text-white px-5 py-1.5 rounded-lg hover:bg-brand-red/90 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary"
             >
               お問い合わせ
             </a>
@@ -378,7 +378,7 @@ export default function Home() {
                   どれだけ良い文章を書いても、送る相手がズレていれば<strong>結果は出ません</strong>。
                 </p>
                 
-                <div className="bg-white p-6 rounded-lg shadow-md mb-6">
+                <div className="bg-white p-6 rounded-lg shadow-md mb-6 border border-gray-200">
                   <h5 className="font-semibold text-gray-900 mb-4"><strong className="bg-marker-yellow font-bold"><span className="text-brand-red font-bold text-xl">200万件</span>以上の企業リストを独自に保有</strong></h5>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
@@ -498,7 +498,7 @@ export default function Home() {
                   <strong>お問合せフォーム送信以外の用途</strong>でも営業リストを作成したい場合があります。
                 </p>
                 
-                <div className="bg-white p-6 rounded-lg shadow-md mb-6">
+                <div className="bg-white p-6 rounded-lg shadow-md mb-6 border border-gray-200">
                   <h5 className="font-semibold text-gray-900 mb-4"> <strong className="bg-marker-yellow font-bold">完全無料＆取得件数は無制限</strong>でリスト提供</h5>
                   <p className="text-gray-900 text-sm mb-4">
                     弊社のお問合せフォーム送信代行をご利用いただいているお客様であれば、完全無料＆取得件数は無制限で「URL、電話番号、FAX番号、住所などの情報を削除していない」営業リストを取得できますので、 
@@ -522,7 +522,7 @@ export default function Home() {
                   単に送信だけでなく、<strong className="bg-marker-yellow font-bold">「誰に・何を・どう伝えるべきか」という営業戦略の見直し</strong>までサポートします。
                 </p>
                 
-                <div className="bg-white p-6 rounded-lg shadow-md mb-6">
+                <div className="bg-white p-6 rounded-lg shadow-md mb-6 border border-gray-200">
                   <h5 className="font-semibold text-gray-900 mb-4"> ご契約前でも、営業戦略のご相談を<strong>無料で実施</strong></h5>
                   <div className="space-y-2 text-sm text-gray-900">
                     <div className="flex items-center">
@@ -1098,7 +1098,7 @@ export default function Home() {
               href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-yellow-400 text-brand-blue px-8 py-3 rounded-lg text-lg font-bold hover:bg-yellow-300 transition-colors whitespace-nowrap cursor-pointer"
+              className="bg-yellow-400 text-brand-blue px-8 py-3 rounded-lg text-lg font-bold hover:bg-yellow-300 whitespace-nowrap cursor-pointer btn-primary"
             >
               お問い合わせ
             </a>
@@ -1139,7 +1139,7 @@ export default function Home() {
                 href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-brand-red text-white px-6 py-2 rounded-lg hover:bg-brand-red/90 transition-colors text-sm whitespace-nowrap cursor-pointer mb-4 inline-block"
+                className="bg-brand-red text-white px-6 py-2 rounded-lg hover:bg-brand-red/90 text-sm whitespace-nowrap cursor-pointer mb-4 inline-block btn-primary"
               >
                 お問い合わせ
               </a>
@@ -1253,7 +1253,7 @@ export default function Home() {
                 
                 <button
                   type="submit"
-                  className="w-full bg-brand-red text-white py-2 rounded-lg font-bold hover:bg-brand-red/90 transition-colors whitespace-nowrap cursor-pointer"
+                  className="w-full bg-brand-red text-white py-2 rounded-lg font-bold hover:bg-brand-red/90 whitespace-nowrap cursor-pointer btn-primary"
                 >
                   送信する
                 </button>

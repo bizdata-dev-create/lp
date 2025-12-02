@@ -25,3 +25,10 @@ body {
 	gap: 0.25rem;
 	margin: 0 auto;
 }
+
+/* 共通ボタンスタイル - ホバー時に少し大きくなる効果 */
+@layer components {
+	.btn-primary {
+		@apply transition-all shadow-lg hover:shadow-xl transform hover:scale-105;
+	}
+}
