@@ -171,7 +171,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h5 className="font-semibold text-gray-900 mb-2">導入後：</h5>
-                  <p className="text-sm text-gray-900">ターゲット業種に特化した送信リストを構築し、確度の高い商談が増加。<strong>新規受注数約2.1倍</strong>を達成。</p>
+                  <p className="text-sm text-gray-900">ターゲット業種に特化した送信リストを構築し、確度の高い商談が増加。<strong>新規受注数約210%増加</strong>を達成。</p>
                 </div>
               </div>
             </div>
@@ -257,7 +257,7 @@ export default function Home() {
               </div>
               <p className="text-gray-900 mb-2">・御社の営業戦略や商材の強み、顧客の理解についての認識合わせを行います。</p>
               <p className="text-gray-900 mb-2">・送信NGリスト等についてもご共有頂きます。</p>
-              <p className="text-gray-900">・御社の労力は基本的にここのみとなります</p>
+              <p className="text-gray-900">・御社の労力は基本的にここのみとなります。</p>
             </div>
             
             <div className="flex justify-center my-4">
@@ -286,10 +286,10 @@ export default function Home() {
                 <div className="flex-shrink-0 w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-lg mr-6">
                   <SendPlaneIcon className="w-5 h-5 text-white" />
                 </div>
-                <h4 className="text-xl font-bold text-gray-900">目標達成までアプローチ</h4>
+                <h4 className="text-xl font-bold text-gray-900">目標達成に向けてアプローチ</h4>
               </div>
               <p className="text-gray-900 mb-2">・リストと文章について、御社の了承をいただけ次第、送信をすぐに開始します。</p>
-              <p className="text-gray-900">・目標が達成されるまで送信を続けます</p>
+              <p className="text-gray-900">・目標が達成されるよう送信を続けます。</p>
             </div>
             
             <div className="flex justify-center my-4">
@@ -304,7 +304,7 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900">定期的に報告</h4>
               </div>
-              <p className="text-gray-900">・隔週~月1で営業状況及び改善提案について報告させて頂きます。返信率を高める施策を一緒に考えます。</p>
+              <p className="text-gray-900">・隔週~月1で営業状況及び改善提案について報告させて頂きます。また、返信率を高める施策を一緒に考えます。</p>
             </div>
           </div>
         </div>
@@ -475,7 +475,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Feature 3 - 特典としてリストを無償提供 */}
+            {/* Feature 3 - 特典としてリストを無料提供 */}
             <div className="grid md:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
               <div className="order-2 md:order-1">
                 <img 
@@ -491,18 +491,18 @@ export default function Home() {
                   特徴③
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">
-                  特典としてリストを<br className="md:hidden" /><strong className="bg-marker-yellow font-bold">無償提供</strong>
+                  特典としてリストを<br className="md:hidden" /><strong className="bg-marker-yellow font-bold">無料提供</strong>
                 </h4>
                 <p className="text-gray-900 mb-6 leading-relaxed">
                   例えば自社でテレアポ営業をしたい場合、DMやFAXを送付したい場合など、 
-                  <strong>お問合せフォーム送信以外の用途</strong>でも営業リストを作成したい場合があります。
+                  <strong>お問合せフォーム送信以外の様々な用途</strong>でも営業リストを作成したい場合があります。
                 </p>
                 
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6 border border-gray-200">
                   <h5 className="font-semibold text-gray-900 mb-4"> <strong className="bg-marker-yellow font-bold">完全無料＆取得件数は無制限</strong>でリスト提供</h5>
                   <p className="text-gray-900 text-sm mb-4">
-                    弊社のお問合せフォーム送信代行をご利用いただいているお客様であれば、完全無料＆取得件数は無制限で「URL、電話番号、FAX番号、住所などの情報を削除していない」営業リストを取得できますので、 
-                    お問合せフォーム営業以外の様々な営業手段で弊社のリストをご利用いただけます。
+                    弊社のお問い合わせフォーム送信代行をご利用いただいているお客様であれば、完全無料＆取得件数は無制限で「URL、電話番号、FAX番号、住所などの情報を削除していない」営業リストを取得できますので、 
+                    お問い合わせフォーム営業以外の様々な営業手段で弊社のリストをご利用いただけます。
                   </p>
                 </div>
               </div>
@@ -638,8 +638,7 @@ export default function Home() {
                 </div>
                 <p className="text-sm text-gray-900 mt-4">
                   AIや自動ツールでは止まってしまう部分を、<strong className="bg-marker-yellow font-bold">専門スタッフが一件ずつ確認・再送信</strong>。
-                  これにより、<strong>品質を守る</strong>ようにしております。
-                  これにより誤送信等による<strong>イメージダウンを防ぐ</strong>ことができます。
+                  これにより、誤送信等による<strong>イメージダウンを防ぎ、品質が守られます</strong>。
                 </p>
               </div>
             </div>
@@ -691,7 +690,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">提供価値</h3>
-            <p className="text-xl text-gray-900">初期準備（営業戦略とリストの取得、文章作成等）とアプローチをお任せ頂くことで、<strong className="bg-marker-yellow font-bold">御社はコア業務に集中できる</strong>ようになります。</p>
+            <p className="text-xl text-gray-900">初期準備（営業戦略とリストの取得、文章作成等）とアプローチをお任せ頂くことで、<br></br><strong className="bg-marker-yellow font-bold">御社は業務品質の向上に集中できる</strong>ようになります。</p>
           </div>
           
           {/* Image Space */}
@@ -726,7 +725,7 @@ export default function Home() {
                 <h4 className="text-xl font-bold text-gray-900">初期準備</h4>
               </div>
               <p className="text-gray-900">
-                一部上場企業(現プライム上場)にて、BtoBの営業戦略を検討してきたコンサルタントが、貴社のターゲット選定をご支援することで、見込みの高い顧客獲得に繋がります
+                一部上場企業(現プライム上場)にて、BtoBの営業戦略を検討してきたコンサルタントが、御社のターゲット選定をご支援することで、見込みの高い顧客獲得に繋がります
               </p>
             </div>
             
@@ -844,7 +843,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-white mb-6 leading-relaxed mb-8">
-                当社合同会社bizdataは、<strong>一部上場コンサルティング会社からスピンアウト</strong>し設立されました。
+                弊社合同会社bizdataは、<strong>一部上場コンサルティング会社からスピンアウト</strong>し設立されました。
                 戦略立案から実行支援まで、これまでに<strong>20社以上の営業・データ分析プロジェクト</strong>をご支援してきました。
               </p>
               
@@ -869,7 +868,7 @@ export default function Home() {
                   <h4 className="bg-white text-brand-blue px-2 py-1 font-black text-xl mb-3">③ モットー：「顧客に本質的な価値を届ける」</h4>
                   <p className="text-white">
                     「代行して終わり」ではなく、
-                    <strong>お客様が自社の営業を自信を持って回せる状態</strong>をゴールとしています。
+                    <strong>「お客様が」自社の営業を自信を持って回せる状態</strong>をゴールとしています。
                     だからこそ、私たちは常に、
                     <strong>"本質的な価値を提供できているか？"</strong>を問いながら、プロジェクトを進めています。
                   </p>
@@ -890,7 +889,7 @@ export default function Home() {
           {/* Team Introduction */}
           <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-12">
             <div className="text-center mb-12">
-              <h4 className="text-2xl font-bold text-gray-900 mb-4">成果にこだわる、最強<br className="md:hidden" />のチームが支援します</h4>
+              <h4 className="text-2xl font-bold text-gray-900 mb-4">成果を追及し続けるチーム<br className="md:hidden" />でご支援します</h4>
             </div>
             
             <div className="grid md:grid-cols-[70%_30%] gap-8 items-start">
@@ -898,8 +897,8 @@ export default function Home() {
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
                   <h5 className="font-semibold text-gray-900 mb-3">代表：<br className="md:hidden" />梁清揚（りょう せいよう）</h5>
                   <p className="text-sm text-gray-900">
-                    コンサルティング会社での営業・データ基盤導入支援経験を経て、企業の営業活動を効率化する複数プロジェクトをリード。
-                    これまでに<strong>20社以上の企業で、営業・データ活用・分析基盤構築</strong>を支援。
+                    コンサルティング会社での営業・マーケティング戦略の立案・実行支援を経て、企業の営業活動を効率化するプロジェクトを複数リード。
+                    これまでに<strong>20社以上の企業で、営業・事業戦略立案・実行支援</strong>を支援。
                   </p>
                 </div>
                 
@@ -931,8 +930,8 @@ export default function Home() {
                       <BarChartIcon className="w-4 h-4 text-teal-600" />
                     </div>
                     <div>
-                      <h6 className="font-medium text-gray-900">アプローチ</h6>
-                      <p className="text-sm text-gray-900"><strong>数字で物事を考える力と、課題の本質をつかむ洞察力</strong>。データをもとに徹底的に設計</p>
+                      <h6 className="font-medium text-gray-900">弊社の強み</h6>
+                      <p className="text-sm text-gray-900"><strong>数字で物事を考える力と、課題の本質をつかむ洞察力</strong>。データをもとに最適な戦略とオペレーションを設計します。</p>
                     </div>
                   </div>
                 </div>
@@ -965,10 +964,10 @@ export default function Home() {
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
-                <h4 className="font-bold text-lg">Q. 原稿の作成は自社で行う必要がありますか？</h4>
+                <h4 className="font-bold text-lg">Q. 営業文章の作成は自社で行う必要がありますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-900">A. 原稿作成は当社で行います。完成した原稿は御社にご確認いただき、内容修正も可能です。すでに御社でご用意された原稿がある場合は、そのまま活用することも、改善案を当社でご提案することもできます。</p>
+                <p className="text-gray-900">A. 営業文章作成は弊社で行います。完成した営業文章は御社にご確認いただき、内容修正も可能です。すでに御社でご用意された営業文章がある場合は、そのまま活用することも、改善案を弊社がご提案することもできます。</p>
               </div>
             </div>
 
@@ -977,13 +976,13 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 企業リストは誰が準備しますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-900">A. 企業リストの作成はすべて当社で対応いたします。追加・変更が発生しても、追加費用は一切いただきません。</p>
+                <p className="text-gray-900">A. 企業リストの作成はすべて弊社で対応いたします。追加・変更が発生しても、追加費用は一切いただきません。</p>
               </div>
             </div>
 
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
-                <h4 className="font-bold text-lg">Q. 自社で保有しているリストにも送信できますか？</h4>
+                <h4 className="font-bold text-lg">Q. 自社で保有しているリストでも送信できますか？</h4>
               </div>
               <div className="px-6 py-4">
                 <p className="text-gray-900">A. 可能です。御社からリストをお預かりすれば、そのリストにも同様に送信いたします。</p>
@@ -995,7 +994,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 作成された企業リストを事前に確認できますか？</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-900">A. はい、すべて御社にご提出いたします。御社のお取引先など、送信を避けたい企業が含まれている場合は、除外チェックをお願いしています。</p>
+                <p className="text-gray-900">A. はい、確認することができます。御社のお取引先など、送信を避けたい企業が含まれている場合は、除外チェックをお願いしています。</p>
               </div>
             </div>
 
@@ -1049,7 +1048,7 @@ export default function Home() {
                 <h4 className="font-bold text-lg">Q. 営業代行を使うと、自社にノウハウが残らないかと心配してます。</h4>
               </div>
               <div className="px-6 py-4">
-                <p className="text-gray-900">A. 初回のご商談からはお客様にお願いをするため、営業活動の主要部分はノウハウとして残ります。また、弊社が使用している文章、リスト等もすべて提出を致しますので、貴社のノウハウとして所持して頂ければと考えます。</p>
+                <p className="text-gray-900">A. ご商談以降のプロセスはお客様に対応した頂くため、営業活動の主要部分はノウハウとして残ります。また、弊社が使用している文章、リスト等もすべて提出を致しますので、御社のノウハウとして所持していただくことができます。</p>
               </div>
             </div>
 
@@ -1090,7 +1089,7 @@ export default function Home() {
             営業の「手間」をなくし「<strong>成果</strong>」に集中
           </h3>
           <p className="text-xl text-blue-100 mb-8">
-            「営業労力を最小化し、<strong>成果を最大化する仕組み</strong>」を私達は提供します。
+            「営業労力を最小化し、<strong>成果を最大化する仕組み</strong>」を私たちは提供します。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
