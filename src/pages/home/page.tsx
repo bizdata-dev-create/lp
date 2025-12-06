@@ -14,7 +14,6 @@ import compareTableFormPC from '../../img/dev/compare_table_form_pc.webp';
 import compareTableMobile from '../../img/dev/compare_table_mobile.webp';
 import compareTablePC from '../../img/dev/compare_table_pc.webp';
 import ryoImage from '../../img/dev/ryo.webp';
-import bizdataLogBlueBack from '../../img/dev/bizdata_log_blue_back.webp';
 import SpecialOffer from '../../components/SpecialOffer';
 import {
   ArrowRightIcon,
