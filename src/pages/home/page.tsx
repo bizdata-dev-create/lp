@@ -1,19 +1,20 @@
 import { useState } from 'react';
-import heroImageMobile from '../../img/hero_mobile.webp';
-import heroImagePC from '../../img/hero_pc.webp';
-import benefit1Image from '../../img/benefit1.webp';
-import benefit2Image from '../../img/benefit2.webp';
-import benefit3Image from '../../img/benefit3.webp';
-import benefit4Image from '../../img/benefit4.webp';
-import company1Image from '../../img/company1.webp';
-import valuePropositionMobile from '../../img/value_proposition_mobile.webp';
-import valuePropositionPC from '../../img/value_proposition_pc.webp';
-import logoDeeper from '../../img/logo_deeper.webp';
-import compareTableFormMobile from '../../img/compare_table_form_mobile.webp';
-import compareTableFormPC from '../../img/compare_table_form_pc.webp';
-import compareTableMobile from '../../img/compare_table_mobile.webp';
-import compareTablePC from '../../img/compare_table_pc.webp';
-import ryoImage from '../../img/ryo.webp';
+import heroImageMobile from '../../img/dev/hero_mobile.webp';
+import heroImagePC from '../../img/dev/hero_pc.webp';
+import benefit1Image from '../../img/dev/benefit1.webp';
+import benefit2Image from '../../img/dev/benefit2.webp';
+import benefit3Image from '../../img/dev/benefit3.webp';
+import benefit4Image from '../../img/dev/benefit4.webp';
+import company1Image from '../../img/dev/company1.webp';
+import valuePropositionMobile from '../../img/dev/value_proposition_mobile.webp';
+import valuePropositionPC from '../../img/dev/value_proposition_pc.webp';
+import logoDeeper from '../../img/dev/logo_deeper.webp';
+import compareTableFormMobile from '../../img/dev/compare_table_form_mobile.webp';
+import compareTableFormPC from '../../img/dev/compare_table_form_pc.webp';
+import compareTableMobile from '../../img/dev/compare_table_mobile.webp';
+import compareTablePC from '../../img/dev/compare_table_pc.webp';
+import ryoImage from '../../img/dev/ryo.webp';
+import bizdataLogBlueBack from '../../img/dev/bizdata_log_blue_back.webp';
 import SpecialOffer from '../../components/SpecialOffer';
 import {
   ArrowRightIcon,
@@ -72,7 +73,7 @@ export default function Home() {
                 <img src={logoDeeper} alt="logo" className="h-12 scale-[0.68] md:scale-[0.85]" />
               </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#service" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">サービス概要</a>
+              <a href="#service-flow" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">サービス概要</a>
               <a href="#results" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">実績</a>
               <a href="#benefits" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">当サービスの特徴</a>
               <a href="#company" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">会社概要</a>
@@ -240,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* Service Flow Section */}
-      <section className="py-20 bg-brand-blue-light">
+      <section id="service-flow" className="py-20 bg-brand-blue-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">サービスの流れ</h3>
@@ -835,18 +836,16 @@ export default function Home() {
       {/* Company Section */}
       <section id="company" className="py-20 bg-brand-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-white mb-4">会社紹介</h3>
-            <p className="text-xl text-white">コンサル出身の実行チームが、<strong>成果を出す営業</strong>を設計します</p>
+          <div className="text-center mb-1">
+            <h3 className="text-3xl font-bold text-white mb-0.5">会社紹介</h3>
+            <p className="text-white mb-6 leading-relaxed mb-8"></p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-white mb-6 leading-relaxed mb-8">
                 弊社合同会社bizdataは、<strong>一部上場コンサルティング会社からスピンアウト</strong>し設立されました。
                 戦略立案から実行支援まで、これまでに<strong>20社以上の営業・データ分析プロジェクト</strong>をご支援してきました。
               </p>
-              
               <div className="space-y-6">
                 <div className="mb-8">
                   <h4 className="bg-white text-brand-blue px-2 py-1 font-black text-xl mb-3">① コンサル品質の「戦略 × 実行」アプローチ</h4>
@@ -903,8 +902,8 @@ export default function Home() {
                 </div>
                 
                 {/* スマホ版：写真を代表紹介とチーム構成の間に配置 */}
-                <div className="flex justify-center mb-6 md:hidden">
-                  <div className="w-48 h-64 rounded-lg overflow-hidden">
+                <div className="mb-6 md:hidden">
+                  <div className="w-48 h-64 rounded-lg overflow-hidden border border-gray-200 mx-auto">
                     <img 
                       src={ryoImage}
                       alt="社長写真"
@@ -938,7 +937,7 @@ export default function Home() {
               </div>
               {/* PC版：写真を右側に配置 */}
               <div className="hidden md:flex md:justify-start">
-                <div className="w-48 h-64 rounded-lg overflow-hidden">
+                <div className="w-48 h-64 rounded-lg overflow-hidden border border-gray-200">
                   <img 
                     src={ryoImage}
                     alt="社長写真"
