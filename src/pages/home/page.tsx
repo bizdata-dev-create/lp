@@ -64,7 +64,7 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-brand-blue p-0">
+      <section id="hero" className="relative bg-brand-blue p-0">
         <div className="w-full">
           <img
             src={heroImageMobile}

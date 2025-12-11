@@ -15,9 +15,9 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-start">
-              <Link to="/">
+              <AnchorLink to="/#hero">
                 <img src={logoDeeper} alt="logo" className="h-12 scale-[0.68] md:scale-[0.85]" />
-              </Link>
+              </AnchorLink>
             </div>
             <nav className="hidden md:flex space-x-8">
               <AnchorLink to="/#service-flow" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">
@@ -62,7 +62,7 @@ export default function Layout({ children }: LayoutProps) {
             <div>
               <h5 className="font-semibold mb-4">サービス</h5>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><AnchorLink to="/#service" className="hover:text-white transition-colors cursor-pointer">フォーム営業代行</AnchorLink></li>
+                <li><AnchorLink to="/#hero" className="hover:text-white transition-colors cursor-pointer">フォーム営業代行</AnchorLink></li>
               </ul>
             </div>
             <div>
