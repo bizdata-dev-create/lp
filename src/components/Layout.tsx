@@ -27,10 +27,10 @@ export default function Layout({ children }: LayoutProps) {
                 実績
               </AnchorLink>
               <AnchorLink to="/#benefits" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">
-                当サービスの特徴
+                4つの特徴
               </AnchorLink>
               <AnchorLink to="/#company" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">
-                会社概要
+                会社紹介
               </AnchorLink>
             </nav>
             <a 
