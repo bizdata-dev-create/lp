@@ -8,13 +8,13 @@ import benefit4Image from '../../img/dev/benefit4.webp';
 import company1Image from '../../img/dev/company1.webp';
 import valuePropositionMobile from '../../img/dev/value_proposition_mobile.webp';
 import valuePropositionPC from '../../img/dev/value_proposition_pc.webp';
-import logoDeeper from '../../img/dev/logo_deeper.webp';
 import compareTableFormMobile from '../../img/dev/compare_table_form_mobile.webp';
 import compareTableFormPC from '../../img/dev/compare_table_form_pc.webp';
 import compareTableMobile from '../../img/dev/compare_table_mobile.webp';
 import compareTablePC from '../../img/dev/compare_table_pc.webp';
 import ryoImage from '../../img/dev/ryo.webp';
 import SpecialOffer from '../../components/SpecialOffer';
+import Layout from '../../components/Layout';
 import {
   ArrowRightIcon,
   BarChartIcon,
@@ -62,33 +62,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-40">
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-start">
-                <img src={logoDeeper} alt="logo" className="h-12 scale-[0.68] md:scale-[0.85]" />
-              </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="#service-flow" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">サービス概要</a>
-              <a href="#results" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">実績</a>
-              <a href="#benefits" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">当サービスの特徴</a>
-              <a href="#company" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">会社概要</a>
-            </nav>
-            <a id="cta_schedule_header"
-              href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-brand-red text-white px-5 py-1.5 rounded-lg hover:bg-brand-red/90 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary"
-            >
-              お問い合わせ
-            </a>
-          </div>
-        </div>
-      </header>
-
+    <Layout>
       {/* Hero Section */}
       <section className="relative bg-brand-blue p-0">
         <div className="w-full">
@@ -1103,53 +1077,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <p className="text-gray-400 text-sm">
-                成果報酬型の営業代行サービス。<br />
-                <strong>初期費用0円</strong>で確実に結果を出します。
-              </p>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">サービス</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#service" className="hover:text-white transition-colors cursor-pointer">フォーム営業代行</a></li>
-                <li><a href="#benefits" className="hover:text-white transition-colors cursor-pointer">営業戦略コンサルティング</a></li>
-                <li><a href="#results" className="hover:text-white transition-colors cursor-pointer">実績・事例</a></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">会社情報</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="https://bizdata-official.jp/%e4%bc%9a%e7%a4%be%e6%a6%82%e8%a6%81/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors cursor-pointer">会社概要</a></li>
-                <li><a href="#" className="hover:text-white transition-colors cursor-pointer">プライバシーポリシー</a></li>
-                <li><a href="#" className="hover:text-white transition-colors cursor-pointer">利用規約</a></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">お問い合わせ</h5>
-              <a 
-                id="cta_schedule_footer"
-                href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-brand-red text-white px-6 py-2 rounded-lg hover:bg-brand-red/90 text-sm whitespace-nowrap cursor-pointer mb-4 inline-block btn-primary"
-              >
-                お問い合わせ
-              </a>
-              <div className="text-sm text-gray-400">
-                <p>営業時間: 平日 9:00-18:00</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 営業代行サービス. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
 
       {/* Contact Form Modal */}
       {isContactFormOpen && (
@@ -1266,6 +1193,6 @@ export default function Home() {
           </div>
         </div>
       )}
-    </div>
+    </Layout>
   );
 }
