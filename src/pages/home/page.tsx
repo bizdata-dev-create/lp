@@ -15,11 +15,11 @@ import compareTablePC from '../../img/dev/compare_table_pc.webp';
 import ryoImage from '../../img/dev/ryo.webp';
 import SpecialOffer from '../../components/SpecialOffer';
 import Layout from '../../components/Layout';
+import ContactFormModal from '../../components/ContactFormModal';
 import {
   ArrowRightIcon,
   BarChartIcon,
   CheckIcon,
-  CloseIcon,
   EditIcon,
   FileTextIcon,
   GraduationCapIcon,
@@ -46,13 +46,6 @@ export default function Home() {
     '御社に最適な営業ルートの選び方',
     '反応率を200%上げる文章の"型"'
   ];
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Redirect to external URL
-    window.open('https://timerex.net/s/qingyangliangjp_f186/5354f609/', '_blank');
-  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -85,6 +78,7 @@ export default function Home() {
       <SpecialOffer 
         ctaId="cta_schedule_special_offer_1"
         benefitItems={specialOfferBenefits}
+        onOpenModal={() => setIsContactFormOpen(true)}
       />
 
       {/* Results Section */}
@@ -624,6 +618,7 @@ export default function Home() {
       <SpecialOffer 
         ctaId="cta_schedule_special_offer_2"
         benefitItems={specialOfferBenefits}
+        onOpenModal={() => setIsContactFormOpen(true)}
       />
 
       {/* Competitive Comparison */}
@@ -1069,130 +1064,28 @@ export default function Home() {
               href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-yellow-400 text-brand-blue px-8 py-3 rounded-lg text-lg font-bold hover:bg-yellow-300 whitespace-nowrap cursor-pointer btn-primary"
+              className="bg-yellow-400 text-brand-blue px-4 py-2 rounded-lg text-lg font-bold hover:bg-yellow-300 whitespace-nowrap cursor-pointer btn-primary"
             >
               お問い合わせ
             </a>
+            <button
+              onClick={() => setIsContactFormOpen(true)}
+              className="bg-yellow-400 text-brand-blue px-4 py-2 rounded-lg text-lg font-bold hover:bg-yellow-300 whitespace-nowrap cursor-pointer btn-primary"
+            >
+              資料請求
+            </button>
           </div>
         </div>
       </section>
 
 
       {/* Contact Form Modal */}
-      {isContactFormOpen && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900">お問い合わせ</h3>
-                <button 
-                  onClick={() => setIsContactFormOpen(false)}
-                  className="text-gray-400 hover:text-gray-900 cursor-pointer"
-                >
-                  <CloseIcon className="w-6 h-6" />
-                </button>
-              </div>
-              
-              <form id="contact-form" data-readdy-form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-900 mb-1">
-                    会社名 <span className="text-brand-red">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    required
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm"
-                    placeholder="株式会社○○"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-1">
-                    お名前 <span className="text-brand-red">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm"
-                    placeholder="山田太郎"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-1">
-                    メールアドレス <span className="text-brand-red">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm"
-                    placeholder="example@company.com"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-1">
-                    電話番号
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm"
-                    placeholder="03-1234-5678"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-1">
-                    お問い合わせ内容 <span className="text-brand-red">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={4}
-                    maxLength={500}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-sm resize-none"
-                    placeholder="ご相談内容をお聞かせください（500文字以内）"
-                  ></textarea>
-                  <p className="text-xs text-gray-900 mt-1">{formData.message.length}/500文字</p>
-                </div>
-                
-                <button
-                  type="submit"
-                  className="w-full bg-brand-red text-white py-2 rounded-lg font-bold hover:bg-brand-red/90 whitespace-nowrap cursor-pointer btn-primary"
-                >
-                  送信する
-                </button>
-              </form>
-              
-              <div className="mt-6 p-4 bg-orange-50 rounded-lg">
-                <h4 className="font-semibold text-orange-800 mb-2">🎁 特典</h4>
-                <p className="text-sm text-orange-700">
-                  お問い合わせいただいた方に「反応率が2倍以上になる営業の裏ワザ」資料をプレゼント！
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <ContactFormModal
+        isOpen={isContactFormOpen}
+        onClose={() => setIsContactFormOpen(false)}
+        formData={formData}
+        onInputChange={handleInputChange}
+      />
     </Layout>
   );
 }

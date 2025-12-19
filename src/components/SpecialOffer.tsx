@@ -4,9 +4,10 @@ import benefitImage from '../img/dev/special_offer.webp';
 interface SpecialOfferProps {
   ctaId: string;
   benefitItems: string[];
+  onOpenModal?: () => void;
 }
 
-export default function SpecialOffer({ ctaId, benefitItems }: SpecialOfferProps) {
+export default function SpecialOffer({ ctaId, benefitItems, onOpenModal }: SpecialOfferProps) {
   return (
     <section className="bg-brand-blue-light py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -42,15 +43,26 @@ export default function SpecialOffer({ ctaId, benefitItems }: SpecialOfferProps)
               />
             </div>
           </div>
-          <a 
-            id={ctaId}
-            href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-brand-red text-white px-8 py-2 rounded-lg text-lg font-bold hover:bg-brand-red/90 whitespace-nowrap cursor-pointer inline-block btn-primary"
-          >
-            お問い合わせ
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              id={ctaId}
+              href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-red text-white px-6 py-2 rounded-lg text-lg font-bold hover:bg-brand-red/90 whitespace-nowrap cursor-pointer inline-block btn-primary"
+            >
+              お問い合わせ
+            </a>
+              {onOpenModal && (
+                <button
+                  onClick={onOpenModal}
+                  className="bg-brand-blue text-yellow-400 px-6 py-2 rounded-lg text-lg font-bold hover:bg-brand-blue/90 whitespace-nowrap cursor-pointer btn-primary"
+                >
+                  資料請求
+                </button>
+              )}
+          </div>
+
         </div>
       </div>
     </section>

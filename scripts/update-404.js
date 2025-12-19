@@ -46,3 +46,4 @@ writeFileSync(html404Path, html404, 'utf-8');
 
 console.log('✅ 404.html has been updated with the latest build files.');
 
+
