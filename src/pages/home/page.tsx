@@ -138,6 +138,7 @@ export default function Home() {
       {/* Special Offer */}
       <SpecialOffer 
         ctaId="cta_schedule_special_offer_1"
+        materialCtaId="cta_material_special_offer_1"
         benefitItems={specialOfferBenefits}
         onOpenModal={() => setIsContactFormOpen(true)}
       />
@@ -679,6 +680,7 @@ export default function Home() {
       {/* Special Offer 2 */}
       <SpecialOffer 
         ctaId="cta_schedule_special_offer_2"
+        materialCtaId="cta_material_special_offer_2"
         benefitItems={specialOfferBenefits}
         onOpenModal={() => setIsContactFormOpen(true)}
       />
@@ -1131,6 +1133,7 @@ export default function Home() {
               お問い合わせ
             </a>
             <button
+              id="cta_material_last_section"
               onClick={() => setIsContactFormOpen(true)}
               className="bg-yellow-400 text-brand-blue px-4 py-2 rounded-lg text-lg font-bold hover:bg-yellow-300 whitespace-nowrap cursor-pointer btn-primary"
             >

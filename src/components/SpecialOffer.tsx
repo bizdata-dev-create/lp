@@ -3,11 +3,12 @@ import benefitImage from '../img/dev/special_offer.webp';
 
 interface SpecialOfferProps {
   ctaId: string;
+  materialCtaId?: string;
   benefitItems: string[];
   onOpenModal?: () => void;
 }
 
-export default function SpecialOffer({ ctaId, benefitItems, onOpenModal }: SpecialOfferProps) {
+export default function SpecialOffer({ ctaId, materialCtaId, benefitItems, onOpenModal }: SpecialOfferProps) {
   return (
     <section className="bg-brand-blue-light py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -55,6 +56,7 @@ export default function SpecialOffer({ ctaId, benefitItems, onOpenModal }: Speci
             </a>
               {onOpenModal && (
                 <button
+                  id={materialCtaId}
                   onClick={onOpenModal}
                   className="bg-brand-blue text-yellow-400 px-6 py-2 rounded-lg text-lg font-bold hover:bg-brand-blue/90 whitespace-nowrap cursor-pointer btn-primary"
                 >
