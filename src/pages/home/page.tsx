@@ -1125,7 +1125,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               id="cta_schedule_last_section"
-              href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
+              href="https://timerex.net/s/info_cbe9_f3ff/48c82dac"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-yellow-400 text-brand-blue px-4 py-2 rounded-lg text-lg font-bold hover:bg-yellow-300 whitespace-nowrap cursor-pointer btn-primary"

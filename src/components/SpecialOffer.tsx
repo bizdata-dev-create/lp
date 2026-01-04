@@ -47,7 +47,7 @@ export default function SpecialOffer({ ctaId, materialCtaId, benefitItems, onOpe
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               id={ctaId}
-              href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
+              href="https://timerex.net/s/info_cbe9_f3ff/48c82dac"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-red text-white px-6 py-2 rounded-lg text-lg font-bold hover:bg-brand-red/90 whitespace-nowrap cursor-pointer inline-block btn-primary"

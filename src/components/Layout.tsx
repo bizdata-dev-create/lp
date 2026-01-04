@@ -35,7 +35,7 @@ export default function Layout({ children }: LayoutProps) {
             </nav>
             <a 
               id="cta_schedule_header"
-              href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
+              href="https://timerex.net/s/info_cbe9_f3ff/48c82dac"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-red text-white px-3 md:px-5 py-1.5 rounded-lg hover:bg-brand-red/90 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary"
@@ -77,7 +77,7 @@ export default function Layout({ children }: LayoutProps) {
               <h5 className="font-semibold mb-4">お問い合わせ</h5>
               <a 
                 id="cta_schedule_footer"
-                href="https://timerex.net/s/qingyangliangjp_f186/5354f609/"
+                href="https://timerex.net/s/info_cbe9_f3ff/48c82dac"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand-red text-white px-6 py-2 rounded-lg hover:bg-brand-red/90 text-sm whitespace-nowrap cursor-pointer mb-4 inline-block btn-primary"
