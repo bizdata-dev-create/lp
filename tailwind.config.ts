@@ -7,8 +7,20 @@ export default {
     ],
     theme: {
       extend: {
+        fontFamily: {
+          sans: [
+            '"Noto Sans JP"',
+            '-apple-system',
+            'BlinkMacSystemFont',
+            '"Segoe UI"',
+            'Roboto',
+            '"Hiragino Sans"',
+            '"Hiragino Kaku Gothic ProN"',
+            'sans-serif',
+          ],
+        },
         colors: {
-          'brand-blue': '#002672',
+          'brand-blue': '#004E7C',
           'brand-blue-light': '#DBEAFE', // blue-100相当
           'brand-red': '#B91C1C', // red-700相当
           'brand-red-light': '#FEE2E2', // red-200相当

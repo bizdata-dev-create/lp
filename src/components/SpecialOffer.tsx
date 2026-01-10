@@ -17,7 +17,7 @@ export default function SpecialOffer({ ctaId, materialCtaId, benefitItems, onOpe
             <span className="bg-brand-blue text-yellow-300 px-3 py-1 rounded">お問い合わせ特典</span>
           </h3>
           <p className="text-xl text-gray-900 mb-6 text-left">
-            お問い合わせいただいた方限定に、<br></br><strong className="bg-marker-yellow font-bold"><strong>「営業戦略の無料相談」と「反応率が3倍以上になる裏ワザ」</strong>をプレゼント！</strong>
+            お問い合わせいただいた方限定に、<br></br><strong className="bg-marker-yellow font-bold">「営業戦略の無料相談」と「反応率が3倍以上になる裏ワザ」</strong>をプレゼント！
           </p>
           <div className="grid md:grid-cols-[55%_45%] gap-8 mb-6">
             {/* 内容一例ボックス - リッチなデザイン（縦サイズは維持） */}
