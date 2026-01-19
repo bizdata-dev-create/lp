@@ -87,7 +87,7 @@ export default function ContactFormModal({
                   href="https://timerex.net/s/info_cbe9_f3ff/48c82dac"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-yellow-400 text-brand-blue px-4 py-2 rounded-lg text-lg font-bold hover:bg-yellow-300 whitespace-nowrap cursor-pointer btn-primary"
+                  className="bg-brand-green text-white px-4 py-2 rounded-lg text-lg font-bold hover:bg-brand-green/90 whitespace-nowrap cursor-pointer btn-primary"
                 >
                   お問い合わせ
                 </a>

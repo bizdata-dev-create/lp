@@ -1,5 +1,6 @@
 import { CheckCircleIcon } from './icons';
 import benefitImage from '../img/dev/special_offer.webp';
+import AnchorLink from './AnchorLink';
 
 interface SpecialOfferProps {
   ctaId: string;
@@ -44,25 +45,34 @@ export default function SpecialOffer({ ctaId, materialCtaId, benefitItems, onOpe
               />
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              id={ctaId}
-              href="https://timerex.net/s/info_cbe9_f3ff/48c82dac"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-brand-red text-white px-6 py-2 rounded-lg text-lg font-bold hover:bg-brand-red/90 whitespace-nowrap cursor-pointer inline-block btn-primary"
-            >
-              お問い合わせ
-            </a>
-              {onOpenModal && (
+          <div className="flex flex-col items-center gap-2">
+            <p className="text-base text-gray-600 mb-0 font-bold">＼ <span className="text-red-600">10秒</span>でお申し込み完了 ／</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <AnchorLink
+                to="/#contact-form"
+                className="bg-gradient-to-r from-green-600 to-green-500 text-white px-9 py-[0.65rem] rounded-lg text-2xl font-bold hover:from-green-500 hover:to-green-400 whitespace-nowrap cursor-pointer inline-block btn-primary transition-all hover-pulse-ring"
+              >
+                <span id={ctaId}>無料で相談する 》</span>
+              </AnchorLink>
+              {/* <a 
+                id={ctaId}
+                href="https://timerex.net/s/info_cbe9_f3ff/48c82dac"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-brand-green text-white px-6 py-2 rounded-lg text-lg font-bold hover:bg-brand-green/90 whitespace-nowrap cursor-pointer inline-block btn-primary shadow-md hover:shadow-lg transition-shadow"
+              >
+                お問い合わせ
+              </a> */}
+              {/* {onOpenModal && (
                 <button
                   id={materialCtaId}
                   onClick={onOpenModal}
-                  className="bg-brand-blue text-yellow-400 px-6 py-2 rounded-lg text-lg font-bold hover:bg-brand-blue/90 whitespace-nowrap cursor-pointer btn-primary"
+                  className="bg-brand-blue text-yellow-400 px-6 py-2 rounded-lg text-lg font-bold hover:bg-brand-blue/90 whitespace-nowrap cursor-pointer btn-primary shadow-md hover:shadow-lg transition-shadow"
                 >
                   資料請求
                 </button>
-              )}
+              )} */}
+            </div>
           </div>
 
         </div>

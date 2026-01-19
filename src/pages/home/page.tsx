@@ -39,6 +39,18 @@ export default function Home() {
     message: ''
   });
 
+  // お問い合わせフォーム用の状態
+  const [contactFormData, setContactFormData] = useState({
+    company: '',
+    name: '',
+    email: '',
+    phone: '',
+    inquiryType: '',
+    remarks: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   // Special Offer の共通データ
   const specialOfferBenefits = [
     '本物の営業代行業者の見極め方',
@@ -52,6 +64,61 @@ export default function Home() {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+  
+  const handleContactFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setContactFormData({
+      ...contactFormData,
+      [e.target.name]: e.target.value
+    });
+  };
+  
+  const handleContactFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const GOOGLE_FORM_ACTION =
+      "https://docs.google.com/forms/d/e/1FAIpQLScAzEd3YYnW_zELrdoBQWoCNx2eiN1JhANR4is2GIlY3mtLUw/formResponse";
+
+    try {
+      const payload = new URLSearchParams();
+
+      payload.append("entry.1927350659", contactFormData.company || "");
+      payload.append("entry.1866246276", contactFormData.name || "");
+      payload.append("entry.1765924240", contactFormData.email || "");
+      payload.append("entry.1609350815", contactFormData.phone || "");
+      payload.append("entry.1625547957", contactFormData.inquiryType || "");
+      payload.append("entry.110634519", contactFormData.remarks || "");
+
+      await fetch(GOOGLE_FORM_ACTION, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: payload.toString(),
+      });
+
+      // フォームをリセット
+      setContactFormData({
+        company: '',
+        name: '',
+        email: '',
+        phone: '',
+        inquiryType: '',
+        remarks: ''
+      });
+
+      setSubmitStatus('success');
+    } catch (err) {
+      console.error(err);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -81,7 +148,7 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-full h-1 bg-brand-blue"></div>
           <div className="absolute bottom-0 left-0 w-full h-1 bg-brand-blue"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8">
             <div className="inline-block mb-3">
@@ -97,7 +164,7 @@ export default function Home() {
               リストと文章は<strong className="bg-marker-yellow font-bold">何度でも無料で</strong>作成・修正いたします。
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {/* 初期費用0円 */}
             <div className="bg-brand-blue rounded-xl py-3 md:py-4 px-4 md:px-8 text-center shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 border border-blue-700/20">
@@ -136,14 +203,14 @@ export default function Home() {
       </section>
 
       {/* Special Offer */}
-      <SpecialOffer 
+      <SpecialOffer
         ctaId="cta_schedule_special_offer_1"
         materialCtaId="cta_material_special_offer_1"
         benefitItems={specialOfferBenefits}
         onOpenModal={() => setIsContactFormOpen(true)}
       />
 
-      
+
       {/* Results Section */}
       <section id="results" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -151,7 +218,7 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-gray-900 mb-4">bizdata式フォーム営業<br className="md:hidden" />の圧倒的な実績</h3>
             <p className="text-xl text-gray-900">数々の企業で確実な成果を実現</p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {/* Result 1 */}
             <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-brand-red-light">
@@ -246,20 +313,20 @@ export default function Home() {
               フォーム営業は<strong className="bg-marker-yellow font-bold">決裁者の目に届きやすく、興味の高い人のみ返信する</strong>ため、受注率の高い営業手法です。
             </p>
           </div>
-          
+
           {/* Comparison Table */}
           <div>
             {/* スマホ用画像（モバイルで表示、PCで非表示） */}
-            <img 
+            <img
               src={compareTableFormMobile}
               alt="比較表"
               className="w-full h-auto rounded-lg md:hidden"
               loading="lazy"
               decoding="async"
             />
-            
+
             {/* PC用画像（モバイルで非表示、PCで表示） */}
-            <img 
+            <img
               src={compareTableFormPC}
               alt="比較表"
               className="w-full h-auto rounded-lg hidden md:block"
@@ -276,7 +343,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">サービスの流れ</h3>
           </div>
-          
+
           <div className="max-w-4xl mx-auto space-y-4">
             {/* Step 1 */}
             <div className="flex-1 bg-white rounded-lg p-6 shadow-md border border-gray-200">
@@ -290,7 +357,7 @@ export default function Home() {
               <p className="text-gray-900 mb-2">・送信NGリスト等についてもご共有頂きます。</p>
               <p className="text-gray-900">・御社の労力は基本的にここのみとなります。</p>
             </div>
-            
+
             <div className="flex justify-center my-4">
               <div className="w-0 h-0 border-l-[180px] border-l-transparent border-r-[180px] border-r-transparent border-t-[20px] border-t-gray-400"></div>
             </div>
@@ -306,7 +373,7 @@ export default function Home() {
               <p className="text-gray-900 mb-2">・御社の商材に最適リスト、及び営業文章をこちらから作成・提案します。</p>
               <p className="text-gray-900">・既存のリストや文章がある場合は持ち寄っていただいても問題ありません。改善提案もできます。</p>
             </div>
-            
+
             <div className="flex justify-center my-4">
               <div className="w-0 h-0 border-l-[180px] border-l-transparent border-r-[180px] border-r-transparent border-t-[20px] border-t-gray-400"></div>
             </div>
@@ -322,7 +389,7 @@ export default function Home() {
               <p className="text-gray-900 mb-2">・リストと文章について、御社の了承をいただけ次第、送信をすぐに開始します。</p>
               <p className="text-gray-900">・目標が達成されるよう送信を続けます。</p>
             </div>
-            
+
             <div className="flex justify-center my-4">
               <div className="w-0 h-0 border-l-[180px] border-l-transparent border-r-[180px] border-r-transparent border-t-[20px] border-t-gray-400"></div>
             </div>
@@ -348,12 +415,12 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-gray-900 mb-4">4つの特徴</h3>
             <p className="text-xl text-gray-900">なぜ選ばれるのか</p>
           </div>
-          
+
           <div className="space-y-16">
             {/* Feature 1 - 初期費用ゼロ */}
             <div className="grid md:grid-cols-2 gap-12 items-center border-4 border-brand-blue p-4">
               <div className="order-2 md:order-1">
-                <img 
+                <img
                   src={benefit1Image}
                   alt="初期費用0円の成果報酬制"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
@@ -372,7 +439,7 @@ export default function Home() {
                   一般的な営業代行や広告のように、<strong className="bg-marker-yellow font-bold">初期費用として数十万円の費用を払う必要は「一切」ありません</strong>。
                   フォーム営業では、「送信が行われた分だけ」のシンプルな成果報酬制です。
                 </p>
-                
+
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="bg-white p-4 rounded-lg shadow-md text-center border-2 border-brand-red">
                     <div className="text-2xl font-bold text-brand-red">0円</div>
@@ -387,7 +454,7 @@ export default function Home() {
                     <div className="text-sm text-gray-900 font-bold">文章作成<br />（何度でも）</div>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-900">
                   営業に必要な準備はすべて弊社にお任せください。
                   お客様にご負担いただくのは、<strong>送信完了分の料金（1通あたり15円〜）のみ</strong>。
@@ -408,7 +475,7 @@ export default function Home() {
                   営業の成果を決める最大の要因は、「<strong>誰に届けるか</strong>」。
                   どれだけ良い文章を書いても、送る相手がズレていれば<strong>結果は出ません</strong>。
                 </p>
-                
+
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6 border border-gray-200">
                   <h5 className="font-semibold text-gray-900 mb-4"><strong className="bg-marker-yellow font-bold"><span className="text-brand-red font-bold text-xl">200万件</span>以上の企業リストを独自に保有</strong></h5>
                   <div className="grid grid-cols-2 gap-4 text-sm">
@@ -432,7 +499,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <img 
+                <img
                   src={benefit3Image}
                   alt="200万件以上の企業リスト"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
@@ -445,11 +512,11 @@ export default function Home() {
             {/* Media List Section - Full width below Feature 2 */}
             <div className="w-full">
               <div className="bg-brand-blue-light p-8 rounded-lg border-2 border-brand-blue">
-                <h5 className="font-semibold text-gray-900 mb-6 text-center text-xl">リストアップできる媒体例<br/><span className="text-sm">（ご希望の媒体を付け加え可能）</span></h5>
-                
+                <h5 className="font-semibold text-gray-900 mb-6 text-center text-xl">リストアップできる媒体例<br /><span className="text-sm">（ご希望の媒体を付け加え可能）</span></h5>
+
                 <div className="grid md:grid-cols-3 gap-8">
                   <div>
-                  <h6 className="font-medium text-gray-900 mb-4 text-lg"><span className="inline-block border-b-2 border-blue-600 pb-2 w-1/2">採用媒体</span></h6>
+                    <h6 className="font-medium text-gray-900 mb-4 text-lg"><span className="inline-block border-b-2 border-blue-600 pb-2 w-1/2">採用媒体</span></h6>
                     <div className="grid grid-cols-2 gap-2 text-sm text-gray-900">
                       <div>リクナビ</div>
                       <div>マイナビ</div>
@@ -472,7 +539,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                   <h6 className="font-medium text-gray-900 mb-4 text-lg"><span className="inline-block border-b-2 border-blue-600 pb-2 w-1/2">営業・PR系媒体</span></h6>
+                    <h6 className="font-medium text-gray-900 mb-4 text-lg"><span className="inline-block border-b-2 border-blue-600 pb-2 w-1/2">営業・PR系媒体</span></h6>
                     <div className="grid grid-cols-2 gap-2 text-sm text-gray-900">
                       <div>BOXIL</div>
                       <div>LISKUL</div>
@@ -486,7 +553,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                  <h6 className="font-medium text-gray-900 mb-4 text-lg"><span className="inline-block border-b-2 border-blue-600 pb-2 w-1/2">業界特化媒体</span></h6>
+                    <h6 className="font-medium text-gray-900 mb-4 text-lg"><span className="inline-block border-b-2 border-blue-600 pb-2 w-1/2">業界特化媒体</span></h6>
                     <div className="space-y-3 text-sm text-gray-900">
                       <div>
                         <strong>①美容系媒体</strong><br />
@@ -509,7 +576,7 @@ export default function Home() {
             {/* Feature 3 - 特典としてリストを無料提供 */}
             <div className="grid md:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
               <div className="order-2 md:order-1">
-                <img 
+                <img
                   src={benefit4Image}
                   alt="多様な営業手法への対応"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
@@ -525,14 +592,14 @@ export default function Home() {
                   特典としてリストを<br className="md:hidden" /><strong className="bg-marker-yellow font-bold">無料提供</strong>
                 </h4>
                 <p className="text-gray-900 mb-6 leading-relaxed">
-                  例えば自社でテレアポ営業をしたい場合、DMやFAXを送付したい場合など、 
+                  例えば自社でテレアポ営業をしたい場合、DMやFAXを送付したい場合など、
                   <strong>お問合せフォーム送信以外の様々な用途</strong>でも営業リストを作成したい場合があります。
                 </p>
-                
+
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6 border border-gray-200">
                   <h5 className="font-semibold text-gray-900 mb-4"> <strong className="bg-marker-yellow font-bold">完全無料＆取得件数は無制限</strong>でリスト提供</h5>
                   <p className="text-gray-900 text-sm mb-4">
-                    弊社のお問い合わせフォーム送信代行をご利用いただいているお客様であれば、完全無料＆取得件数は無制限で「URL、電話番号、FAX番号、住所などの情報を削除していない」営業リストを取得できますので、 
+                    弊社のお問い合わせフォーム送信代行をご利用いただいているお客様であれば、完全無料＆取得件数は無制限で「URL、電話番号、FAX番号、住所などの情報を削除していない」営業リストを取得できますので、
                     お問い合わせフォーム営業以外の様々な営業手段で弊社のリストをご利用いただけます。
                   </p>
                 </div>
@@ -552,7 +619,7 @@ export default function Home() {
                   どんなに良い営業手法を使っても、「戦略の方向性」が間違っていれば<strong>成果は出ません</strong>。
                   単に送信だけでなく、<strong className="bg-marker-yellow font-bold">「誰に・何を・どう伝えるべきか」という営業戦略の見直し</strong>までサポートします。
                 </p>
-                
+
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6 border border-gray-200">
                   <h5 className="font-semibold text-gray-900 mb-4"> ご契約前でも、営業戦略のご相談を<strong>無料で実施</strong></h5>
                   <div className="space-y-2 text-sm text-gray-900">
@@ -566,18 +633,18 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-900 mb-4">
                   上場企業から中小企業、ベンチャー企業に至るまで、<strong>数多くの企業の営業を支援</strong>してきたプロのコンサル出身メンバーが、
                   具体的な改善ポイントをわかりやすく整理します。
                 </p>
-                
+
                 <p className="text-xs text-gray-900">
                   ※各種データ・リサーチを踏まえた戦略設計は別途有償で承ります。業界・競合分析、社内データを基に確実な営業戦略を設計いたします。
                 </p>
               </div>
               <div>
-                <img 
+                <img
                   src={benefit2Image}
                   alt="営業戦略コンサルティング"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
@@ -597,7 +664,7 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-gray-900 mb-4">独自の強み</h3>
             <p className="text-xl text-gray-900">他社との違い</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-16">
             {/* USP 1 */}
             <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border-2 border-orange-600">
@@ -613,7 +680,7 @@ export default function Home() {
                   これまで同じ商品でも、相手の業種や状況に合わせて言葉を変えることで、返信・成約率が<span className="text-brand-red font-bold text-3xl">180％以上</span>向上しています。
                 </p>
               </div>
-              
+
               <div className="space-y-4">
                 <h5 className="font-semibold text-gray-900">一社一社に<strong className="bg-marker-yellow font-bold">営業文をカスタマイズ</strong></h5>
                 <div className="space-y-2 text-sm text-gray-900">
@@ -650,7 +717,7 @@ export default function Home() {
                   <strong>自動ツールだけでは対応できないケース</strong>が多く存在します。
                 </p>
               </div>
-              
+
               <div className="space-y-4">
                 <h5 className="font-semibold text-gray-900"> システムだけでは気づけない"わずかな違い"を人が判断</h5>
                 <div className="space-y-2 text-sm text-gray-900">
@@ -678,7 +745,7 @@ export default function Home() {
       </section>
 
       {/* Special Offer 2 */}
-      <SpecialOffer 
+      <SpecialOffer
         ctaId="cta_schedule_special_offer_2"
         materialCtaId="cta_material_special_offer_2"
         benefitItems={specialOfferBenefits}
@@ -692,21 +759,21 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-gray-900 mb-4">他サービスと比較</h3>
             <p className="text-xl text-gray-900">他社と比べても<strong className="bg-marker-yellow font-bold">費用の割に営業のクオリティ・スピードともに高い</strong>ところが強みとなっています。</p>
           </div>
-          
+
           {/* Table Space for Future Use */}
           <div className="bg-white rounded-lg p-2 text-center">
             <div className="mt-2">
               {/* スマホ用画像（モバイルで表示、タブレット以上で非表示） */}
-              <img 
+              <img
                 src={compareTableMobile}
                 alt="詳細比較表"
                 className="w-full h-auto rounded-lg md:hidden"
                 loading="lazy"
                 decoding="async"
               />
-              
+
               {/* PC用画像（タブレット以上で表示、モバイルで非表示） */}
-              <img 
+              <img
                 src={compareTablePC}
                 alt="詳細比較表"
                 className="w-full h-auto rounded-lg hidden md:block"
@@ -725,21 +792,21 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-gray-900 mb-4">提供価値</h3>
             <p className="text-xl text-gray-900">初期準備（営業戦略とリストの取得、文章作成等）とアプローチをお任せ頂くことで、<br></br><strong className="bg-marker-yellow font-bold">御社は業務品質の向上に集中できる</strong>ようになります。</p>
           </div>
-          
+
           {/* Image Space */}
           <div className="mb-8">
             {/* スマホ用画像（モバイルで表示、PCで非表示） */}
-            <img 
+            <img
               src={valuePropositionMobile}
               alt="提供価値 - 導入前後の比較"
               className="w-full h-auto rounded-lg md:hidden"
               loading="lazy"
               decoding="async"
             />
-            
+
             {/* PC用画像（モバイルで非表示、PCで表示、80%サイズ） */}
             <div className="hidden md:flex md:justify-center">
-              <img 
+              <img
                 src={valuePropositionPC}
                 alt="提供価値 - 導入前後の比較"
                 className="w-4/5 h-auto rounded-lg"
@@ -748,7 +815,7 @@ export default function Home() {
               />
             </div>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-brand-blue-light to-teal-50 rounded-lg p-8 text-center border-4 border-blue-600">
               <div className="flex items-center justify-center mb-4">
@@ -761,7 +828,7 @@ export default function Home() {
                 一部上場企業(現プライム上場)にて、BtoBの営業戦略を検討してきたコンサルタントが、御社のターゲット選定をご支援することで、見込みの高い顧客獲得に繋がります
               </p>
             </div>
-            
+
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-8 text-center border-4 border-green-600">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
@@ -773,7 +840,7 @@ export default function Home() {
                 一社一社に最適な文章を考え、送信を外部パートナーと連携することで営業文章の質の向上と送信量の確保を両立し、効率的な営業を実施できます
               </p>
             </div>
-            
+
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-8 text-center border-4 border-pink-600">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mr-4">
@@ -797,7 +864,7 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-gray-900 mb-4">お客様の声</h3>
             <p className="text-xl text-gray-900">ご利用いただいたお客様からの評価</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
               <div className="flex items-center mb-6">
@@ -811,7 +878,7 @@ export default function Home() {
               </div>
               <blockquote className="text-gray-900 mb-4">
                 <strong>「CPAがわかりやすく、安心して頼める。課金形態が他の業者は作業ベース、<strong className="bg-marker-yellow font-bold">bizdataさんは結果ベース</strong>なので、結果にコミットしてくれる。
-                成果報酬だから安心して任せられるし、実際に費用対効果がはっきり出ている点が他社との決定的な違いでした。」</strong>
+                  成果報酬だから安心して任せられるし、実際に費用対効果がはっきり出ている点が他社との決定的な違いでした。」</strong>
               </blockquote>
             </div>
 
@@ -842,7 +909,7 @@ export default function Home() {
               </div>
               <blockquote className="text-gray-900 mb-4">
                 <strong>「文章をすごい丁寧に準備してくれた。おかげで、<strong className="bg-marker-yellow font-bold">開始翌週からすぐに反響があり</strong>、案件獲得につながった。
-                わざわざフォームから返信頂いたお客さんは基本的に興味を持ってくれる人たちなので商談の質も高く、本格導入につながりやすかった。」</strong>
+                  わざわざフォームから返信頂いたお客さんは基本的に興味を持ってくれる人たちなので商談の質も高く、本格導入につながりやすかった。」</strong>
               </blockquote>
             </div>
 
@@ -886,7 +953,7 @@ export default function Home() {
                     戦略コンサルタントとして培った分析・検証・改善力により、「確実に結果が出る営業プロセス」をお客様と共に構築します。
                   </p>
                 </div>
-                
+
                 <div className="mb-8">
                   <h4 className="bg-white text-brand-blue px-2 py-1 font-black text-xl mb-3">② 現場から生まれた「本当に使えるノウハウ」</h4>
                   <p className="text-white">
@@ -907,7 +974,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <img 
+              <img
                 src={company1Image}
                 alt="コンサル出身の実行チーム"
                 className="w-full h-auto rounded-lg shadow-lg object-cover"
@@ -916,13 +983,13 @@ export default function Home() {
               />
             </div>
           </div>
-          
+
           {/* Team Introduction */}
           <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-12">
             <div className="text-center mb-12">
               <h4 className="text-2xl font-bold text-gray-900 mb-4">成果を追及し続けるチーム<br className="md:hidden" />でご支援します</h4>
             </div>
-            
+
             <div className="grid md:grid-cols-[70%_30%] gap-8 items-start">
               <div>
                 <div className="bg-white p-6 rounded-lg shadow-md mb-6">
@@ -932,11 +999,11 @@ export default function Home() {
                     これまでに<strong>20社以上の企業で、営業・事業戦略立案・実行支援</strong>を支援。
                   </p>
                 </div>
-                
+
                 {/* スマホ版：写真を代表紹介とチーム構成の間に配置 */}
                 <div className="mb-6 md:hidden">
                   <div className="w-48 h-64 rounded-lg overflow-hidden border border-gray-200 mx-auto">
-                    <img 
+                    <img
                       src={ryoImage}
                       alt="社長写真"
                       className="w-full h-full object-cover"
@@ -945,7 +1012,7 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4 mt-1">
@@ -970,7 +1037,7 @@ export default function Home() {
               {/* PC版：写真を右側に配置 */}
               <div className="hidden md:flex md:justify-start">
                 <div className="w-48 h-64 rounded-lg overflow-hidden border border-gray-200">
-                  <img 
+                  <img
                     src={ryoImage}
                     alt="社長写真"
                     className="w-full h-full object-cover"
@@ -991,7 +1058,7 @@ export default function Home() {
             <h3 className="text-3xl font-bold text-gray-900 mb-4">FAQ</h3>
             <p className="text-xl text-gray-900">よくあるご質問</p>
           </div>
-          
+
           <div className="space-y-6">
             <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
               <div className="bg-brand-blue text-white px-6 py-4">
@@ -1113,6 +1180,313 @@ export default function Home() {
         </div>
       </section>
 
+      {/* お問い合わせフォーム */}
+      <section id="contact-form" className="py-2 bg-white">
+        <h2 className="text-2xl font-bold text-white bg-brand-blue px-4 py-4 mb-8 text-center w-full">お問い合わせフォーム</h2>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {submitStatus === 'success' ? (
+            <div className="bg-white rounded-lg p-8 shadow-md text-center">
+              <div className="text-green-600 text-lg font-bold mb-4">
+                送信ありがとうございました。<br />
+                メールにてご案内させて頂きます。
+              </div>
+              <button
+                onClick={() => setSubmitStatus('idle')}
+                className="bg-brand-green text-white px-6 py-2 rounded-lg font-bold hover:bg-brand-green/90 btn-primary"
+              >
+                新しいお問い合わせを送信
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleContactFormSubmit} className="bg-white rounded-lg p-4">
+              {/* スマホ用レイアウト */}
+              <div className="md:hidden space-y-4">
+                {/* 会社名 */}
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <label htmlFor="contact-company" className="text-sm font-medium text-gray-900">
+                      会社名
+                    </label>
+                    <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
+                  </div>
+                  <input
+                    type="text"
+                    id="contact-company"
+                    name="company"
+                    required
+                    value={contactFormData.company}
+                    onChange={handleContactFormChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                  />
+                </div>
+
+                {/* お名前 */}
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <label htmlFor="contact-name" className="text-sm font-medium text-gray-900">
+                      お名前
+                    </label>
+                    <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
+                  </div>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    required
+                    value={contactFormData.name}
+                    onChange={handleContactFormChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                  />
+                </div>
+
+                {/* Eメール */}
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <label htmlFor="contact-email" className="text-sm font-medium text-gray-900">
+                      Eメール
+                    </label>
+                    <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
+                  </div>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    required
+                    value={contactFormData.email}
+                    onChange={handleContactFormChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                  />
+                </div>
+
+                {/* 電話番号 */}
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <label htmlFor="contact-phone" className="text-sm font-medium text-gray-900">
+                      電話番号
+                    </label>
+                    <span className="bg-gray-400 text-white text-xs px-1.5 py-0.5 rounded">任意</span>
+                  </div>
+                  <input
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    value={contactFormData.phone}
+                    onChange={handleContactFormChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                  />
+                </div>
+
+                {/* 詳細 */}
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <label htmlFor="contact-inquiry" className="text-sm font-medium text-gray-900">
+                      内容
+                    </label>
+                    <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
+                  </div>
+                  <select
+                    id="contact-inquiry"
+                    name="inquiryType"
+                    required
+                    value={contactFormData.inquiryType}
+                    onChange={handleContactFormChange}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                  >
+                    <option value="">選択して下さい</option>
+                    <option value="サービス資料が欲しい">サービス資料が欲しい</option>
+                    <option value="無料相談を受けたい">無料相談を受けたい</option>
+                    <option value="その他のお問い合わせ">その他のお問い合わせ</option>
+                  </select>
+                </div>
+
+                {/* 備考 */}
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <label htmlFor="contact-remarks" className="text-sm font-medium text-gray-900">
+                      備考
+                    </label>
+                    <span className="bg-gray-400 text-white text-xs px-1.5 py-0.5 rounded">任意</span>
+                  </div>
+                  <textarea
+                    id="contact-remarks"
+                    name="remarks"
+                    value={contactFormData.remarks}
+                    onChange={handleContactFormChange}
+                    placeholder="回答を入力"
+                    rows={4}
+                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent resize-none"
+                  />
+                </div>
+              </div>
+
+              {/* デスクトップ用テーブルレイアウト */}
+              <div className="hidden md:block overflow-x-auto">
+                <table className="w-full table-fixed">
+                  <colgroup>
+                    <col className="w-24" />
+                    <col className="w-16" />
+                    <col />
+                  </colgroup>
+                  <tbody>
+                    {/* 会社名 */}
+                    <tr className="align-middle">
+                      <td className="py-3 pr-2 text-left">
+                        <label htmlFor="contact-company-desktop" className="text-sm font-medium text-gray-900">
+                          会社名
+                        </label>
+                      </td>
+                      <td className="py-3 pr-2 text-left">
+                        <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
+                      </td>
+                      <td className="py-3">
+                        <input
+                          type="text"
+                          id="contact-company-desktop"
+                          name="company"
+                          required
+                          value={contactFormData.company}
+                          onChange={handleContactFormChange}
+                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                        />
+                      </td>
+                    </tr>
+
+                    {/* お名前 */}
+                    <tr className="align-middle">
+                      <td className="py-3 pr-2 text-left">
+                        <label htmlFor="contact-name-desktop" className="text-sm font-medium text-gray-900">
+                          お名前
+                        </label>
+                      </td>
+                      <td className="py-3 pr-2 text-left">
+                        <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
+                      </td>
+                      <td className="py-3">
+                        <input
+                          type="text"
+                          id="contact-name-desktop"
+                          name="name"
+                          required
+                          value={contactFormData.name}
+                          onChange={handleContactFormChange}
+                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                        />
+                      </td>
+                    </tr>
+
+                    {/* Eメール */}
+                    <tr className="align-middle">
+                      <td className="py-3 pr-2 text-left">
+                        <label htmlFor="contact-email-desktop" className="text-sm font-medium text-gray-900">
+                          Eメール
+                        </label>
+                      </td>
+                      <td className="py-3 pr-2 text-left">
+                        <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
+                      </td>
+                      <td className="py-3">
+                        <input
+                          type="email"
+                          id="contact-email-desktop"
+                          name="email"
+                          required
+                          value={contactFormData.email}
+                          onChange={handleContactFormChange}
+                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                        />
+                      </td>
+                    </tr>
+
+                    {/* 電話番号 */}
+                    <tr className="align-middle">
+                      <td className="py-3 pr-2 text-left">
+                        <label htmlFor="contact-phone-desktop" className="text-sm font-medium text-gray-900">
+                          電話番号
+                        </label>
+                      </td>
+                      <td className="py-3 pr-2 text-left">
+                        <span className="bg-gray-400 text-white text-xs px-1.5 py-0.5 rounded">任意</span>
+                      </td>
+                      <td className="py-3">
+                        <input
+                          type="tel"
+                          id="contact-phone-desktop"
+                          name="phone"
+                          value={contactFormData.phone}
+                          onChange={handleContactFormChange}
+                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                        />
+                      </td>
+                    </tr>
+
+                    {/* 詳細 */}
+                    <tr className="align-middle">
+                      <td className="py-3 pr-2 text-left">
+                        <label htmlFor="contact-inquiry-desktop" className="text-sm font-medium text-gray-900">
+                          内容
+                        </label>
+                      </td>
+                      <td className="py-3 pr-2 text-left">
+                        <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
+                      </td>
+                      <td className="py-3">
+                        <select
+                          id="contact-inquiry-desktop"
+                          name="inquiryType"
+                          required
+                          value={contactFormData.inquiryType}
+                          onChange={handleContactFormChange}
+                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                        >
+                          <option value="">選択して下さい</option>
+                          <option value="サービス資料が欲しい">サービス資料が欲しい</option>
+                          <option value="無料相談を受けたい">無料相談を受けたい</option>
+                          <option value="その他のお問い合わせ">その他のお問い合わせ</option>
+                        </select>
+                      </td>
+                    </tr>
+
+                    {/* 備考 */}
+                    <tr className="align-middle">
+                      <td className="py-3 pr-2 text-left">
+                        <label htmlFor="contact-remarks-desktop" className="text-sm font-medium text-gray-900">
+                          備考
+                        </label>
+                      </td>
+                      <td className="py-3 pr-2 text-left">
+                        <span className="bg-gray-400 text-white text-xs px-1.5 py-0.5 rounded">任意</span>
+                      </td>
+                      <td className="py-3">
+                        <textarea
+                          id="contact-remarks-desktop"
+                          name="remarks"
+                          value={contactFormData.remarks}
+                          onChange={handleContactFormChange}
+                          placeholder="お問い合わせ内容を入力してください"
+                          rows={4}
+                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent resize-none"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              {/* 送信ボタン */}
+              <div className="text-center pt-6">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="bg-brand-green text-white px-6 py-2 rounded-lg text-lg font-bold hover:bg-brand-green/90 btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? '送信中…' : '送信する 》'}
+                </button>
+              </div>
+            </form>
+          )}
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-brand-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1122,8 +1496,8 @@ export default function Home() {
           <p className="text-xl text-blue-100 mb-8">
             「営業労力を最小化し、<strong>成果を最大化する仕組み</strong>」を私たちは提供します。
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
               id="cta_schedule_last_section"
               href="https://timerex.net/s/info_cbe9_f3ff/48c82dac"
               target="_blank"
@@ -1139,9 +1513,10 @@ export default function Home() {
             >
               資料請求
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
+
 
 
       {/* Contact Form Modal */}

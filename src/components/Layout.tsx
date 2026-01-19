@@ -27,21 +27,27 @@ export default function Layout({ children }: LayoutProps) {
                 実績
               </AnchorLink>
               <AnchorLink to="/#benefits" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">
-                4つの特徴
+                特徴
               </AnchorLink>
               <AnchorLink to="/#company" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">
                 会社紹介
               </AnchorLink>
             </nav>
-            <a 
+            <AnchorLink
+              to="/#contact-form"
+              className="bg-brand-green text-white px-3 md:px-5 py-1.5 rounded-lg hover:bg-brand-green/90 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary"
+            >
+              <span id="cta_schedule_header">無料で相談する 》</span>
+            </AnchorLink>
+            {/* <a
               id="cta_schedule_header"
               href="https://timerex.net/s/info_cbe9_f3ff/48c82dac"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-brand-red text-white px-3 md:px-5 py-1.5 rounded-lg hover:bg-brand-red/90 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary"
+              className="bg-brand-green text-white px-3 md:px-5 py-1.5 rounded-lg hover:bg-brand-green/90 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary"
             >
               お問い合わせ
-            </a>
+            </a> */}
           </div>
         </div>
       </header>
@@ -75,15 +81,21 @@ export default function Layout({ children }: LayoutProps) {
             </div>
             <div>
               <h5 className="font-semibold mb-4">お問い合わせ</h5>
-              <a 
+              <AnchorLink
+                to="/#contact-form"
+                className="bg-brand-green text-white px-6 py-2 rounded-lg hover:bg-brand-green/90 text-sm whitespace-nowrap cursor-pointer mb-4 inline-block btn-primary"
+              >
+                <span id="cta_schedule_footer">お問い合わせ</span>
+              </AnchorLink>
+              {/* <a
                 id="cta_schedule_footer"
                 href="https://timerex.net/s/info_cbe9_f3ff/48c82dac"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-brand-red text-white px-6 py-2 rounded-lg hover:bg-brand-red/90 text-sm whitespace-nowrap cursor-pointer mb-4 inline-block btn-primary"
+                className="bg-brand-green text-white px-6 py-2 rounded-lg hover:bg-brand-green/90 text-sm whitespace-nowrap cursor-pointer mb-4 inline-block btn-primary"
               >
                 お問い合わせ
-              </a>
+              </a> */}
               <div className="text-sm text-gray-400">
                 <p>営業時間: 平日 9:00-18:00</p>
               </div>

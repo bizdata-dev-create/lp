@@ -24,6 +24,7 @@ export default {
           'brand-blue-light': '#DBEAFE', // blue-100相当
           'brand-red': '#B91C1C', // red-700相当
           'brand-red-light': '#FEE2E2', // red-200相当
+          'brand-green': '#00A629',
         },
         backgroundImage: {
           'marker-yellow': 'linear-gradient(rgba(255,248,0,1.0) 0%, rgba(255,248,0,1.0) 100%)',
