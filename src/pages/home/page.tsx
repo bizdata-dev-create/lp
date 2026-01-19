@@ -1204,7 +1204,7 @@ export default function Home() {
                 {/* 会社名 */}
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <label htmlFor="contact-company" className="text-sm font-medium text-gray-900">
+                    <label htmlFor="contact-company" className="text-base font-bold text-gray-900">
                       会社名
                     </label>
                     <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
@@ -1216,14 +1216,14 @@ export default function Home() {
                     required
                     value={contactFormData.company}
                     onChange={handleContactFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                    className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                   />
                 </div>
 
                 {/* お名前 */}
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <label htmlFor="contact-name" className="text-sm font-medium text-gray-900">
+                    <label htmlFor="contact-name" className="text-base font-bold text-gray-900">
                       お名前
                     </label>
                     <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
@@ -1235,14 +1235,14 @@ export default function Home() {
                     required
                     value={contactFormData.name}
                     onChange={handleContactFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                    className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                   />
                 </div>
 
                 {/* Eメール */}
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <label htmlFor="contact-email" className="text-sm font-medium text-gray-900">
+                    <label htmlFor="contact-email" className="text-base font-bold text-gray-900">
                       Eメール
                     </label>
                     <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
@@ -1254,14 +1254,14 @@ export default function Home() {
                     required
                     value={contactFormData.email}
                     onChange={handleContactFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                    className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                   />
                 </div>
 
                 {/* 電話番号 */}
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <label htmlFor="contact-phone" className="text-sm font-medium text-gray-900">
+                    <label htmlFor="contact-phone" className="text-base font-bold text-gray-900">
                       電話番号
                     </label>
                     <span className="bg-gray-400 text-white text-xs px-1.5 py-0.5 rounded">任意</span>
@@ -1272,14 +1272,14 @@ export default function Home() {
                     name="phone"
                     value={contactFormData.phone}
                     onChange={handleContactFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                    className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                   />
                 </div>
 
                 {/* 詳細 */}
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <label htmlFor="contact-inquiry" className="text-sm font-medium text-gray-900">
+                    <label htmlFor="contact-inquiry" className="text-base font-bold text-gray-900">
                       内容
                     </label>
                     <span className="bg-red-600 text-white text-xs px-1.5 py-0.5 rounded">必須</span>
@@ -1290,7 +1290,7 @@ export default function Home() {
                     required
                     value={contactFormData.inquiryType}
                     onChange={handleContactFormChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                    className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                   >
                     <option value="">選択して下さい</option>
                     <option value="サービス資料が欲しい">サービス資料が欲しい</option>
@@ -1302,7 +1302,7 @@ export default function Home() {
                 {/* 備考 */}
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <label htmlFor="contact-remarks" className="text-sm font-medium text-gray-900">
+                    <label htmlFor="contact-remarks" className="text-base font-bold text-gray-900">
                       備考
                     </label>
                     <span className="bg-gray-400 text-white text-xs px-1.5 py-0.5 rounded">任意</span>
@@ -1314,7 +1314,7 @@ export default function Home() {
                     onChange={handleContactFormChange}
                     placeholder="回答を入力"
                     rows={4}
-                    className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent resize-none"
+                    className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent resize-none"
                   />
                 </div>
               </div>
@@ -1331,7 +1331,7 @@ export default function Home() {
                     {/* 会社名 */}
                     <tr className="align-middle">
                       <td className="py-3 pr-2 text-left">
-                        <label htmlFor="contact-company-desktop" className="text-sm font-medium text-gray-900">
+                        <label htmlFor="contact-company-desktop" className="text-base font-bold text-gray-900">
                           会社名
                         </label>
                       </td>
@@ -1346,7 +1346,7 @@ export default function Home() {
                           required
                           value={contactFormData.company}
                           onChange={handleContactFormChange}
-                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                          className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                         />
                       </td>
                     </tr>
@@ -1354,7 +1354,7 @@ export default function Home() {
                     {/* お名前 */}
                     <tr className="align-middle">
                       <td className="py-3 pr-2 text-left">
-                        <label htmlFor="contact-name-desktop" className="text-sm font-medium text-gray-900">
+                        <label htmlFor="contact-name-desktop" className="text-base font-bold text-gray-900">
                           お名前
                         </label>
                       </td>
@@ -1369,7 +1369,7 @@ export default function Home() {
                           required
                           value={contactFormData.name}
                           onChange={handleContactFormChange}
-                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                          className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                         />
                       </td>
                     </tr>
@@ -1377,7 +1377,7 @@ export default function Home() {
                     {/* Eメール */}
                     <tr className="align-middle">
                       <td className="py-3 pr-2 text-left">
-                        <label htmlFor="contact-email-desktop" className="text-sm font-medium text-gray-900">
+                        <label htmlFor="contact-email-desktop" className="text-base font-bold text-gray-900">
                           Eメール
                         </label>
                       </td>
@@ -1392,7 +1392,7 @@ export default function Home() {
                           required
                           value={contactFormData.email}
                           onChange={handleContactFormChange}
-                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                          className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                         />
                       </td>
                     </tr>
@@ -1400,7 +1400,7 @@ export default function Home() {
                     {/* 電話番号 */}
                     <tr className="align-middle">
                       <td className="py-3 pr-2 text-left">
-                        <label htmlFor="contact-phone-desktop" className="text-sm font-medium text-gray-900">
+                        <label htmlFor="contact-phone-desktop" className="text-base font-bold text-gray-900">
                           電話番号
                         </label>
                       </td>
@@ -1414,7 +1414,7 @@ export default function Home() {
                           name="phone"
                           value={contactFormData.phone}
                           onChange={handleContactFormChange}
-                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                          className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                         />
                       </td>
                     </tr>
@@ -1422,7 +1422,7 @@ export default function Home() {
                     {/* 詳細 */}
                     <tr className="align-middle">
                       <td className="py-3 pr-2 text-left">
-                        <label htmlFor="contact-inquiry-desktop" className="text-sm font-medium text-gray-900">
+                        <label htmlFor="contact-inquiry-desktop" className="text-base font-bold text-gray-900">
                           内容
                         </label>
                       </td>
@@ -1436,7 +1436,7 @@ export default function Home() {
                           required
                           value={contactFormData.inquiryType}
                           onChange={handleContactFormChange}
-                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                          className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent"
                         >
                           <option value="">選択して下さい</option>
                           <option value="サービス資料が欲しい">サービス資料が欲しい</option>
@@ -1449,7 +1449,7 @@ export default function Home() {
                     {/* 備考 */}
                     <tr className="align-middle">
                       <td className="py-3 pr-2 text-left">
-                        <label htmlFor="contact-remarks-desktop" className="text-sm font-medium text-gray-900">
+                        <label htmlFor="contact-remarks-desktop" className="text-base font-bold text-gray-900">
                           備考
                         </label>
                       </td>
@@ -1464,7 +1464,7 @@ export default function Home() {
                           onChange={handleContactFormChange}
                           placeholder="お問い合わせ内容を入力してください"
                           rows={4}
-                          className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent resize-none"
+                          className="w-full px-3 py-2 border-2 border-gray-300 rounded focus:ring-2 focus:ring-brand-blue focus:border-transparent resize-none"
                         />
                       </td>
                     </tr>
@@ -1477,7 +1477,7 @@ export default function Home() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-brand-green text-white px-6 py-2 rounded-lg text-lg font-bold hover:bg-brand-green/90 btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-gradient-to-r from-green-600 to-green-500 text-white px-9 py-[0.65rem] rounded-lg text-2xl font-bold hover:from-green-500 hover:to-green-400 btn-primary transition-all hover-pulse-ring disabled:opacity-50 disabled:cursor-not-allowed disabled:hover-pulse-ring"
                 >
                   {isSubmitting ? '送信中…' : '送信する 》'}
                 </button>

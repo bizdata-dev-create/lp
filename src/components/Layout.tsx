@@ -35,7 +35,7 @@ export default function Layout({ children }: LayoutProps) {
             </nav>
             <AnchorLink
               to="/#contact-form"
-              className="bg-brand-green text-white px-3 md:px-5 py-1.5 rounded-lg hover:bg-brand-green/90 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary"
+              className="bg-gradient-to-r from-green-600 to-green-500 text-white px-3 md:px-5 py-1.5 rounded-lg hover:from-green-500 hover:to-green-400 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary transition-all hover-pulse-ring"
             >
               <span id="cta_schedule_header">無料で相談する 》</span>
             </AnchorLink>
