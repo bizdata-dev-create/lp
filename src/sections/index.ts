@@ -1,0 +1,15 @@
+export { default as HeroSection } from './HeroSection';
+export { default as PriceDeclarationSection } from './PriceDeclarationSection';
+export { default as SpecialOfferSection } from './SpecialOfferSection';
+export { default as ResultsSection } from './ResultsSection';
+export { default as ServiceIntroductionSection } from './ServiceIntroductionSection';
+export { default as ServiceFlowSection } from './ServiceFlowSection';
+export { default as BenefitsSection } from './BenefitsSection';
+export { default as USPSection } from './USPSection';
+export { default as CompetitiveComparisonSection } from './CompetitiveComparisonSection';
+export { default as ValuePropositionSection } from './ValuePropositionSection';
+export { default as CustomerVoicesSection } from './CustomerVoicesSection';
+export { default as CompanySection } from './CompanySection';
+export { default as FAQSection } from './FAQSection';
+export { default as ContactFormSection } from './ContactFormSection';
+export { default as CTASection } from './CTASection';
