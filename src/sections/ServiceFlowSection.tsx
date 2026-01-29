@@ -15,7 +15,7 @@ export default function ServiceFlowSection() {
 
         <div className="max-w-4xl mx-auto space-y-4">
           {/* Step 1 */}
-          <div className="flex-1 bg-white rounded-lg p-6 shadow-md border border-gray-200">
+          <div className="flex-1 bg-white p-6 shadow-md border-4 border-brand-blue">
             <div className="flex items-center mb-3">
               <div className="flex-shrink-0 w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-lg mr-6">
                 <UserIcon className="w-5 h-5 text-white" />
@@ -28,11 +28,11 @@ export default function ServiceFlowSection() {
           </div>
 
           <div className="flex justify-center my-4">
-            <div className="w-0 h-0 border-l-[180px] border-l-transparent border-r-[180px] border-r-transparent border-t-[20px] border-t-gray-400"></div>
+          <div className="w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[20px] border-t-gray-700"></div>
           </div>
 
           {/* Step 2 */}
-          <div className="flex-1 bg-white rounded-lg p-6 shadow-md border border-gray-200">
+          <div className="flex-1 bg-white p-6 shadow-md border-4 border-brand-blue">
             <div className="flex items-center mb-3">
               <div className="flex-shrink-0 w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-lg mr-6">
                 <FileTextIcon className="w-5 h-5 text-white" />
@@ -44,11 +44,11 @@ export default function ServiceFlowSection() {
           </div>
 
           <div className="flex justify-center my-4">
-            <div className="w-0 h-0 border-l-[180px] border-l-transparent border-r-[180px] border-r-transparent border-t-[20px] border-t-gray-400"></div>
+          <div className="w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[20px] border-t-gray-700"></div>
           </div>
 
           {/* Step 3 */}
-          <div className="flex-1 bg-white rounded-lg p-6 shadow-md border border-gray-200">
+          <div className="flex-1 bg-white p-6 shadow-md border-4 border-brand-blue">
             <div className="flex items-center mb-3">
               <div className="flex-shrink-0 w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-lg mr-6">
                 <SendPlaneIcon className="w-5 h-5 text-white" />
@@ -60,16 +60,16 @@ export default function ServiceFlowSection() {
           </div>
 
           <div className="flex justify-center my-4">
-            <div className="w-0 h-0 border-l-[180px] border-l-transparent border-r-[180px] border-r-transparent border-t-[20px] border-t-gray-400"></div>
+          <div className="w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-t-[20px] border-t-gray-700"></div>
           </div>
 
           {/* Step 4 */}
-          <div className="flex-1 bg-white rounded-lg p-6 shadow-md border border-gray-200">
+          <div className="flex-1 bg-white p-6 shadow-md border-4 border-brand-blue">
             <div className="flex items-center mb-3">
               <div className="flex-shrink-0 w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-lg mr-6">
                 <BarChartIcon className="w-5 h-5 text-white" />
               </div>
-              <h4 className="text-xl font-bold text-gray-900">定期的に報告</h4>
+              <h4 className="text-xl font-bold text-gray-900">送信結果のご共有</h4>
             </div>
             <p className="text-gray-900">・隔週~月1で営業状況及び改善提案について報告させて頂きます。また、返信率を高める施策を一緒に考えます。</p>
           </div>

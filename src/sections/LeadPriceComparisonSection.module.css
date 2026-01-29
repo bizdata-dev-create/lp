@@ -1,0 +1,23 @@
+.triangle {
+  position: relative;
+  height: 32px;
+}
+.triangle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: currentColor;
+  /* sharp centered triangle */
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  z-index: 3;
+}
+.isRed {
+  color: #004E7C;
+}
+.isBlack {
+  color: #0f1416;
+}
+

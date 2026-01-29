@@ -53,14 +53,14 @@ export default function FAQSection() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
+          {/* <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
             <div className="bg-brand-blue text-white px-6 py-4">
               <h4 className="font-bold text-lg">Q. 最低契約期間や件数の制限はありますか？</h4>
             </div>
             <div className="px-6 py-4">
               <p className="text-gray-900">A. ご依頼いただく件数によって異なりますので、詳細はお問い合わせください。</p>
             </div>
-          </div>
+          </div> */}
 
           <div className="bg-white rounded-lg shadow-md overflow-hidden border-2 border-gray-200">
             <div className="bg-brand-blue text-white px-6 py-4">

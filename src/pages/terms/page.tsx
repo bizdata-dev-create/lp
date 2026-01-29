@@ -32,7 +32,7 @@ export default function Terms() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">第3条（料金）</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                本サービスの料金は、成果報酬制となっており、送信完了分の料金（1通あたり15円〜）のみをいただきます。
+                本サービスの料金は、成果報酬制となっており、送信完了分の料金（1通あたり13円）のみをいただきます。
                 初期費用、リスト作成費用、文章作成費用は一切かかりません。
               </p>
             </section>

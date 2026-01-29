@@ -1,6 +1,7 @@
 export { default as HeroSection } from './HeroSection';
 export { default as PriceDeclarationSection } from './PriceDeclarationSection';
 export { default as SpecialOfferSection } from './SpecialOfferSection';
+export { default as PricingSection } from './PricingSection';
 export { default as ResultsSection } from './ResultsSection';
 export { default as ServiceIntroductionSection } from './ServiceIntroductionSection';
 export { default as ServiceFlowSection } from './ServiceFlowSection';

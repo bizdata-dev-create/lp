@@ -4,7 +4,7 @@ export default function PriceDeclarationSection() {
       {/* 装飾的な背景要素 */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-1 bg-brand-blue"></div>
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-brand-blue"></div>
+        {/* <div className="absolute bottom-0 left-0 w-full h-1 bg-brand-blue"></div> */}
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -13,7 +13,7 @@ export default function PriceDeclarationSection() {
             <div className="h-1 w-20 bg-brand-blue mx-auto mb-3"></div>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 tracking-tight">
-            安心価格宣言
+            料金プラン
           </h2>
           <p className="text-center text-gray-700 mb-3 max-w-3xl mx-auto leading-relaxed">
             私達は、<strong className="bg-marker-yellow font-bold">初期費用、リスト作成、文章作成を全て0円</strong>で請け負います。

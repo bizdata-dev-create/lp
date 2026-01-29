@@ -54,7 +54,7 @@ export default function BenefitsSection() {
 
               <p className="text-gray-900">
                 営業に必要な準備はすべて弊社にお任せください。
-                お客様にご負担いただくのは、<strong>送信完了分の料金（1通あたり15円〜）のみ</strong>。
+                お客様にご負担いただくのは、<strong>送信完了分の料金（1通あたり13円）のみ</strong>。
               </p>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function BenefitsSection() {
               </h4>
               <p className="text-gray-900 mb-6 leading-relaxed">
                 例えば自社でテレアポ営業をしたい場合、DMやFAXを送付したい場合など、
-                <strong>お問合せフォーム送信以外の様々な用途</strong>でも営業リストを作成したい場合があります。
+                <strong>お問合せフォーム送信以外の様々な用途</strong>でも営業リストを作成したい場合があり、あり、その際にご利用頂けます。
               </p>
 
               <div className="bg-white p-6 rounded-lg shadow-md mb-6 border border-gray-200">

@@ -1,0 +1,83 @@
+$(function(){
+
+	$('a[href^="#"]').on('click', function () {
+		var href = $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		var position = target.offset().top - 80;
+		$("html, body").animate({scrollTop: position}, 550, "swing");
+		return false;
+	});	  
+
+	const accordionItems = document.querySelectorAll('.Faq-Accordion-Item');
+
+	accordionItems.forEach(item => {
+	const question = item.querySelector('.Faq-Accordion-Item-Q');
+	const answer = item.querySelector('.Faq-Accordion-Item-A');
+
+	question.addEventListener('click', () => {
+		answer.classList.toggle('isActive');
+		question.classList.toggle('isOpen');
+	});
+	});
+
+});
+
+document.addEventListener('scroll', function() {
+	// FvSectionの位置を取得
+	const fvSection = document.getElementById('FvSection');
+	const header = document.querySelector('.header');
+	
+	// FvSectionの位置までスクロールしたかどうかを確認
+	if (window.scrollY >= fvSection.offsetTop + fvSection.offsetHeight) {
+	  header.classList.add('isTransparent');
+	} else {
+	  header.classList.remove('isTransparent');
+	}
+});
+
+const sliders = document.querySelectorAll('.swiper');
+for (let i = 0; i < sliders.length; i++) {
+  let prev = sliders[i].querySelector('.swiper-button-prev');
+  let next = sliders[i].querySelector('.swiper-button-next');
+  
+  // 兄弟要素として配置されたページネーションを取得
+  let pagination = sliders[i].parentElement.querySelector('.swiper-pagination');
+
+  const mySwiper = new Swiper(sliders[i], {
+    loop: true,
+    navigation: {
+      nextEl: next,
+      prevEl: prev,
+    },
+    pagination: {
+      el: pagination,
+      clickable: true,
+    },
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+
+	const hamburgerMenuButton = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+    const closeButton = document.querySelector('.menu-close');
+	const menuLinks = document.querySelectorAll('.menu-nav a');
+
+	hamburgerMenuButton.addEventListener('click', function() {
+        menu.classList.add('menu-visible');
+		document.body.classList.add('no-scroll');
+    });
+
+    closeButton.addEventListener('click', function() {
+        menu.classList.remove('menu-visible');
+		document.body.classList.remove('no-scroll');
+    });
+
+	menuLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            menu.classList.remove('menu-visible');
+            document.body.classList.remove('no-scroll');
+        });
+    });
+
+});

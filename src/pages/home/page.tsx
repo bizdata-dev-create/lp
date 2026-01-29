@@ -457,7 +457,7 @@ export default function Home() {
 
                 <p className="text-gray-900">
                   営業に必要な準備はすべて弊社にお任せください。
-                  お客様にご負担いただくのは、<strong>送信完了分の料金（1通あたり15円〜）のみ</strong>。
+                  お客様にご負担いただくのは、<strong>送信完了分の料金（1通あたり13円）のみ</strong>。
                 </p>
               </div>
             </div>
