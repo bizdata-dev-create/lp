@@ -1,10 +1,15 @@
 import company1Image from '../img/dev/company1.webp';
+import companyBackground from '../img/dev/company_background.webp';
 import ryoImage from '../img/dev/ryo.webp';
 import { GraduationCapIcon, BarChartIcon } from '../components/icons';
 
 export default function CompanySection() {
   return (
-    <section id="company" className="py-20 bg-brand-blue">
+    <section
+      id="company"
+      className="py-20 overflow-hidden bg-brand-blue bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${companyBackground})` }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-1">
           <h3 className="text-3xl font-bold text-white mb-0.5">会社紹介</h3>

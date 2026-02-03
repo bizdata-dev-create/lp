@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import heroImageMobile from '../../img/dev/hero_mobile.webp';
 import heroImagePC from '../../img/dev/hero_pc.webp';
-import benefit1Image from '../../img/dev/benefit1.webp';
-import benefit2Image from '../../img/dev/benefit2.webp';
-import benefit3Image from '../../img/dev/benefit3.webp';
-import benefit4Image from '../../img/dev/benefit4.webp';
+import benefit1Image from '../../img/dev/feature/feature1_0127.webp';
+import benefit2Image from '../../img/dev/feature/feature2_0127.webp';
+import benefit3Image from '../../img/dev/feature/feature3_0127.webp';
+import benefit4Image from '../../img/dev/feature/feature4_0127.webp';
 import company1Image from '../../img/dev/company1.webp';
 import valuePropositionMobile from '../../img/dev/value_proposition_mobile.webp';
 import valuePropositionPC from '../../img/dev/value_proposition_pc.webp';

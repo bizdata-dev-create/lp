@@ -45,3 +45,5 @@ coverage/
 *.temp
 .cache/
 
+src/img/dev/
+

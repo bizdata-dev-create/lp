@@ -1,17 +1,18 @@
-import benefit1Image from '../img/dev/benefit1.webp';
-import benefit2Image from '../img/dev/benefit2.webp';
-import benefit3Image from '../img/dev/benefit3.webp';
-import benefit4Image from '../img/dev/benefit4.webp';
+import benefit1Image from '../img/dev/feature/feature1_0127.webp';
+import benefit2Image from '../img/dev/feature/feature2_0127.webp';
+import benefit3Image from '../img/dev/feature/feature3_0127.webp';
+import benefit4Image from '../img/dev/feature/feature4_0127.webp';
 import { CheckIcon } from '../components/icons';
 
 export default function BenefitsSection() {
   return (
     <section id="benefits" className="py-20 bg-white">
+      <div className="Price_Head mb-12">
+        <h2 className="Price-Headline">4つの特徴</h2>
+        <p className="Price-Text">なぜ選ばれるのか</p>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">4つの特徴</h3>
-          <p className="text-xl text-gray-900">なぜ選ばれるのか</p>
-        </div>
 
         <div className="space-y-16">
           {/* Feature 1 - 初期費用ゼロ */}
@@ -97,7 +98,7 @@ export default function BenefitsSection() {
             </div>
             <div>
               <img
-                src={benefit3Image}
+                src={benefit2Image}
                 alt="200万件以上の企業リスト"
                 className="w-full h-auto rounded-lg shadow-lg object-cover"
                 loading="lazy"
@@ -174,7 +175,7 @@ export default function BenefitsSection() {
           <div className="grid md:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
             <div className="order-2 md:order-1">
               <img
-                src={benefit4Image}
+                src={benefit3Image}
                 alt="多様な営業手法への対応"
                 className="w-full h-auto rounded-lg shadow-lg object-cover"
                 loading="lazy"
@@ -242,7 +243,7 @@ export default function BenefitsSection() {
             </div>
             <div>
               <img
-                src={benefit2Image}
+                src={benefit4Image}
                 alt="営業戦略コンサルティング"
                 className="w-full h-auto rounded-lg shadow-lg object-cover"
                 loading="lazy"

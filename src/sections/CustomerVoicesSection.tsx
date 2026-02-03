@@ -1,4 +1,7 @@
-import { UserIcon } from '../components/icons';
+import customerVoice1 from '../img/dev/customer_voice/customer_voice_processed1.webp';
+import customerVoice2 from '../img/dev/customer_voice/customer_voice_processed2.webp';
+import customerVoice3 from '../img/dev/customer_voice/customer_voice_processed3.webp';
+import customerVoice4 from '../img/dev/customer_voice/customer_voice_processed4.webp';
 
 export default function CustomerVoicesSection() {
   return (
@@ -9,67 +12,66 @@ export default function CustomerVoicesSection() {
           <p className="text-xl text-gray-900">ご利用いただいたお客様からの評価</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                <UserIcon className="w-6 h-6 text-teal-600" />
-              </div>
-              <div>
-                <h5 className="font-semibold text-gray-900">製造業 A社様</h5>
-                <p className="text-sm text-gray-900">従業員数: 50名</p>
+        <div className="grid md:grid-cols-4 gap-8">
+          <div className="bg-white p-4 shadow-lg border-2 border-gray-200">
+            <div className="mb-6">
+              <div className="bg-brand-blue text-white px-4 py-2 w-full text-center">
+                <h5 className="font-semibold text-lg">製造業 A社様</h5>
+                <p className="text-[0.5rem]">従業員数: 50名</p>
               </div>
             </div>
-            <blockquote className="text-gray-900 mb-4">
-              <strong>「CPAがわかりやすく、安心して頼める。課金形態が他の業者は作業ベース、<strong className="bg-marker-yellow font-bold">bizdataさんは結果ベース</strong>なので、結果にコミットしてくれる。
-                成果報酬だから安心して任せられるし、実際に費用対効果がはっきり出ている点が他社との決定的な違いでした。」</strong>
+            <div className="flex justify-center mb-4">
+              <img src={customerVoice1} alt="" className="max-w-[60%] h-auto" loading="lazy" decoding="async" />
+            </div>
+            <blockquote className="text-gray-900 mb-0">
+              「CPAがわかりやすく、安心して頼める。課金形態が他の業者は作業ベース、<strong className="bg-marker-yellow font-bold">bizdataさんは結果ベース</strong>なので、結果にコミットしてくれる。
+                成果報酬だから安心して任せられるし、実際に費用対効果がはっきり出ている点が他社との決定的な違いでした。」
             </blockquote>
           </div>
 
-          <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-brand-blue-light rounded-full flex items-center justify-center mr-4">
-                <UserIcon className="w-6 h-6 text-brand-blue" />
-              </div>
-              <div>
-                <h5 className="font-semibold text-gray-900 ">IT企業 B社様</h5>
-                <p className="text-sm text-gray-900">従業員数: 30名</p>
+          <div className="bg-white p-4 shadow-lg border-2 border-gray-200">
+            <div className="mb-6">
+              <div className="bg-brand-blue text-white px-4 py-2 w-full text-center">
+                <h5 className="font-semibold text-lg">IT企業 B社様</h5>
+                <p className="text-[0.5rem]">従業員数: 30名</p>
               </div>
             </div>
-            <blockquote className="text-gray-900 mb-4">
-              <strong>「営業戦略自体も詳しく相談に乗っていただけた。<strong className="bg-marker-yellow font-bold">色々な業界や商材のユースケースを提案</strong>していただき、自分たちだけではできなかった新規開拓に成功した。」</strong>
+            <div className="flex justify-center mb-4">
+              <img src={customerVoice2} alt="" className="max-w-[60%] h-auto" loading="lazy" decoding="async" />
+            </div>
+            <blockquote className="text-gray-900 mb-0">
+              「営業戦略自体も詳しく相談に乗っていただけた。<strong className="bg-marker-yellow font-bold">色々な業界や商材のユースケースを提案</strong>していただき、自分たちだけではできなかった新規開拓に成功した。」
             </blockquote>
           </div>
 
-          <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                <UserIcon className="w-6 h-6 text-purple-600" />
-              </div>
-              <div>
-                <h5 className="font-semibold text-gray-900">人材サービス C社様</h5>
-                <p className="text-sm text-gray-900">従業員数: 80名</p>
+          <div className="bg-white p-4 shadow-lg border-2 border-gray-200">
+            <div className="mb-6">
+              <div className="bg-brand-blue text-white px-4 py-2 w-full text-center">
+                <h5 className="font-semibold text-lg">人材サービス C社様</h5>
+                <p className="text-[0.5rem]">従業員数: 80名</p>
               </div>
             </div>
-            <blockquote className="text-gray-900 mb-4">
-              <strong>「文章をすごい丁寧に準備してくれた。おかげで、<strong className="bg-marker-yellow font-bold">開始翌週からすぐに反響があり</strong>、案件獲得につながった。
-                わざわざフォームから返信頂いたお客さんは基本的に興味を持ってくれる人たちなので商談の質も高く、本格導入につながりやすかった。」</strong>
+            <div className="flex justify-center mb-4">
+              <img src={customerVoice3} alt="" className="max-w-[60%] h-auto" loading="lazy" decoding="async" />
+            </div>
+            <blockquote className="text-gray-900 mb-0">
+              「文章をすごい丁寧に準備してくれた。おかげで、<strong className="bg-marker-yellow font-bold">開始翌週からすぐに反響があり</strong>、案件獲得につながった。
+                わざわざフォームから返信頂いたお客さんは基本的に興味を持ってくれる人たちなので商談の質も高く、本格導入につながりやすかった。」
             </blockquote>
           </div>
 
-          <div className="bg-white rounded-lg p-8 shadow-lg border-2 border-gray-200">
-            <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
-                <UserIcon className="w-6 h-6 text-orange-600" />
-              </div>
-              <div>
-                <h5 className="font-semibold text-gray-900">建設業 D社様</h5>
-                <p className="text-sm text-gray-900">従業員数: 120名</p>
+          <div className="bg-white p-4 shadow-lg border-2 border-gray-200">
+            <div className="mb-6">
+              <div className="bg-brand-blue text-white px-4 py-2 w-full text-center">
+                <h5 className="font-semibold text-lg">建設業 D社様</h5>
+                <p className="text-[0.5rem]">従業員数: 120名</p>
               </div>
             </div>
-            <blockquote className="text-gray-900 mb-4">
-              <strong>一件一件のヒアリングや提案内容が的確で、<strong className="bg-marker-yellow font-bold">単なるアポ代行ではなく伴走型の営業パートナー</strong>という印象です。
-              </strong>
+            <div className="flex justify-center mb-4">
+              <img src={customerVoice4} alt="" className="max-w-[60%] h-auto" loading="lazy" decoding="async" />
+            </div>
+            <blockquote className="text-gray-900 mb-0">
+              一件一件のヒアリングや提案内容が的確で、<strong className="bg-marker-yellow font-bold">単なるアポ代行ではなく伴走型の営業パートナー</strong>という印象です。
             </blockquote>
           </div>
         </div>

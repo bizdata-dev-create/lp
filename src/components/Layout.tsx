@@ -19,23 +19,26 @@ export default function Layout({ children }: LayoutProps) {
                 <img src={logoDeeper} alt="logo" className="h-12 scale-[0.68] md:scale-[0.85]" />
               </AnchorLink>
             </div>
-            <nav className="hidden md:flex space-x-8">
-              <AnchorLink to="/#service-flow" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">
-                サービスの流れ
-              </AnchorLink>
-              <AnchorLink to="/#results" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">
+            <nav className="hidden md:flex items-center gap-4">
+            <AnchorLink to="/#results" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
                 実績
               </AnchorLink>
-              <AnchorLink to="/#benefits" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">
+              <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
+              <AnchorLink to="/#service-flow" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
+                サービスの流れ
+              </AnchorLink>
+              <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
+              <AnchorLink to="/#benefits" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
                 特徴
               </AnchorLink>
-              <AnchorLink to="/#company" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer border-b-2 border-blue-900 pb-1">
+              <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
+              <AnchorLink to="/#company" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
                 会社紹介
               </AnchorLink>
             </nav>
             <AnchorLink
               to="/#contact-form"
-              className="bg-gradient-to-r from-green-600 to-green-500 text-white px-3 md:px-5 py-1.5 rounded-lg hover:from-green-500 hover:to-green-400 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary transition-all hover-pulse-ring"
+              className="bg-gradient-to-r from-green-600 to-green-500 text-white px-4 md:px-6 py-1.5 rounded-full hover:from-green-500 hover:to-green-400 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary transition-all hover-pulse-ring"
             >
               <span id="cta_schedule_header">無料で相談する 》</span>
             </AnchorLink>

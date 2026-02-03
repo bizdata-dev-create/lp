@@ -57,7 +57,7 @@ export default function SpecialOffer({
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <AnchorLink
                 to="/#contact-form"
-                className="bg-gradient-to-r from-green-600 to-green-500 text-white px-9 py-[0.65rem] rounded-lg text-2xl font-bold hover:from-green-500 hover:to-green-400 whitespace-nowrap cursor-pointer inline-block btn-primary transition-all hover-pulse-ring"
+                className="bg-gradient-to-r from-green-600 to-green-500 text-white px-9 py-[0.65rem] rounded-full text-2xl font-bold hover:from-green-500 hover:to-green-400 whitespace-nowrap cursor-pointer inline-block btn-primary transition-all hover-pulse-ring"
               >
                 <span id={ctaId}>無料で相談する 》</span>
               </AnchorLink>
