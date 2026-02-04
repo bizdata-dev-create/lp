@@ -39,7 +39,7 @@ function StepBlock({ stepNum, imagePC, imageMobile, title, children }: { stepNum
 
 export default function ServiceFlowSection() {
   return (
-    <section id="service-flow" className="py-20 bg-brand-blue-light">
+    <section id="service-flow" className="py-20 bg-brand-blue-soft bg-dot-grid-blue bg-dot-grid">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">サービスの流れ</h3>
