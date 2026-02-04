@@ -15,7 +15,7 @@ export default function CustomerVoicesSection() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="bg-white p-4 shadow-lg border-2 border-gray-200">
             <div className="mb-6">
-              <div className="bg-brand-blue text-white px-4 py-2 w-full text-center">
+              <div className="bg-brand-blue text-white px-4 py-1 w-full text-center">
                 <h5 className="font-semibold text-lg">製造業 A社様</h5>
                 <p className="text-[0.5rem]">従業員数: 50名</p>
               </div>
@@ -31,7 +31,7 @@ export default function CustomerVoicesSection() {
 
           <div className="bg-white p-4 shadow-lg border-2 border-gray-200">
             <div className="mb-6">
-              <div className="bg-brand-blue text-white px-4 py-2 w-full text-center">
+              <div className="bg-brand-blue text-white px-4 py-1 w-full text-center">
                 <h5 className="font-semibold text-lg">IT企業 B社様</h5>
                 <p className="text-[0.5rem]">従業員数: 30名</p>
               </div>
@@ -46,7 +46,7 @@ export default function CustomerVoicesSection() {
 
           <div className="bg-white p-4 shadow-lg border-2 border-gray-200">
             <div className="mb-6">
-              <div className="bg-brand-blue text-white px-4 py-2 w-full text-center">
+              <div className="bg-brand-blue text-white px-4 py-1 w-full text-center">
                 <h5 className="font-semibold text-lg">人材サービス C社様</h5>
                 <p className="text-[0.5rem]">従業員数: 80名</p>
               </div>
@@ -62,7 +62,7 @@ export default function CustomerVoicesSection() {
 
           <div className="bg-white p-4 shadow-lg border-2 border-gray-200">
             <div className="mb-6">
-              <div className="bg-brand-blue text-white px-4 py-2 w-full text-center">
+              <div className="bg-brand-blue text-white px-4 py-1 w-full text-center">
                 <h5 className="font-semibold text-lg">建設業 D社様</h5>
                 <p className="text-[0.5rem]">従業員数: 120名</p>
               </div>

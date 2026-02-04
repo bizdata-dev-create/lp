@@ -13,14 +13,14 @@ export default function PricingSection() {
               <h3 className="text-3xl font-bold underline underline-offset-8">単発利用プラン</h3>
             </div>
             <div className="p-6">
-              <p className="text-xl text-center text-gray-700 mb-6">
+              <p className="text-xl text-center text-gray-700 mb-6 font-bold">
                 利用期間、最低送信数の<br />
                 縛り一切なし
               </p>
 
               <div className="text-center mb-6">
                 <div className="text-7xl font-extrabold text-brand-blue">17</div>
-                <div className="text-base text-gray-500 mt-1">(税別) 円/件</div>
+                <div className="text-base mt-1"><span className="text-gray-500">(税別)</span> <span className="font-bold text-brand-blue">円/件</span></div>
               </div>
 
               <div className="flex justify-center mb-6">
@@ -66,14 +66,14 @@ export default function PricingSection() {
               <h3 className="text-3xl font-bold underline underline-offset-8">定期利用プラン</h3>
             </div>
             <div className="p-6">
-              <p className="text-xl text-center text-gray-700 mb-6">
+              <p className="text-xl text-center text-gray-700 mb-6 font-bold">
                 利用期間：3ヶ月<br />
                 最低送信数：5,000件/月
               </p>
 
               <div className="text-center mb-6">
                 <div className="text-7xl font-extrabold text-brand-blue">13</div>
-                <div className="text-base text-gray-500 mt-1">(税別) 円/件</div>
+                <div className="text-base mt-1"><span className="text-gray-500">(税別)</span> <span className="font-bold text-brand-blue">円/件</span></div>
               </div>
 
               <div className="flex justify-center mb-6">

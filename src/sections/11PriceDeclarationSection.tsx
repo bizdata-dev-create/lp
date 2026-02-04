@@ -1,6 +1,6 @@
 export default function PriceDeclarationSection() {
   return (
-    <section className="py-10 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="price-plan" className="py-10 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* 装飾的な背景要素 */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-1 bg-brand-blue"></div>

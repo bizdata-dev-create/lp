@@ -20,24 +20,24 @@ export default function Layout({ children }: LayoutProps) {
               </AnchorLink>
             </div>
             <nav className="hidden md:flex items-center gap-4">
-            <AnchorLink to="/#results" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
+              <AnchorLink to="/#results" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
                 実績
-              </AnchorLink>
-              <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
-              <AnchorLink to="/#service-flow" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
-                サービスの流れ
               </AnchorLink>
               <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
               <AnchorLink to="/#benefits" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
                 特徴
               </AnchorLink>
               <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
-              <AnchorLink to="/#anchor04" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
+              <AnchorLink to="/#company" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
+                会社紹介
+              </AnchorLink>
+              <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
+              <AnchorLink to="/#price-plan" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
                 料金
               </AnchorLink>
               <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
-              <AnchorLink to="/#company" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
-                会社紹介
+              <AnchorLink to="/#service-flow" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
+                サービスの流れ
               </AnchorLink>
             </nav>
             <AnchorLink
