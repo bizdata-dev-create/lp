@@ -32,6 +32,10 @@ export default function Layout({ children }: LayoutProps) {
                 特徴
               </AnchorLink>
               <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
+              <AnchorLink to="/#anchor04" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
+                料金
+              </AnchorLink>
+              <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
               <AnchorLink to="/#company" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
                 会社紹介
               </AnchorLink>
@@ -86,7 +90,7 @@ export default function Layout({ children }: LayoutProps) {
               <h5 className="font-semibold mb-4">お問い合わせ</h5>
               <AnchorLink
                 to="/#contact-form"
-                className="bg-brand-green text-white px-6 py-2 rounded-lg hover:bg-brand-green/90 text-sm whitespace-nowrap cursor-pointer mb-4 inline-block btn-primary"
+                className="bg-gradient-to-r from-green-600 to-green-500 text-white px-4 md:px-6 py-1.5 rounded-full hover:from-green-500 hover:to-green-400 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary transition-all hover-pulse-ring mb-4 inline-block"
               >
                 <span id="cta_schedule_footer">お問い合わせ</span>
               </AnchorLink>

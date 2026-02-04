@@ -321,7 +321,7 @@ export default function ContactFormSection({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-green-600 to-green-500 text-white px-9 py-[0.65rem] rounded-lg text-2xl font-bold hover:from-green-500 hover:to-green-400 btn-primary transition-all hover-pulse-ring disabled:opacity-50 disabled:cursor-not-allowed disabled:hover-pulse-ring"
+                className="bg-gradient-to-r from-green-600 to-green-500 text-white px-9 py-[0.65rem] rounded-full text-2xl font-bold hover:from-green-500 hover:to-green-400 btn-primary transition-all hover-pulse-ring disabled:opacity-50 disabled:cursor-not-allowed disabled:hover-pulse-ring"
               >
                 {isSubmitting ? '送信中…' : '送信する 》'}
               </button>

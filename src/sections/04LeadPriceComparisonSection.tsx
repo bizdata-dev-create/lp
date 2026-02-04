@@ -1,5 +1,5 @@
 import priceCrown from '../img/dev/price-crown.png';
-import styles from './LeadPriceComparisonSection.module.css';
+import styles from './04LeadPriceComparisonSection.module.css';
 
 export default function LeadPriceComparisonSection() {
   return (

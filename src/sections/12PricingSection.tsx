@@ -32,7 +32,7 @@ export default function PricingSection() {
                 フォーム営業代行で<span className="font-bold">利用期間や最低送信数の縛りがない</span>のは弊社の単発プランだけです。
               </p>
 
-              <div className="space-y-3">
+              <div className="space-y-1.5">
                 {[
                   '完全手動のお問い合わせフォーム配信',
                   '営業文添削',
@@ -42,9 +42,9 @@ export default function PricingSection() {
                   '送信先ごとカスタム文章作成',
                   '宛名挿入',
                 ].map((it, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-7 h-7 text-brand-blue mt-1 flex-shrink-0" />
-                    <div className="text-lg text-gray-700 font-bold">
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircleIcon className="w-[1.4875rem] h-[1.4875rem] md:w-7 md:h-7 text-brand-blue flex-shrink-0" />
+                    <div className="text-[0.956rem] md:text-lg text-gray-700 font-bold whitespace-nowrap">
                       {it}
                       {i === 2 && <span className="ml-3 inline-block bg-brand-blue text-white px-2 rounded">+0円/件</span>}
                       {i === 3 && <span className="ml-3 inline-block bg-brand-blue text-white px-2 rounded">+0円/件</span>}
@@ -85,7 +85,7 @@ export default function PricingSection() {
                 <span className="font-bold">業界最安級のお手軽価格</span>で、高品質のフォーム営業を実施することができます。
               </p>
 
-              <div className="space-y-3">
+              <div className="space-y-1.5">
                 {[
                   '完全手動のお問い合わせフォーム配信',
                   '営業文添削',
@@ -95,9 +95,9 @@ export default function PricingSection() {
                   '送信先ごとカスタム文章作成',
                   '宛名挿入',
                 ].map((it, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-7 h-7 text-brand-blue mt-1 flex-shrink-0" />
-                    <div className="text-lg text-gray-700 font-bold">
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircleIcon className="w-[1.4875rem] h-[1.4875rem] md:w-7 md:h-7 text-brand-blue flex-shrink-0" />
+                    <div className="text-[0.956rem] md:text-lg text-gray-700 font-bold whitespace-nowrap">
                       {it}
                       {i === 2 && <span className="ml-3 inline-block bg-brand-blue text-white px-2 rounded">+0円/件</span>}
                       {i === 3 && <span className="ml-3 inline-block bg-brand-blue text-white px-2 rounded">+0円/件</span>}
