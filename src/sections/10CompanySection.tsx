@@ -81,7 +81,7 @@ export default function CompanySection() {
               <div className="space-y-4">
                 <div>
                   <div className="border-l-4 border-brand-blue pl-4">
-                    <h6 className="font-medium text-gray-900">チーム構成</h6>
+                    <h6 className="font-medium text-gray-900">弊社社員の経歴</h6>
                   </div>
                   <p className="text-sm text-gray-900 mt-2"><strong>東京大学・東京工業大学出身、数学オリンピックファイナリスト、大手コンサルティングファーム出身者</strong>など</p>
                 </div>

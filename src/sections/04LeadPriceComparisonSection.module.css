@@ -1,6 +1,7 @@
 .triangle {
   position: relative;
   height: 32px;
+  flex-shrink: 0;
 }
 .triangle::after {
   content: "";
@@ -18,6 +19,21 @@
   color: #004E7C;
 }
 .isBlack {
+  color: #0f1416;
+}
+
+/* スマホ用：右向き三角（ラベルと価格の間） */
+.triangleRight {
+  flex-shrink: 0;
+  width: 16px;
+  align-self: stretch;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+.triangleRightBlue {
+  color: #004E7C;
+}
+.triangleRightBlack {
   color: #0f1416;
 }
 
