@@ -9,7 +9,7 @@ export default function CTASection({ onOpenModal }: CTASectionProps) {
         <h3 className="text-3xl font-bold text-white mb-6">
           営業の「手間」をなくし「<strong>成果</strong>」に集中
         </h3>
-        <p className="text-xl text-blue-100 mb-8">
+        <p className="text-xl text-blue-100 mb-4">
           「営業労力を最小化し、<strong>成果を最大化する仕組み</strong>」を私たちは提供します。
         </p>
         {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">

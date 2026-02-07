@@ -30,7 +30,7 @@ export default function LeadPriceComparisonSection() {
             <div className={`${styles.triangle} ${styles.isRed} hidden md:block`} aria-hidden />
             <div className={`${styles.triangleRight} ${styles.triangleRightBlue} flex md:hidden`} aria-hidden />
             <div className="bg-white md:bg-transparent py-3 md:py-9 px-3 md:px-[18px] text-center relative z-[1] flex items-center justify-center flex-1 min-w-0 md:min-h-40">
-              <p className="text-[28.8px] md:text-[67.2px] text-brand-blue m-0 font-bold">
+              <p className="text-[28.8px] md:text-[53.76px] text-brand-blue m-0 font-bold">
                 <span>~8,000</span>円
               </p>
             </div>
