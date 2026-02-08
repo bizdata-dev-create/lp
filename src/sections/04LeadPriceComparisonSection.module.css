@@ -21,6 +21,9 @@
 .isBlack {
   color: #0f1416;
 }
+.isBlueGray {
+  color: #7C95A7;
+}
 
 /* スマホ用：右向き三角（ラベルと価格の間） */
 .triangleRight {
@@ -35,5 +38,8 @@
 }
 .triangleRightBlack {
   color: #0f1416;
+}
+.triangleRightBlueGray {
+  color: #7C95A7;
 }
 

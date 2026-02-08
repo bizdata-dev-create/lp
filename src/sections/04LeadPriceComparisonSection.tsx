@@ -37,12 +37,12 @@ export default function LeadPriceComparisonSection() {
           </div>
 
           {/* テレアポ */}
-          <div className="w-full md:max-w-[260px] min-h-[80px] md:h-[278px] border-[3px] border-[#0f1416] bg-gray-100 flex flex-row md:flex-col box-border overflow-hidden">
-            <div className="min-h-[80px] md:h-[88px] py-0 px-3 md:px-[18px] flex items-center justify-center text-center text-white font-extrabold text-base md:text-xl bg-[#0f1416] m-0 flex-none w-[165px] md:w-auto shrink-0 md:shrink">
+          <div className="w-full md:max-w-[260px] min-h-[80px] md:h-[278px] border-[3px] border-[#7C95A7] bg-gray-100 flex flex-row md:flex-col box-border overflow-hidden">
+            <div className="min-h-[80px] md:h-[88px] py-0 px-3 md:px-[18px] flex items-center justify-center text-center text-gray-900 font-extrabold text-base md:text-xl bg-[#7C95A7] m-0 flex-none w-[165px] md:w-auto shrink-0 md:shrink">
               テレアポ
             </div>
-            <div className={`${styles.triangle} ${styles.isBlack} hidden md:block`} aria-hidden />
-            <div className={`${styles.triangleRight} ${styles.triangleRightBlack} flex md:hidden`} aria-hidden />
+            <div className={`${styles.triangle} ${styles.isBlueGray} hidden md:block`} aria-hidden />
+            <div className={`${styles.triangleRight} ${styles.triangleRightBlueGray} flex md:hidden`} aria-hidden />
             <div className="bg-gray-100 py-3 md:py-8 px-3 md:px-[18px] flex-1 flex items-center justify-center text-center min-w-0 md:min-h-[128px]">
               <p className="text-2xl md:text-[34px] text-gray-900 m-0 font-bold">
                 <span>~15,000</span>円
@@ -51,12 +51,12 @@ export default function LeadPriceComparisonSection() {
           </div>
 
           {/* インターネット広告 */}
-          <div className="w-full md:max-w-[260px] min-h-[80px] md:h-[278px] border-[3px] border-[#0f1416] bg-gray-100 flex flex-row md:flex-col box-border overflow-hidden">
-            <div className="min-h-[80px] md:h-[88px] py-0 px-3 md:px-[18px] flex items-center justify-center text-center text-white font-extrabold text-base md:text-xl bg-[#0f1416] m-0 flex-none w-[165px] md:w-auto shrink-0 md:shrink">
+          <div className="w-full md:max-w-[260px] min-h-[80px] md:h-[278px] border-[3px] border-[#7C95A7] bg-gray-100 flex flex-row md:flex-col box-border overflow-hidden">
+            <div className="min-h-[80px] md:h-[88px] py-0 px-3 md:px-[18px] flex items-center justify-center text-center text-gray-900 font-extrabold text-base md:text-xl bg-[#7C95A7] m-0 flex-none w-[165px] md:w-auto shrink-0 md:shrink">
               ネット<br className="hidden md:block" />広告
             </div>
-            <div className={`${styles.triangle} ${styles.isBlack} hidden md:block`} aria-hidden />
-            <div className={`${styles.triangleRight} ${styles.triangleRightBlack} flex md:hidden`} aria-hidden />
+            <div className={`${styles.triangle} ${styles.isBlueGray} hidden md:block`} aria-hidden />
+            <div className={`${styles.triangleRight} ${styles.triangleRightBlueGray} flex md:hidden`} aria-hidden />
             <div className="bg-gray-100 py-3 md:py-8 px-3 md:px-[18px] flex-1 flex items-center justify-center text-center min-w-0 md:min-h-[128px]">
               <p className="text-2xl md:text-[34px] text-gray-900 m-0 font-bold">
                 <span>~30,000</span>円
