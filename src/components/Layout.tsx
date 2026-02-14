@@ -13,13 +13,18 @@ export default function Layout({ children }: LayoutProps) {
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-start">
+          <div className="flex items-center h-16">
+            <div className="flex items-start shrink-0">
               <AnchorLink to="/#hero">
                 <img src={logoDeeper} alt="logo" className="h-12 scale-[0.68] md:scale-[0.85]" />
               </AnchorLink>
             </div>
+            <div className="flex items-center gap-3 ml-auto shrink-0">
             <nav className="hidden md:flex items-center gap-4">
+              <AnchorLink to="/#service-flow" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
+                サービス利用の流れ
+              </AnchorLink>
+              <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
               <AnchorLink to="/#results" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
                 実績
               </AnchorLink>
@@ -36,16 +41,23 @@ export default function Layout({ children }: LayoutProps) {
                 料金
               </AnchorLink>
               <span className="h-6 w-px bg-gray-800 shrink-0" aria-hidden />
-              <AnchorLink to="/#service-flow" className="text-gray-900 hover:text-teal-600 transition-colors cursor-pointer">
-                サービスの流れ
-              </AnchorLink>
             </nav>
-            <AnchorLink
-              to="/#contact-form"
-              className="bg-gradient-to-r from-green-600 to-green-500 text-white px-4 md:px-6 py-1.5 rounded-full hover:from-green-500 hover:to-green-400 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary transition-all hover-pulse-ring"
-            >
-              <span id="cta_schedule_header">無料で相談する 》</span>
-            </AnchorLink>
+
+            <div className="flex items-center gap-2 shrink-0">
+              <AnchorLink
+                to="/#contact-form"
+                className="hidden md:inline text-gray-900 hover:text-teal-600 transition-colors whitespace-nowrap cursor-pointer"
+              >
+                お問い合わせはこちら➔
+              </AnchorLink>
+              <AnchorLink
+                to="/#contact-form"
+                className="bg-gradient-to-r from-green-600 to-green-500 text-white px-4 md:px-6 py-1.5 rounded-full hover:from-green-500 hover:to-green-400 whitespace-nowrap cursor-pointer font-bold text-lg btn-primary transition-all hover-pulse-ring"
+              >
+                <span id="cta_schedule_header">無料で相談する 》</span>
+              </AnchorLink>
+            </div>
+            </div>
             {/* <a
               id="cta_schedule_header"
               href="https://timerex.net/s/info_cbe9_f3ff/48c82dac"

@@ -1,5 +1,5 @@
-import compareTableMobile from '../img/dev/compare_table_mobile.webp';
-import compareTablePC from '../img/dev/compare_table_pc.webp';
+import compareTableMobile from '../img/dev/comparison_mobile.webp';
+import compareTablePC from '../img/dev/comparison_pc.webp';
 
 export default function CompetitiveComparisonSection() {
   return (

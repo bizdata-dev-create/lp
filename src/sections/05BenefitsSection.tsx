@@ -4,19 +4,6 @@ import benefit3Image from '../img/dev/feature/feature3_0127.webp';
 import benefit4Image from '../img/dev/feature/feature4_0127.webp';
 import { CheckIcon } from '../components/icons';
 
-// 会社ロゴ（流れ用）を一括取得
-const companyLogoModules = import.meta.glob<{ default: string }>(
-  '../img/original/v3_0203/company_logos/*.png',
-  { eager: true }
-);
-const companyLogoUrls = Object.keys(companyLogoModules)
-  .sort()
-  .map((path) => companyLogoModules[path].default);
-// 上段・下段で別ロゴになるよう二分（同時に同じロゴが表示されない）
-const mid = Math.ceil(companyLogoUrls.length / 2);
-const companyLogosTop = companyLogoUrls.slice(0, mid);
-const companyLogosBottom = companyLogoUrls.slice(mid);
-
 export default function BenefitsSection() {
   return (
     <section id="benefits" className="py-20 bg-white">
@@ -120,7 +107,7 @@ export default function BenefitsSection() {
             </div>
           </div>
 
-          {/* Media List Section - Full width below Feature 2 */}
+          {/* リストアップできる媒体例セクション - 一時非表示
           <div className="w-full">
             <div className="bg-brand-blue-light p-8 rounded-lg border-2 border-brand-blue">
               <h5 className="font-semibold text-gray-900 mb-6 text-center text-xl">リストアップできる媒体例<br /><span className="text-sm">（ご希望の媒体を付け加え可能）</span></h5>
@@ -183,30 +170,7 @@ export default function BenefitsSection() {
               </div>
             </div>
           </div>
-
-          {/* 会社ロゴ 流れセクション：上段は左→右、下段は右→左。同時表示されるロゴは重ならないよう二分 */}
-          <div className="py-2 rounded-xl overflow-hidden space-y-1" aria-hidden>
-            <div className="overflow-hidden">
-              <div className="flex w-max logo-marquee-track-right">
-                {[...companyLogosTop, ...companyLogosTop].map((src, i) => (
-                  <div key={i} className="flex-shrink-0 flex items-center justify-center px-6 h-12">
-                    <img src={src} alt="" className="max-h-10 w-auto object-contain opacity-80" loading="lazy" />
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="overflow-hidden">
-              <div className="flex w-max logo-marquee-track-left">
-                {[...companyLogosBottom, ...companyLogosBottom].map((src, i) => (
-                  <div key={i} className="flex-shrink-0 flex items-center justify-center px-6 h-12">
-                    <img src={src} alt="" className="max-h-10 w-auto object-contain opacity-80" loading="lazy" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-
+          */}
 
           {/* Feature 3 - 特典としてリストを無料提供 */}
           <div className="grid md:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">

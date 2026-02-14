@@ -509,7 +509,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Media List Section - Full width below Feature 2 */}
+            {/* リストアップできる媒体例セクション - 一時非表示
             <div className="w-full">
               <div className="bg-brand-blue-light p-8 rounded-lg border-2 border-brand-blue">
                 <h5 className="font-semibold text-gray-900 mb-6 text-center text-xl">リストアップできる媒体例<br /><span className="text-sm">（ご希望の媒体を付け加え可能）</span></h5>
@@ -572,6 +572,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            */}
 
             {/* Feature 3 - 特典としてリストを無料提供 */}
             <div className="grid md:grid-cols-2 gap-12 items-center border-4 border-blue-900 p-4">
